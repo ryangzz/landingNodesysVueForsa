@@ -1,60 +1,37 @@
 <template>
-  <header class="page-header menu-on-end" id="page-header">
-    <div class="container">
-      <nav class="main-navbar" id="main-nav">
-        <a class="navbar-brand" href="#">
-          <img class="brand-logo light-logo img-fluid" src="img/logo-light.png" alt="" />
-          <img class="brand-logo dark-logo img-fluid" src="img/logo-dark.png" alt="" />
-        </a>
-        <div class="menu-toggler-btn">
-          <span></span><span></span><span></span>
-        </div>
-        <div class="navbar-menu-wraper" id="navbar-menu-wraper">
-          <ul class="navbar-nav mobile-menu">
-            <li class="nav-item has-sub-menu">
-              <a class="nav-link" href="#page-hero"><i class="fas fa-home icon"></i>home<i
-                  class="fas fa-chevron-down down-Arrow-icon">
-                </i></a>
-              <ul class="sub-menu">
-                <li class="nav-item sub-menu-item">
-                  <a class="nav-link sub-menu-link" href="index-dark.html"><i
-                      class="fas fa-home icon"></i>index-dark</a>
-                </li>
-                <li class="nav-item sub-menu-item">
-                  <a class="nav-link sub-menu-link" href="index-rtl.html"><i
-                      class="fas fa-home icon"></i>index-light-RTL</a>
-                </li>
-                <li class="nav-item sub-menu-item">
-                  <a class="nav-link sub-menu-link" href="index-dark-rtl.html"><i
-                      class="fas fa-home icon"></i>index-dark-RTL</a>
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#services"><i class="fas fa-address-card icon"></i>services</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#about"><i class="fas fa-cogs icon"></i>about</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#portfolio"><i class="fas fa-camera-retro icon"></i>portfolio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#pricing"><i class="fas fa-file-invoice-dollar icon"></i>pricing</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#testimonials"><i class="fas fa-comments icon"></i>testimonials</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#faq"><i class="fas fa-question-circle icon"></i>FAQ</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#contact-us"><i class="fas fa-mobile-alt icon"></i>contact us</a>
-            </li>
-          </ul>
-        </div>
-        <a class="header-cta ma-btn-primary" href="#0">Subscribe</a>
-      </nav>
-    </div>
-  </header>
+  <header-menu></header-menu>
+  <slider-component></slider-component>
+  <services-component></services-component>
+  <about-component></about-component>
+  <portafolio-component></portafolio-component>
+  <video-component></video-component>
+  <our-team-component></our-team-component>
+  <our-clients-component></our-clients-component>
+  <testimonials-component></testimonials-component>
+  <faq-component></faq-component>
+  <footer-component></footer-component>
+  <loading-component></loading-component>
+  <back-top-component></back-top-component>
 </template>
+<script>
+import { defineAsyncComponent } from 'vue';
+export default{
+  name:"navBarDayBook",
+  components:{
+    'header-menu':defineAsyncComponent(()=> import('../components/headerComponent.vue')),
+    'slider-component':defineAsyncComponent(()=> import('../components/sliderComponent.vue')),
+    'services-component':defineAsyncComponent(()=> import('../components/servicesComponent.vue')),
+    'about-component':defineAsyncComponent(()=> import('../components/aboutComponent.vue')),
+    'portafolio-component':defineAsyncComponent(()=> import('../components/portafolioComponent.vue')),
+    'video-component':defineAsyncComponent(()=> import('../components/videoComponent.vue')),
+    'our-team-component':defineAsyncComponent(()=> import('../components/ourTeamComponent.vue')),
+    'our-clients-component':defineAsyncComponent(()=> import('../components/ourClientsComponent.vue')),
+    'testimonials-component':defineAsyncComponent(()=> import('../components/testimonialsComponent.vue')),
+    'faq-component':defineAsyncComponent(()=> import('../components/faqComponent.vue')),
+    'footer-component':defineAsyncComponent(()=> import('../components/footerComponent.vue')),
+    'loading-component':defineAsyncComponent(()=> import('../components/loadingComponent.vue')),
+    'back-top-component':defineAsyncComponent(()=> import('../components/backTopComponent.vue')),
+  }
+}
+
+</script>
