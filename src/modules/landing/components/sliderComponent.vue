@@ -26,7 +26,7 @@
             <div class="slide-content">
               <div class="slider-bg">
                 <div class="overlay-color"></div>
-                <img class="slider-bg-img" src="img/hero-slider-bg-img-1.jpg" alt="slider-bg 1" />
+                <img class="slider-bg-img" src="img/slide1.jpg" alt="slider-bg 1" />
               </div>
               <div class="container">
                 <div class="hero-text-area">
@@ -61,7 +61,7 @@
             <div class="slide-content">
               <div class="slider-bg">
                 <div class="overlay-color"></div>
-                <img class="slider-bg-img" src="img/hero-slider-bg-img-2.jpg" alt="slider-bg 2" />
+                <img class="slider-bg-img" src="img/slide2.jpg" alt="slider-bg 2" />
               </div>
               <div class="container">
                 <div class="hero-text-area">
@@ -89,7 +89,7 @@
                               <div class="play-btn">
                                 <img class="img-fluid play-icon" src="img/play-icon.svg" alt="" />
                               </div>
-                              <div class="play-btn-text">watch our video</div>
+                              <div class="play-btn-text">Nuestro Video</div>
                             </div>
                           </a>
                         </div>
@@ -105,7 +105,7 @@
             <div class="slide-content">
               <div class="slider-bg">
                 <div class="overlay-color"></div>
-                <img class="slider-bg-img" src="img/hero-slider-bg-img-3.jpg" alt="slider-bg 3" />
+                <img class="slider-bg-img" src="img/slide3.jpg" alt="slider-bg 3" />
               </div>
               <div class="container">
                 <div class="hero-text-area">
