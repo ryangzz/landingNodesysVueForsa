@@ -47,8 +47,8 @@
                     <div class="col-12">
                       <div class="cta-links-area wow fadeInUp" data-wow-delay="0.8s">
                         <a class="ma-btn-primary cta-link cta-link-primary wow fadeInUp" href="#0"
-                          data-wow-delay="0.8s">start now</a><a class="ma-btn-primary cta-link wow fadeInUp" href="#0"
-                          data-wow-delay="1s">Contact us</a>
+                          data-wow-delay="0.8s">Mensaje</a><a class="ma-btn-primary cta-link wow fadeInUp" href="#0"
+                          data-wow-delay="1s">Contactanos</a>
                       </div>
                     </div>
                   </div>
