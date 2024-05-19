@@ -1,3 +1,12 @@
+<script setup>
+import { inject,onMounted } from 'vue';
+
+const appjs = inject('appjs')
+onMounted(() => {
+  appjs()
+  // Tu lógica adicional aquí
+})
+</script>
 <template>
   <header class="page-header menu-on-end" id="page-header">
     <div class="container">

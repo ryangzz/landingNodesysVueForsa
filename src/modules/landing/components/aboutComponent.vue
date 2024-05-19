@@ -7,10 +7,11 @@
         <div class="row">
           <div class="col-12 col-lg-6 d-flex align-items-center about-col wow fadeInUp" data-wow-delay="0.2s">
             <div class="img-area">
-              <div class="photo-banner-end">
+              <div class="photo-banner-end" v-if="true">
                 <i class="fas fa-pen-nib icon"></i>
                 <p class="banner-text">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Potenciamos negocios con soluciones tecnológicas innovadoras y personalizadas.
+
                 </p>
               </div>
               <img class="about-img img-fluid" src="img/about-1_photo.png" alt="Our vision" />
@@ -18,21 +19,14 @@
           </div>
           <div class="col-12 col-lg-6 d-flex align-items-center about-col wow fadeInUp" data-wow-delay="0.4s">
             <div class="text-area">
-              <span class="tag-line">about us</span>
+              <span class="tag-line">Sobre Nosotros</span>
               <h2 class="about-title">
-                The #1 company On IT solutions & development field
+                Transformación Tecnológica con Sello Mexicano
               </h2>
               <p class="about-text">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Distinctio, aliquam est! rerum inventore animi at iusto
+                En Kernesys, estamos orgullosos de ser una empresa 100% mexicana dedicada a impulsar la transformación digital de las empresas. Nuestro compromiso es ayudar a nuestros clientes a optimizar y automatizar sus procesos y reglas de negocio, llevándolos a alcanzar nuevos niveles de eficiencia y éxito.
               </p>
-              <p class="about-text">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Distinctio, aliquam est! rerum inventore animi at iusto
-                mollitia nemo reprehenderit dignissimos voluptate eos
-                Repellendus tenetur officia excepturi dolorum totam sunt
-                accusamus quia fugiat quasi
-              </p>
+
               <div class="about-stats stats-counter">
                 <div class="row g-0">
                   <!--Info One-->
@@ -42,7 +36,7 @@
                         <span class="sign">+</span><span class="counter" data-from="10" data-to="750" data-speed="3000"
                           data-refresh-interval="50"></span>
                       </p>
-                      <h5 class="stat-desc">projects</h5>
+                      <h5 class="stat-desc">Proyectos</h5>
                     </div>
                   </div>
                   <!--Info Two-->
@@ -52,7 +46,7 @@
                         <span class="sign">+</span><span class="counter" data-from="25" data-to="900" data-speed="3000"
                           data-refresh-interval="50"></span>
                       </p>
-                      <h5 class="stat-desc">clients</h5>
+                      <h5 class="stat-desc">Clientes</h5>
                     </div>
                   </div>
                   <!--Info Three-->
@@ -62,12 +56,12 @@
                         <span class="sign">+</span><span class="counter" data-from="0" data-to="980" data-speed="3000"
                           data-refresh-interval="50"></span>
                       </p>
-                      <h5 class="stat-desc">hours</h5>
+                      <h5 class="stat-desc">Horas</h5>
                     </div>
                   </div>
                 </div>
               </div>
-              <a class="ma-btn-primary" href="#0">Learn more</a>
+              <a class="ma-btn-primary" href="#0">Leer Mas</a>
             </div>
           </div>
         </div>
@@ -79,57 +73,48 @@
           <div class="col-12 col-lg-6 d-flex align-items-center order-2 order-lg-0 about-col wow fadeInUp"
             data-wow-delay="0.2s">
             <div class="text-area">
-              <span class="tag-line">our mision</span>
+              <span class="tag-line">Nuestra Mision</span>
               <h2 class="about-title">
-                create your way to success and acheive your goals
+                Crear Tu Camino Hacia el Éxito y Alcanzar Tus Metas
               </h2>
               <div class="info-items">
                 <div class="row g-0">
                   <div class="col-12">
                     <p class="about-text">
-                      Lorem ipsum dolor, sit amet consectetur adipisicing
-                      elit. Distinctio, aliquam est! rerum inventore animi at
-                      iusto mollitia nemo reprehenderit dignissimos voluptate
-                      eos.
+                      En Kernesys, nuestra misión es acompañarte en tu camino hacia el éxito empresarial, proporcionándote soluciones tecnológicas innovadoras que transformen y optimicen sus procesos. Nos comprometemos a ayudarte a alcanzar tus objetivos mediante la automatización y sistematización de sus operaciones, permitiéndote concentrarse en lo que realmente importa: hacer crecer tu negocio.
                     </p>
                   </div>
                   <div class="col-12">
                     <ul class="menu-items">
                       <li class="info-item">
-                        <img class="info-img-icon" src="img/icon-1.png" alt="showcase image"
-                          draggable="false" />
-                        <div class="info-content">
-                          <h5 class="info-title">
-                            Creating a Uniq Experience
-                          </h5>
-                          <p class="info-text">
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Porro, repellat. Corporis eveniet dolores
-                            eos architecto!
-                          </p>
-                        </div>
-                      </li>
-                      <li class="info-item">
                         <img class="info-img-icon" src="img/icon-2.png" alt="showcase image"
-                          draggable="false" />
+                        draggable="false" />
                         <div class="info-content">
-                          <h5 class="info-title">Adding More Value</h5>
+                          <h5 class="info-title">Creando una Experiencia Única</h5>
                           <p class="info-text">
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Porro, repellat. Corporis eveniet dolores
-                            eos architecto!
+                            En Kernesys, nos dedicamos a crear experiencias únicas a través de nuestras soluciones de software a medida. Cada proyecto es una oportunidad para desarrollar aplicaciones que no solo cumplen con tus necesidades empresariales, sino que también mejoran la experiencia de usuario y fortalecen tu marca en el mercado.
                           </p>
                         </div>
                       </li>
                       <li class="info-item">
                         <img class="info-img-icon" src="img/icon-3.png" alt="showcase image"
+                        draggable="false" />
+                        <div class="info-content">
+                          <h5 class="info-title">Añadiendo Más Valor</h5>
+                          <p class="info-text">
+                            En Kernesys, agregamos valor a tu negocio mediante la implementación de tecnologías avanzadas y estrategias innovadoras. Nuestro enfoque en la excelencia en el desarrollo de software asegura que cada solución no solo resuelva problemas, sino que también impulse el crecimiento y la eficiencia de tu empresa.
+                          </p>
+                        </div>
+                      </li>
+                      <li class="info-item">
+                        <img class="info-img-icon" src="img/icon-1.png" alt="showcase image"
                           draggable="false" />
                         <div class="info-content">
-                          <h5 class="info-title">Fulfill your dreams</h5>
+                          <h5 class="info-title">
+                            Cumpliendo Tus Sueños
+                          </h5>
                           <p class="info-text">
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Porro, repellat. Corporis eveniet dolores
-                            eos architecto!
+                            En Kernesys, estamos aquí para hacer realidad tus sueños empresariales. Nos esforzamos por entender tus aspiraciones y desafíos, y trabajamos incansablemente para ofrecerte soluciones tecnológicas que superen tus expectativas. Con nuestro apoyo, puedes estar seguro de que tus proyectos estarán respaldados por tecnología de vanguardia y un equipo comprometido con tu éxito
                           </p>
                         </div>
                       </li>
@@ -137,7 +122,7 @@
                   </div>
                 </div>
               </div>
-              <a class="ma-btn-primary" href="#0">Learn more</a>
+              <a class="ma-btn-primary" href="#0">Leer Mas</a>
             </div>
           </div>
           <div class="col-12 col-lg-6 d-flex align-items-center about-col order-0 order-lg-2 wow fadeInUp"
@@ -146,7 +131,7 @@
               <div class="photo-banner-start">
                 <i class="fas fa-code icon"></i>
                 <p class="banner-text">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Innovamos para optimizar y potenciar tu éxito empresarial
                 </p>
               </div>
               <img class="img-fluid about-img" src="img/about-2_photo.png" alt="Our vision" />

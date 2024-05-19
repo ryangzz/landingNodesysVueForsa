@@ -33,15 +33,13 @@
                   <div class="row justify-content-center">
                     <div class="col-12 col-lg-8 mx-auto">
                       <h1 class="slide-title" data-splitting="words">
-                        create the business youooo
-                        <span class="hollow-text">dreamed</span> about
+                        Software a la Medida para  
+                        <span class="hollow-text">Impulsar</span> tu Negocio.
                       </h1>
                     </div>
                     <div class="col-9 col-md-10 col-lg-8 mx-auto">
                       <p class="slide-subtitle narrow-centerd-text" data-splitting="words">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing
-                        elit. Autem recusandae reiciendis esse? Corporis, quo
-                        eum.
+                        Desarrollamos soluciones personalizadas que se adaptan perfectamente a tus necesidades específicas, optimizando sus procesos y mejorando tu eficiencia.
                       </p>
                     </div>
                     <div class="col-12">
@@ -68,16 +66,14 @@
                   <div class="row justify-content-center">
                     <div class="col-12 col-lg-8 mx-auto">
                       <h1 class="slide-title" data-splitting="words">
-                        get another
-                        <span class="hollow-text">sucsses</span> with our
-                        awesome team
+                        Migraciones  
+                        <span class="hollow-text">Eficientes</span> y Sin Interrupciones
+                      
                       </h1>
                     </div>
                     <div class="col-9 col-md-10 col-lg-8 mx-auto">
                       <p class="slide-subtitle narrow-centerd-text" data-splitting="words">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing
-                        elit. Autem recusandae reiciendis esse? Corporis, quo
-                        eum.
+                        Actualiza tus sistemas a nuevas tecnologías sin preocupaciones. Nos encargamos de una migración suave y sin interrupciones para tu negocio.
                       </p>
                     </div>
                     <div class="col-12">
@@ -112,21 +108,18 @@
                   <div class="row justify-content-center">
                     <div class="col-12 col-lg-8 mx-auto">
                       <h1 class="slide-title wow fadeInUp" data-splitting="words">
-                        <span class="hollow-text">download</span> our app to
-                        start your journy
+                        <span class="hollow-text">Optimización y </span> Modernización de Proyectos
                       </h1>
                     </div>
                     <div class="col-9 col-md-10 col-lg-8 mx-auto">
                       <p class="slide-subtitle narrow-centerd-text" data-splitting="words">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing
-                        elit. Autem recusandae reiciendis esse? Corporis, quo
-                        eum.
+                        Dale nueva vida a tus proyectos con nuestras soluciones de actualización. Integramos las tecnologías más avanzadas para mejorar tu rendimiento y seguridad.
                       </p>
                     </div>
                     <div class="col-12">
                       <div class="cta-links-area wow fadeInUp" data-wow-delay="0.8s">
                         <a class="ma-btn-primary cta-link cta-link-primary wow fadeInUp" href="#0"
-                          data-wow-delay="0.8s">download now</a>
+                          data-wow-delay="0.8s">Descargar  Ahora</a>
                       </div>
                     </div>
                   </div>

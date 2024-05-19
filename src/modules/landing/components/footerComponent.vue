@@ -4,14 +4,13 @@
     <div class="container">
       <div class="row footer-cols">
         <div class="col-12 col-md-8 col-lg-4 footer-col wow fadeInUp" data-wow-delay="0.3s">
-          <h6 class="footer-col-title">About forsa</h6>
+          <h6 class="footer-col-title">Sobre Kernesys</h6>
           <div class="footer-col-content-wrapper">
             <p class="footer-text-about-us">
-              Lorem ipsum dolor, sit amet consectetur adipisicing
-              elit.Voluptatibus facere modi possimus dignissimos, aliquam
-              nobis eaque? Voluptatem magnam quisquam rem.
+              Nuestro enfoque se centra en desarrollar software a medida que automatiza procesos y optimiza operaciones, permitiendo a nuestros clientes alcanzar nuevos niveles de eficiencia y éxito empresarial.
+
             </p>
-            <div class="social-icons">
+            <div class="social-icons" v-if="false">
               <div class="sc-wraper dir-row sc-size-32">
                 <ul class="sc-list">
                   <li class="sc-item" title="Facebook">
@@ -32,7 +31,7 @@
           </div>
         </div>
         <div class="col-12 col-md-6 col-lg-2 footer-col wow fadeInUp" data-wow-delay="0.5s">
-          <h6 class="footer-col-title">useful links</h6>
+          <h6 class="footer-col-title">Enlaces &uacute;tiles</h6>
           <div class="footer-col-content-wrapper">
             <ul class="footer-menu">
               <li class="footer-menu-item">
@@ -51,40 +50,39 @@
           </div>
         </div>
         <div class="col-12 col-md-6 col-lg-2 footer-col wow fadeInUp" data-wow-delay=".7s">
-          <h6 class="footer-col-title">Resources</h6>
+          <h6 class="footer-col-title">Recursos</h6>
           <div class="footer-col-content-wrapper">
             <ul class="footer-menu">
               <li class="footer-menu-item">
-                <a class="footer-menu-link" href="#0">support</a>
+                <a class="footer-menu-link" href="#0">Soporte</a>
               </li>
               <li class="footer-menu-item">
-                <a class="footer-menu-link" href="#0">dashboard</a>
+                <a class="footer-menu-link" href="#0">Panel</a>
               </li>
               <li class="footer-menu-item">
-                <a class="footer-menu-link" href="#0">drivers</a>
+                <a class="footer-menu-link" href="#0">Conductores</a>
               </li>
               <li class="footer-menu-item">
-                <a class="footer-menu-link" href="#0">projects</a>
+                <a class="footer-menu-link" href="#0">Proyectos</a>
               </li>
             </ul>
           </div>
         </div>
         <div class="col-12 col-md-8 col-lg-4 footer-col wow fadeInUp" data-wow-delay=".9s">
-          <h6 class="footer-col-title">contact information</h6>
+          <h6 class="footer-col-title">Informaci&oacute;n De Contacto</h6>
           <div class="footer-col-content-wrapper">
             <div class="contact-info-card">
               <i class="fas fa-envelope icon"></i><a class="text-lowercase info"
-                href="mailto:example@support.com">example@support.com</a>
+                href="mailto:example@support.com">contacto@kernesys.com</a>
             </div>
             <div class="contact-info-card">
-              <i class="fas fa-globe-africa icon"></i><a class="text-lowercase info" href="#0">www.yoursite.com</a>
+              <i class="fas fa-globe-africa icon"></i><a class="text-lowercase info" href="#0">www.kernesys.com</a>
             </div>
             <div class="contact-info-card">
-              <i class="fas fa-map-marker-alt icon"></i><span class="text-lowercase info">5 Xyz st., Abc, alexandria,
-                egypt.</span>
+              <i class="fas fa-map-marker-alt icon"></i><span class="text-lowercase info">Monterrey, Nuevo Le&oacute;n, M&eacute;xico </span>
             </div>
             <div class="contact-info-card">
-              <i class="fas fa-mobile-alt icon"></i><a class="info" href="tel:+20123456789">+20123456789 </a>
+              <i class="fas fa-mobile-alt icon"></i><a class="info" href="tel:+8117223184">+8117223184 </a>
             </div>
           </div>
         </div>
@@ -95,13 +93,12 @@
         <div class="row">
           <div class="col-12 col-md-6">
             <p class="creadits">
-              &copy; 2022 Created by:
-              <a class="link" href="https://www.templatemonster.com/authors/aminThemes/">AminThemes Team</a>
+              &copy; 2022 Creado Por: Kernesys
             </p>
           </div>
-          <div class="col-12 col-md-6">
+          <div class="col-12 col-md-6" >
             <div class="terms-links">
-              <a href="#0">Terms of Use </a> | <a href="#0">Privacy Policy</a>
+              <a href="#0">Terminos de uso</a> | <a href="#0">Politica de Privacidad</a>
             </div>
           </div>
         </div>
