@@ -397,7 +397,7 @@ if (jQuery().isotope) {
     itemSelector: ".portfolio-item",
     layoutMode: "fitRows",
     percentPosition: true,
-    filter: "*",
+    filter: "",
     stagger: 30,
     containerStyle: null
   });

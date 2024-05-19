@@ -12,8 +12,8 @@ onMounted(() => {
     <div class="container">
       <nav class="main-navbar" id="main-nav">
         <a class="navbar-brand" href="#">
-          <img class="brand-logo light-logo img-fluid" src="img/logo-light.png" alt="" />
-          <img class="brand-logo dark-logo img-fluid" src="img/logo-dark.png" alt="" />
+          
+          <img class="brand-logo light-logo img-fluid" src="img/logo.png" alt="" />
         </a>
         <div class="menu-toggler-btn">
           <span></span><span></span><span></span>
