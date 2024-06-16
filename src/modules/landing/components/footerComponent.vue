@@ -73,7 +73,7 @@
           <div class="footer-col-content-wrapper">
             <div class="contact-info-card">
               <i class="fas fa-envelope icon"></i><a class="text-lowercase info"
-                href="mailto:example@support.com">contacto@kernesys.com</a>
+                href="mailto:contacto@kernesys.com">contacto@kernesys.com</a>
             </div>
             <div class="contact-info-card">
               <i class="fas fa-globe-africa icon"></i><a class="text-lowercase info" href="#0">www.kernesys.com</a>
@@ -93,7 +93,7 @@
         <div class="row">
           <div class="col-12 col-md-6">
             <p class="creadits">
-              &copy; 2022 Creado Por: Kernesys
+              &copy; 2024 Creado Por: Kernesys
             </p>
           </div>
           <div class="col-12 col-md-6" >
