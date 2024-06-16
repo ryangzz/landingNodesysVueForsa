@@ -33,7 +33,7 @@
                   <div class="col-4">
                     <div class="stat-box">
                       <p class="stat-num">
-                        <span class="sign">+</span><span class="counter" data-from="10" data-to="750" data-speed="3000"
+                        <span class="sign">+</span><span class="counter" data-from="10" data-to="60" data-speed="3000"
                           data-refresh-interval="50"></span>
                       </p>
                       <h5 class="stat-desc">Proyectos</h5>
@@ -43,7 +43,7 @@
                   <div class="col-4">
                     <div class="stat-box">
                       <p class="stat-num">
-                        <span class="sign">+</span><span class="counter" data-from="25" data-to="900" data-speed="3000"
+                        <span class="sign">+</span><span class="counter" data-from="25" data-to="50" data-speed="3000"
                           data-refresh-interval="50"></span>
                       </p>
                       <h5 class="stat-desc">Clientes</h5>
@@ -53,10 +53,10 @@
                   <div class="col-4">
                     <div class="stat-box">
                       <p class="stat-num">
-                        <span class="sign">+</span><span class="counter" data-from="0" data-to="980" data-speed="3000"
+                        <span class="sign">+</span><span class="counter" data-from="0" data-to="15" data-speed="3000"
                           data-refresh-interval="50"></span>
                       </p>
-                      <h5 class="stat-desc">Horas</h5>
+                      <h5 class="stat-desc">Migraciones de software</h5>
                     </div>
                   </div>
                 </div>
