@@ -1,6 +1,6 @@
 <template>
   <section class="page-hero hero-swiper-slider d-flex align-items-center" id="page-hero">
-    <div class="social-icons">
+    <div class="social-icons d-none">
       <div class="sc-wraper dir-row sc-flat">
         <ul class="sc-list">
           <li class="sc-item" title="Facebook">
@@ -41,14 +41,7 @@
                       <p class="slide-subtitle narrow-centerd-text" data-splitting="words">
                         Desarrollamos soluciones personalizadas que se adaptan perfectamente a tus necesidades específicas, optimizando sus procesos y mejorando tu eficiencia.
                       </p>
-                    </div>
-                    <div class="col-12">
-                      <div class="cta-links-area wow fadeInUp" data-wow-delay="0.8s">
-                        <a class="ma-btn-primary cta-link cta-link-primary wow fadeInUp" href="#0"
-                          data-wow-delay="0.8s">Mensaje</a><a class="ma-btn-primary cta-link wow fadeInUp" href="#0"
-                          data-wow-delay="1s">Contactanos</a>
-                      </div>
-                    </div>
+                    </div>                    
                   </div>
                 </div>
               </div>
@@ -81,12 +74,7 @@
                         <div class="play-btn-row-dir">
                           <a class="video-link" href="https://www.youtube.com/watch?v=8cN7LWGO-gE" role="button"
                             data-fancybox="data-fancybox">
-                            <div class="play-video-btn">
-                              <div class="play-btn">
-                                <img class="img-fluid play-icon" src="img/play-icon.svg" alt="" />
-                              </div>
-                              <div class="play-btn-text">Nuestro Video</div>
-                            </div>
+                            
                           </a>
                         </div>
                       </div>
@@ -116,11 +104,7 @@
                         Dale nueva vida a tus proyectos con nuestras soluciones de actualización. Integramos las tecnologías más avanzadas para mejorar tu rendimiento y seguridad.
                       </p>
                     </div>
-                    <div class="col-12">
-                      <div class="cta-links-area wow fadeInUp" data-wow-delay="0.8s">
-                        <a class="ma-btn-primary cta-link cta-link-primary wow fadeInUp" href="#0"
-                          data-wow-delay="0.8s">Descargar  Ahora</a>
-                      </div>
+                    <div class="col-12">                      
                     </div>
                   </div>
                 </div>

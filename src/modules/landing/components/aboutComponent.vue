@@ -61,7 +61,7 @@
                   </div>
                 </div>
               </div>
-              <a class="ma-btn-primary" href="#0">Leer Mas</a>
+              <a class="ma-btn-primary d-none" href="#0">Leer Mas</a>
             </div>
           </div>
         </div>
@@ -122,7 +122,7 @@
                   </div>
                 </div>
               </div>
-              <a class="ma-btn-primary" href="#0">Leer Mas</a>
+              <a class="ma-btn-primary d-none" href="#0">Leer Mas</a>
             </div>
           </div>
           <div class="col-12 col-lg-6 d-flex align-items-center about-col order-0 order-lg-2 wow fadeInUp"
