@@ -19,17 +19,16 @@
           </div>
           <div class="col-12 col-lg-6 d-flex align-items-center about-col wow fadeInUp" data-wow-delay="0.4s">
             <div class="text-area">
-              <span class="tag-line">Sobre Nosotros</span>
+              <span class="tag-line">Sobre nosotros</span>
               <h2 class="about-title">
-                Transformación Tecnológica con Sello Mexicano
+                Transformación tecnológica con sello mexicano
               </h2>
               <p class="about-text">
-                En Kernesys, estamos orgullosos de ser una empresa 100% mexicana dedicada a impulsar la transformación digital de las empresas. Nuestro compromiso es ayudar a nuestros clientes a optimizar y automatizar sus procesos y reglas de negocio, llevándolos a alcanzar nuevos niveles de eficiencia y éxito.
+                Estamos orgullosos de ser una empresa 100% mexicana dedicada a impulsar la transformación digital de las empresas. Nuestro compromiso es ayudar a nuestros clientes a optimizar y automatizar sus procesos y reglas de negocio, llevándolos a alcanzar nuevos niveles de eficiencia y éxito.
               </p>
 
-              <div class="about-stats stats-counter">
+            <!--  <div class="about-stats stats-counter">
                 <div class="row g-0">
-                  <!--Info One-->
                   <div class="col-4">
                     <div class="stat-box">
                       <p class="stat-num">
@@ -39,7 +38,7 @@
                       <h5 class="stat-desc">Proyectos</h5>
                     </div>
                   </div>
-                  <!--Info Two-->
+                  
                   <div class="col-4">
                     <div class="stat-box">
                       <p class="stat-num">
@@ -49,7 +48,6 @@
                       <h5 class="stat-desc">Clientes</h5>
                     </div>
                   </div>
-                  <!--Info Three-->
                   <div class="col-4">
                     <div class="stat-box">
                       <p class="stat-num">
@@ -60,7 +58,7 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> -->
               <a class="ma-btn-primary d-none" href="#0">Leer Mas</a>
             </div>
           </div>
@@ -75,7 +73,7 @@
             <div class="text-area">
               <span class="tag-line">Nuestra Mision</span>
               <h2 class="about-title">
-                Crear Tu Camino Hacia el Éxito y Alcanzar Tus Metas
+                Apoyar en el camino de los clientes para alcanzar el exito
               </h2>
               <div class="info-items">
                 <div class="row g-0">
@@ -90,9 +88,9 @@
                         <img class="info-img-icon" src="img/icon-2.png" alt="showcase image"
                         draggable="false" />
                         <div class="info-content">
-                          <h5 class="info-title">Creando una Experiencia Única</h5>
+                          <h5 class="info-title">Experiencias unicas</h5>
                           <p class="info-text">
-                            En Kernesys, nos dedicamos a crear experiencias únicas a través de nuestras soluciones de software a medida. Cada proyecto es una oportunidad para desarrollar aplicaciones que no solo cumplen con tus necesidades empresariales, sino que también mejoran la experiencia de usuario y fortalecen tu marca en el mercado.
+                            Nos dedicamos a crear experiencias únicas a través de nuestras soluciones de software a medida. Cada proyecto es una oportunidad para desarrollar aplicaciones que no solo cumplen con tus necesidades empresariales, sino que también mejoran la experiencia de usuario y fortalecen tu marca en el mercado.
                           </p>
                         </div>
                       </li>
@@ -100,21 +98,9 @@
                         <img class="info-img-icon" src="img/icon-3.png" alt="showcase image"
                         draggable="false" />
                         <div class="info-content">
-                          <h5 class="info-title">Añadiendo Más Valor</h5>
+                          <h5 class="info-title">Valor empresarial</h5>
                           <p class="info-text">
-                            En Kernesys, agregamos valor a tu negocio mediante la implementación de tecnologías avanzadas y estrategias innovadoras. Nuestro enfoque en la excelencia en el desarrollo de software asegura que cada solución no solo resuelva problemas, sino que también impulse el crecimiento y la eficiencia de tu empresa.
-                          </p>
-                        </div>
-                      </li>
-                      <li class="info-item">
-                        <img class="info-img-icon" src="img/icon-1.png" alt="showcase image"
-                          draggable="false" />
-                        <div class="info-content">
-                          <h5 class="info-title">
-                            Cumpliendo Tus Sueños
-                          </h5>
-                          <p class="info-text">
-                            En Kernesys, estamos aquí para hacer realidad tus sueños empresariales. Nos esforzamos por entender tus aspiraciones y desafíos, y trabajamos incansablemente para ofrecerte soluciones tecnológicas que superen tus expectativas. Con nuestro apoyo, puedes estar seguro de que tus proyectos estarán respaldados por tecnología de vanguardia y un equipo comprometido con tu éxito
+                            Agregamos valor a tu negocio mediante la implementación de tecnologías avanzadas y estrategias innovadoras. Nuestro enfoque en la excelencia en el desarrollo de software asegura que cada solución no solo resuelva problematicas, sino que también impulse el crecimiento y la eficiencia de tu empresa.
                           </p>
                         </div>
                       </li>

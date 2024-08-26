@@ -2,32 +2,26 @@
     <section class="contact-us  mega-section section-bg-shade" id="contact-us">
         <div class="container">
             <div class="section-heading center-heading">
-                <h2 class="section-title wow words chars splitting animated" data-splitting="chars"
+                <h2 class="section-title2 wow words chars splitting animated" data-splitting="chars"
                     style="--word-total: 3; --char-total: 16; visibility: visible;">
                     <span class="word" data-word="Envíanos" style="--word-index: 0;">
-    <span class="char" data-char="E" style="--char-index: 0;">E</span>
-    <span class="char" data-char="n" style="--char-index: 1;">n</span>
-    <span class="char" data-char="v" style="--char-index: 2;">v</span>
-    <span class="char" data-char="í" style="--char-index: 3;">í</span>
-    <span class="char" data-char="a" style="--char-index: 4;">a</span>
-    <span class="char" data-char="n" style="--char-index: 5;">n</span>
-    <span class="char" data-char="o" style="--char-index: 6;">o</span>
-    <span class="char" data-char="s" style="--char-index: 7;">s</span>
+    <span class="char" data-char="E" style="--char-index: 0;">C</span>
+    <span class="char" data-char="n" style="--char-index: 1;">O</span>
+    <span class="char" data-char="v" style="--char-index: 2;">N</span>
+    <span class="char" data-char="í" style="--char-index: 3;">T</span>
+    <span class="char" data-char="a" style="--char-index: 4;">A</span>
+    <span class="char" data-char="n" style="--char-index: 5;">C</span>
+    <span class="char" data-char="o" style="--char-index: 6;">T</span>
+    <span class="char" data-char="s" style="--char-index: 7;">A</span>
 </span>
 <span class="whitespace"> </span>
 <span class="word" data-word="un" style="--word-index: 1;">
-    <span class="char" data-char="u" style="--char-index: 8;">u</span>
-    <span class="char" data-char="n" style="--char-index: 9;">n</span>
+    <span class="char" data-char="u" style="--char-index: 8;">N</span>
+    <span class="char" data-char="n" style="--char-index: 9;">O</span>
 </span>
 <span class="whitespace"> </span>
 <span class="word" data-word="mensaje" style="--word-index: 2;">
-    <span class="char" data-char="m" style="--char-index: 10;">m</span>
-    <span class="char" data-char="e" style="--char-index: 11;">e</span>
-    <span class="char" data-char="n" style="--char-index: 12;">n</span>
-    <span class="char" data-char="s" style="--char-index: 13;">s</span>
-    <span class="char" data-char="a" style="--char-index: 14;">a</span>
-    <span class="char" data-char="j" style="--char-index: 15;">j</span>
-    <span class="char" data-char="e" style="--char-index: 16;">e</span>
+    <span class="char" data-char="m" style="--char-index: 10;">S</span>
 </span>
                 </h2>
                 <p class="section-subtitle wow fadeInUp" data-wow-delay=".5s"

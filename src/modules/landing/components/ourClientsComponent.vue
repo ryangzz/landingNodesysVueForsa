@@ -2,14 +2,14 @@
   <!-- Start  our-clients Section-->
   <section class="our-clients elf-section" id="our-clients">
     <div class="container">
-      <div class="section-heading d-none">
-        <h4 class="section-title">our great clients</h4>
+      <div class="section-heading">
+        <h4 class="section-title">¡Ellos confian en nosotros!</h4>
         <p class="section-subtitle">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt,
-          architecto cupiditate odio rerum est
-        </p>
-        <div class="line-gradient-color"></div>
+        </p>        
       </div>
+      <div class="line-gradient-color"></div>
+    </div>>
+    <div class="container"> 
       <div class="clients-logos d-flex align-items-center justify-content-around flex-wrap">
         <!--Swiper-->
         <div class="swiper-container">
@@ -21,7 +21,7 @@
                 -->
             <div class="swiper-slide">
               <div class="client-logo wow fadeInUp" data-wow-delay=".2s">
-                <a href="#0"><img class="img-fluid logo" src="img/1-white.png" alt=" " /></a>
+                <a href="#0"><img class="img-fluid logo" src="img/FloreriaHortensia2.png" alt=" " /></a>
               </div>
             </div>
             <div class="swiper-slide">

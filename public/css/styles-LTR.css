@@ -130,17 +130,27 @@ section {
   margin-bottom: 1.25rem;
   font-size: 3rem;
   font-weight: 800;
-  text-transform: capitalize;
-  color: #333;
+  color: #fff;
   line-height: 1.1;
   letter-spacing: 2px;
 }
+
+.section-heading .section-title2 {
+  text-align: center;
+  margin-bottom: 1.25rem;
+  font-size: 3rem;
+  font-weight: 800;
+  color: #000;
+  line-height: 1.1;
+  letter-spacing: 2px;
+}
+/*
 .section-heading .section-title.splitting .char {
   text-transform: initial;
 }
 .section-heading .section-title.splitting .char:first-child {
   text-transform: uppercase;
-}
+}*/
 @media (max-width: 767px) {
   .section-heading .section-title {
     font-size: 2rem;
@@ -153,7 +163,6 @@ section {
   padding: 0 2rem;
   font-size: 1.1rem;
   font-weight: 600;
-  text-transform: capitalize;
   color: #707070;
 }
 .section-heading .section-subtitle.splitting .char:first-child {
@@ -329,7 +338,7 @@ section {
 }
 
 .line-gradient-color {
-  background-color: #074d7e;
+  background-color: #fff;
 }
 
 .line-solid-accent-color {
@@ -1351,7 +1360,7 @@ body.hard-squared-btns .portfolio-btn {
   display: block;
 }
 .light-header.header-stand-out .navbar-brand .brand-name {
-  color: #074d7e;
+  color: #1b4d48; /*074d7e*/
   margin-left: 0.5rem;
 }
 @media (max-width: 1199px) {
@@ -1453,7 +1462,6 @@ body.hard-squared-btns .portfolio-btn {
 .page-hero .hero-text-area .slide-title {
   font-weight: 800;
   font-size: 4rem;
-  text-transform: capitalize;
   margin-bottom: 1.25rem;
   color: #fff;
   line-height: 1.2;
@@ -1990,7 +1998,6 @@ body.hard-squared-btns .portfolio-btn {
 }
 
 .services-boxed .service-box .service-content .service-title, .services .service-box .service-content .service-title {
-  text-transform: capitalize;
   font-size: 1.35rem;
   font-weight: 800;
   transition: all 0.5s ease-in-out 0s;
@@ -2240,7 +2247,6 @@ body.hard-squared-btns .portfolio-btn {
   font-size: 2.25rem;
   font-weight: 700;
   line-height: 1.4;
-  text-transform: capitalize;
   margin-bottom: 1.25rem;
   color: #333;
 }
@@ -2283,7 +2289,7 @@ body.hard-squared-btns .portfolio-btn {
   color: #333;
   font-weight: 800;
   font-size: 1.5rem;
-  text-transform: capitalize;
+
 }
 .about .info-items .menu-items .info-item .info-text {
   font-size: 1rem;
@@ -2844,8 +2850,9 @@ body.hard-squared-btns .portfolio-btn {
   text-align: center;
 }
 .our-clients .logo {
-  max-height: 75px;
+  max-height: 85px;
   transition: all 0.5s ease-in-out 0s;
+  background-color: #074d7e;
 }
 
 /*  12- End our-clients Section   */

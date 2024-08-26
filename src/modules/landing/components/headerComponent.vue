@@ -13,7 +13,7 @@ onMounted(() => {
       <nav class="main-navbar" id="main-nav">
         <a class="navbar-brand" href="#">
           
-          <img class="brand-logo light-logo img-fluid" src="img/logo.png" alt="" />
+          <img class="brand-logo light-logo img-fluid" src="img/Kernesys-blanco.png" alt="" />
         </a>
         <div class="menu-toggler-btn">
           <span></span><span></span><span></span>
@@ -42,7 +42,7 @@ onMounted(() => {
               <a class="nav-link" href="#faq"><i class="fas fa-question-circle icon"></i>Preguntas</a>
             </li> -->
             <li class="nav-item">
-              <a class="nav-link" href="#contact-us"><i class="fas fa-mobile-alt icon"></i>Contactanos</a>
+              <a class="nav-link" href="#contact-us"><i class="fas fa-mobile-alt icon"></i>Contacto</a>
             </li>
           </ul>
         </div>        
