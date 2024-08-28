@@ -13,7 +13,7 @@ onMounted(() => {
       <nav class="main-navbar" id="main-nav">
         <a class="navbar-brand" href="#">
           
-          <img class="brand-logo light-logo img-fluid" src="img/logo.png" alt="" />
+          <img class="brand-logo light-logo img-fluid" src="img/logokernesys.png" alt="" />
         </a>
         <div class="menu-toggler-btn">
           <span></span><span></span><span></span>

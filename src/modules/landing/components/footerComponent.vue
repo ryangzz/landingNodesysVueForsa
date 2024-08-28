@@ -2,8 +2,8 @@
 <!-- Start  page-footer Section-->
   <footer class="page-footer dark-color-footer" id="page-footer">
     <div class="container">
-      <div class="row footer-cols">
-        <div class="col-12 col-md-8 col-lg-4 footer-col wow fadeInUp" data-wow-delay="0.3s">
+      <div class="row justify-content-center footer-cols">
+        <div class="col-12 col-md-8 col-lg-5 footer-col wow fadeInUp" data-wow-delay="0.3s">
           <h6 class="footer-col-title">Sobre Kernesys</h6>
           <div class="footer-col-content-wrapper">
             <p class="footer-text-about-us">
@@ -30,26 +30,23 @@
             </div>
           </div>
         </div>
-        <div class="col-12 col-md-6 col-lg-2 footer-col wow fadeInUp" data-wow-delay="0.5s">
-          <h6 class="footer-col-title">Enlaces &uacute;tiles</h6>
+        <div class="col-12 col-md-6 col-lg-3 footer-col wow fadeInUp" data-wow-delay="0.5s">
+          <h6 class="footer-col-title">Redes sociales</h6>
           <div class="footer-col-content-wrapper">
             <ul class="footer-menu">
               <li class="footer-menu-item">
-                <a class="footer-menu-link" href="#0">Google</a>
+                <a class="footer-menu-link" href="https://www.facebook.com/Kernesys/">Facebook</a>
               </li>
               <li class="footer-menu-item">
-                <a class="footer-menu-link" href="#0">Dribbble</a>
+                <a class="footer-menu-link" href="https://www.instagram.com/kernesys/">Instagram</a>
               </li>
               <li class="footer-menu-item">
-                <a class="footer-menu-link" href="#0">linkedIn</a>
-              </li>
-              <li class="footer-menu-item">
-                <a class="footer-menu-link" href="#0">Wikipiddia</a>
+                <a class="footer-menu-link" href="https://www.linkedin.com/company/kernesys/">linkedIn</a>
               </li>
             </ul>
           </div>
         </div>
-        <div class="col-12 col-md-6 col-lg-2 footer-col wow fadeInUp" data-wow-delay=".7s">
+<!--        <div class="col-12 col-md-6 col-lg-2 footer-col wow fadeInUp" data-wow-delay=".7s">
           <h6 class="footer-col-title">Recursos</h6>
           <div class="footer-col-content-wrapper">
             <ul class="footer-menu">
@@ -67,22 +64,22 @@
               </li>
             </ul>
           </div>
-        </div>
+        </div> -->
         <div class="col-12 col-md-8 col-lg-4 footer-col wow fadeInUp" data-wow-delay=".9s">
           <h6 class="footer-col-title">Informaci&oacute;n De Contacto</h6>
           <div class="footer-col-content-wrapper">
             <div class="contact-info-card">
               <i class="fas fa-envelope icon"></i><a class="text-lowercase info"
-                href="mailto:contacto@kernesys.com">contacto@kernesys.com</a>
+                href="mailto:contacto@kernesys.com">administracion@kernesys.com</a>
             </div>
             <div class="contact-info-card">
               <i class="fas fa-globe-africa icon"></i><a class="text-lowercase info" href="#0">www.kernesys.com</a>
             </div>
             <div class="contact-info-card">
-              <i class="fas fa-map-marker-alt icon"></i><span class="text-lowercase info">Monterrey, Nuevo Le&oacute;n, M&eacute;xico </span>
+              <i class="fas fa-map-marker-alt icon"></i><span class="info">Monterrey, Nuevo Le&oacute;n, M&eacute;xico </span>
             </div>
             <div class="contact-info-card">
-              <i class="fas fa-mobile-alt icon"></i><a class="info" href="tel:+8117223184">+8117223184 </a>
+              <i class="fas fa-mobile-alt icon"></i><a class="info" href="tel:+8117223184">+52 8139166735 </a>
             </div>
           </div>
         </div>
@@ -90,7 +87,7 @@
     </div>
     <div class="copyrights">
       <div class="container">
-        <div class="row">
+        <div class="row ">
           <div class="col-12 col-md-6">
             <p class="creadits">
               &copy; 2024 Creado Por: Kernesys

@@ -4,13 +4,13 @@
       <div class="sc-wraper dir-row sc-flat">
         <ul class="sc-list">
           <li class="sc-item" title="Facebook">
-            <a class="sc-link" href="#0"><i class="fab fa-facebook-f sc-icon"></i></a>
+            <a class="sc-link" href="https://www.facebook.com/Kernesys/"><i class="fab fa-facebook-f sc-icon"></i></a>
           </li>
           <li class="sc-item" title="Linkedin">
-            <a class="sc-link" href="#0"><i class="fab fa-linkedin sc-icon"></i></a>
+            <a class="sc-link" href="https://www.linkedin.com/company/kernesys/"><i class="fab fa-linkedin sc-icon"></i></a>
           </li>
           <li class="sc-item" title="instagram">
-            <a class="sc-link" href="#0"><i class="fab fa-instagram sc-icon"></i></a>
+            <a class="sc-link" href="https://www.instagram.com/kernesys/"><i class="fab fa-instagram sc-icon"></i></a>
           </li>
         </ul>
       </div>
