@@ -7,7 +7,7 @@
           <h6 class="footer-col-title">Sobre Kernesys</h6>
           <div class="footer-col-content-wrapper">
             <p class="footer-text-about-us">
-              Nuestro enfoque se centra en desarrollar software a medida que automatiza procesos y optimiza operaciones, permitiendo a nuestros clientes alcanzar nuevos niveles de eficiencia y éxito empresarial.
+              Nuestro enfoque se centra en desarrollar software a medida que automatiza procesos, optimiza operaciones y permite a nuestros clientes alcanzar nuevos niveles de eficiencia y éxito empresarial.
 
             </p>
             <div class="social-icons" v-if="false">
