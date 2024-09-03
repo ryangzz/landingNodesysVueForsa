@@ -3319,7 +3319,7 @@ body.hard-squared-btns .portfolio-btn {
   font-weight: 600;
   text-transform: capitalize;
   margin-bottom: 1rem;
-  color: #333;
+  color: #fff;
 }
 
 .footer-text-about-us {
@@ -3422,7 +3422,7 @@ body.hard-squared-btns .portfolio-btn {
 .dark-color-footer {
   background-color: #333;
 }
-.dark-color-footer .footer-col-title,
+.dark-color-footer,
 .dark-color-footer .contact-info-card .icon,
 .dark-color-footer .sc-wraper .sc-list .sc-item:hover .sc-icon,
 .dark-color-footer .terms-links,
