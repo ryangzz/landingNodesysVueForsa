@@ -4,6 +4,7 @@
   <services-component></services-component>
   <about-component></about-component>
   <ourclients-component></ourclients-component>
+  <TechStack/>
   <contact-us-component/>
   <footer-component></footer-component>
   <loading-component></loading-component>
@@ -27,6 +28,7 @@ export default{
     'footer-component':defineAsyncComponent(()=> import('../components/footerComponent.vue')),
     'loading-component':defineAsyncComponent(()=> import('../components/loadingComponent.vue')),
     'back-top-component':defineAsyncComponent(()=> import('../components/backTopComponent.vue')),
+    'TechStack': defineAsyncComponent(()=> import('../components/tech-stack.component.vue'))
   },
   mounted() {
   },
