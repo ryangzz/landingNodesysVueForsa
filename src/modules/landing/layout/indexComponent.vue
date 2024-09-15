@@ -2,7 +2,7 @@
   <header-menu></header-menu>
   <slider-component></slider-component>
   <services-component></services-component>
-  <about-component></about-component>ç
+  <about-component></about-component>
   <ourclients-component></ourclients-component>
   <contact-us-component/>
   <footer-component></footer-component>

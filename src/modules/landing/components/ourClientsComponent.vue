@@ -9,7 +9,7 @@
       </div>
       <div class="line line-solid-main-color wow fadeIn" data-wow-delay="1s"
                     style="visibility: visible; animation-delay: 1s; animation-name: fadeIn;"></div>
-    </div>>
+    </div>
     <div class="container"> 
       <div class="clients-logos d-flex align-items-center justify-content-around flex-wrap">
         <!--Swiper-->
