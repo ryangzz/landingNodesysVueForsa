@@ -35,6 +35,11 @@
                 <a href="#0"><img class="img-fluid logo" src="img/Coexsa.png" alt=" " /></a>
               </div>
             </div>
+            <div class="swiper-slide">
+              <div class="client-logo wow fadeInUp" data-wow-delay=".2s">
+                <a href="#0"><img class="img-fluid logo" src="img/Logo.png" alt=" " /></a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
