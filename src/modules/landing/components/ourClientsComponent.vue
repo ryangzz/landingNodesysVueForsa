@@ -37,7 +37,7 @@
             </div>
             <div class="swiper-slide">
               <div class="client-logo wow fadeInUp" data-wow-delay=".2s">
-                <a href="#0"><img class="img-fluid logo" src="img/Logo.png" alt=" " /></a>
+                <a href="#0"><img class="img-fluid logo" src="img/biofase.png" alt=" " /></a>
               </div>
             </div>
           </div>
