@@ -37,7 +37,7 @@
                         <form class="main-form" id="contact-us-form" method="post" action="https://api.web3forms.com/submit"
                             autocomplete="off">
                             <input type="hidden" name="access_key" value="9f1456ea-5d9c-43a6-8c36-6df8545ead4b">
-                            <input type="hidden" name="redirect" value="http://localhost:8082/#/?success">                            <div class="row ">
+                            <input type="hidden" name="redirect" value="https://kernesys.com">                            <div class="row ">
                                 <div class="col-12 col-lg-6">
                                     <div class="input-wraper">
                                         <input class="text-input" id="user-name" name="name" type="text">
@@ -51,7 +51,14 @@
                                         <label for="user-email"> Correo<span class="req">*</span>
                                         </label><span class="b-border"></span><i></i><span class="error-msg"></span>
                                     </div>
-                                </div>                                
+                                </div>   
+                                <div class="col-12 col-lg-6">
+                                    <div class="input-wraper">
+                                        <input class="text-input" id="msg-subject" name="msg-subject" type="text">
+                                        <label for="msg-subject"> Asunto<span class="req">*</span>
+                                        </label><span class="b-border"></span><i></i><span class="error-msg"></span>
+                                    </div>
+                                </div> 
                                 <div class="col-12 ">
                                     <div class="input-wraper">
                                         <textarea class=" text-input" id="msg-text" name="message"></textarea>
