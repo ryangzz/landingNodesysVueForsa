@@ -1,7 +1,10 @@
   function appjs(){
+  console.log("appjs function is called");
   
   //GLOBAL VARIBALES
  setTimeout(() => {
+  console.log("appjs function is called");
+
   var main_window = $(window),
   root = $("html, body"),
   bdyOnePage = $("body.landing-page-demo "),
@@ -313,15 +316,24 @@ Start Vendors plugins options
     isValidInput = false,
     isValidEmail = false;
 
-  function ValidateNotEmptyInput(input, errMsg) {
-    if (input.val().trim() === "") {
-      $(input).siblings(".error-msg").text(errMsg).css("display", "block");
-      isValidInput = false;
-    } else {
-      $(input).siblings(".error-msg").text("").css("display", "none");
-      isValidInput = true;
+    function ValidateNotEmptyInput(input, errMsg) {
+      if (!input || !input.length) {
+        console.error("Elemento no encontrado:", input);
+        return;
+      }
+      const value = input.val();
+      if (typeof value !== 'string') {
+        console.error("Valor no es string:", value);
+        return;
+      }
+      if (value.trim() === "") {
+        input.siblings(".error-msg").text(errMsg).css("display", "block");
+        isValidInput = false;
+      } else {
+        input.siblings(".error-msg").text("").css("display", "none");
+        isValidInput = true;
+      }
     }
-  }
 
   function validateEmailInput(emailInput) {
     var pattern = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
