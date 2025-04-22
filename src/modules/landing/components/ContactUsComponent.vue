@@ -52,7 +52,7 @@
                                         </label><span class="b-border"></span><i></i><span class="error-msg"></span>
                                     </div>
                                 </div>   
-                                <div class="col-12 col-lg-6">
+                                <div class="col-12 col-lg-12">
                                     <div class="input-wraper">
                                         <input class="text-input" id="msg-subject" name="msg-subject" type="text">
                                         <label for="msg-subject"> Asunto<span class="req">*</span>
