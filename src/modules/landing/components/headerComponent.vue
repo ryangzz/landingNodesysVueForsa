@@ -1,11 +1,12 @@
 <script setup>
-import { inject,onMounted } from 'vue';
+import { inject,onMounted, nextTick } from 'vue';
 
 const appjs = inject('appjs')
 onMounted(() => {
-  appjs()
-  // Tu lógica adicional aquí
-})
+  nextTick(() => { // 👈 Espera a que Vue termine de renderizar el DOM
+    appjs(); // Ahora jQuery puede acceder a los elementos de forma segura
+  });
+});
 </script>
 <template>
   <header class="page-header menu-on-end" id="page-header">
