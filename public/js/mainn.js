@@ -369,11 +369,15 @@ Start Vendors plugins options
 
         success: function(data) {
           $(".done-msg")
-            .text("Thank you, Your Message Was Received!")
+            .text("Gracias por tu mensaje!")
             .toggleClass("show");
           setTimeout(function() {
             $(".done-msg").text("").toggleClass("show");
           }, 4000);
+          contactForm[0].reset();
+        },
+        finally: function() {
+          // Reset the form after submission
           contactForm[0].reset();
         }
       });
