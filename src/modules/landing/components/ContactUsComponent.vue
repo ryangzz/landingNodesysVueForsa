@@ -37,7 +37,7 @@
                         <form class="main-form" id="contact-us-form" method="post" action="https://api.web3forms.com/submit"
                             autocomplete="off">
                             <input type="hidden" name="access_key" value="9f1456ea-5d9c-43a6-8c36-6df8545ead4b">
-                            <!-- <input type="hidden" name="redirect" value="https://kernesys.com">      -->
+                            <input type="hidden" name="redirect" value="https://kernesys.com">     
                                                    <div class="row ">
                                 <div class="col-12 col-lg-6">
                                     <div class="input-wraper">
