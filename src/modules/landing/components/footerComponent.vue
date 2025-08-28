@@ -79,7 +79,7 @@
               <i class="fas fa-map-marker-alt icon" style="color:white"></i><span class="info">Monterrey, Nuevo Le&oacute;n, M&eacute;xico </span>
             </div>
             <div class="contact-info-card">
-              <i class="fas fa-mobile-alt icon" style="color:white"></i><a class="info" href="tel:+8117223184">+52 8139166735 </a>
+              <i class="fas fa-mobile-alt icon" style="color:white"></i><a class="info" href="tel:8123686540">+52 8123686540 </a>
             </div>
           </div>
         </div>
