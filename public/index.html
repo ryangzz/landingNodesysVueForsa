@@ -1,13 +1,394 @@
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="es" prefix="og: https://ogp.me/ns#">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <!-- fav icon -->
+
+  <!-- ===== SEO: Título y Descripción Principal ===== -->
+  <title>Kernesys | Desarrollo de Software a la Medida en Monterrey, México | ERP, CRM, Apps Móviles</title>
+  <meta name="description" content="Kernesys es una consultora de software en Monterrey, Nuevo León, México. Ofrecemos desarrollo web, aplicaciones móviles, ERP, CRM, CMS, e-commerce, integraciones de sistemas, servicios en la nube y automatización de procesos. Soluciones tecnológicas personalizadas desde 2019." />
+  <meta name="keywords" content="desarrollo de software, desarrollo web, diseño web, aplicaciones móviles, ERP, CRM, CMS, e-commerce, ecommerce, comercio electrónico, integraciones de sistemas, automatización de procesos, software a la medida, consultora de software, desarrollo de aplicaciones, sistemas empresariales, transformación digital, servicios en la nube, cloud computing, migración de sistemas, seguridad de datos, Monterrey, Nuevo León, México, Kernesys, desarrollo Laravel, desarrollo Vue.js, Flutter, NestJS, FastAPI, Spring Boot, AWS, bases de datos, MySQL, PostgreSQL, MongoDB, software personalizado, consultoría tecnológica, desarrollo de plataformas, aplicaciones web, tienda en línea, sistema de gestión, facturación electrónica, soluciones tecnológicas" />
+  <meta name="author" content="Kernesys - Consultora de Software" />
+  <meta name="copyright" content="Kernesys © 2019-2026" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <meta name="bingbot" content="index, follow" />
+  <meta name="rating" content="general" />
+  <meta name="distribution" content="global" />
+  <meta name="revisit-after" content="7 days" />
+  <meta name="language" content="es" />
+  <meta name="coverage" content="Worldwide" />
+  <meta name="target" content="all" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="MobileOptimized" content="320" />
+  <meta name="theme-color" content="#074d7e" />
+  <meta name="msapplication-TileColor" content="#074d7e" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Kernesys" />
+  <meta name="application-name" content="Kernesys" />
+  <meta name="format-detection" content="telephone=yes" />
+  <meta name="subject" content="Desarrollo de Software, Consultoría Tecnológica, Aplicaciones Móviles, ERP, CRM" />
+  <meta name="abstract" content="Kernesys: Consultora mexicana de desarrollo de software a la medida. Expertos en ERP, CRM, CMS, e-commerce, apps móviles, integraciones y servicios en la nube desde 2019." />
+  <meta name="classification" content="Business, Technology, Software Development" />
+  <meta name="category" content="Technology" />
+
+  <!-- ===== SEO: URL Canónica ===== -->
+  <link rel="canonical" href="https://www.kernesys.com/" />
+
+  <!-- ===== SEO: Idiomas Alternativos (hreflang) ===== -->
+  <link rel="alternate" hreflang="es" href="https://www.kernesys.com/" />
+  <link rel="alternate" hreflang="es-MX" href="https://www.kernesys.com/" />
+  <link rel="alternate" hreflang="x-default" href="https://www.kernesys.com/" />
+
+  <!-- ===== SEO: Geolocalización ===== -->
+  <meta name="geo.region" content="MX-NLE" />
+  <meta name="geo.placename" content="Monterrey, Nuevo León, México" />
+  <meta name="geo.position" content="25.6866;-100.3161" />
+  <meta name="ICBM" content="25.6866, -100.3161" />
+
+  <!-- ===== Open Graph (Facebook, LinkedIn, WhatsApp) ===== -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Kernesys" />
+  <meta property="og:title" content="Kernesys | Desarrollo de Software a la Medida en Monterrey, México" />
+  <meta property="og:description" content="Consultora de software en Monterrey, México. Desarrollo web, apps móviles, ERP, CRM, CMS, e-commerce, integraciones, servicios en la nube y automatización de procesos. Soluciones tecnológicas personalizadas desde 2019." />
+  <meta property="og:url" content="https://www.kernesys.com/" />
+  <meta property="og:image" content="https://www.kernesys.com/img/logokernesys.png" />
+  <meta property="og:image:alt" content="Kernesys - Desarrollo de Software a la Medida" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="es_MX" />
+  <meta property="og:locale:alternate" content="es_ES" />
+  <meta property="og:locale:alternate" content="en_US" />
+
+  <!-- ===== Twitter Card ===== -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Kernesys | Desarrollo de Software a la Medida en Monterrey, México" />
+  <meta name="twitter:description" content="Consultora de software en Monterrey, México. Desarrollo web, apps móviles, ERP, CRM, CMS, e-commerce, integraciones y servicios en la nube desde 2019." />
+  <meta name="twitter:image" content="https://www.kernesys.com/img/logokernesys.png" />
+  <meta name="twitter:image:alt" content="Kernesys - Desarrollo de Software a la Medida" />
+  <meta name="twitter:site" content="@kernesys" />
+  <meta name="twitter:creator" content="@kernesys" />
+
+  <!-- ===== Datos Estructurados JSON-LD: Organización ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Kernesys",
+    "alternateName": ["Kernesys Software", "Kernesys Consultora"],
+    "url": "https://www.kernesys.com",
+    "logo": "https://www.kernesys.com/img/logokernesys.png",
+    "image": "https://www.kernesys.com/img/logokernesys.png",
+    "description": "Consultora mexicana de desarrollo de software a la medida. Expertos en ERP, CRM, CMS, e-commerce, aplicaciones móviles, integraciones de sistemas, servicios en la nube y automatización de procesos desde 2019.",
+    "foundingDate": "2019",
+    "founder": {
+      "@type": "Organization",
+      "name": "Kernesys"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Monterrey",
+      "addressRegion": "Nuevo León",
+      "addressCountry": "MX"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "25.6866",
+      "longitude": "-100.3161"
+    },
+    "contactPoint": [
+      {
+        "@type": "ContactPoint",
+        "telephone": "+52-812-368-6540",
+        "contactType": "sales",
+        "email": "administracion@kernesys.com",
+        "availableLanguage": ["Spanish", "English"],
+        "areaServed": "Worldwide"
+      },
+      {
+        "@type": "ContactPoint",
+        "telephone": "+52-812-368-6540",
+        "contactType": "customer service",
+        "email": "administracion@kernesys.com",
+        "availableLanguage": ["Spanish", "English"]
+      }
+    ],
+    "sameAs": [
+      "https://www.facebook.com/Kernesys/",
+      "https://www.instagram.com/kernesys/",
+      "https://www.linkedin.com/company/kernesys/"
+    ],
+    "areaServed": [
+      {
+        "@type": "Country",
+        "name": "Mexico"
+      },
+      {
+        "@type": "Place",
+        "name": "Worldwide"
+      }
+    ],
+    "knowsAbout": [
+      "Desarrollo de Software",
+      "Desarrollo Web",
+      "Diseño Web",
+      "Aplicaciones Móviles",
+      "ERP",
+      "CRM",
+      "CMS",
+      "E-commerce",
+      "Integraciones de Sistemas",
+      "Automatización de Procesos",
+      "Cloud Computing",
+      "AWS",
+      "Migración de Sistemas",
+      "Seguridad de Datos",
+      "Vue.js",
+      "Laravel",
+      "Flutter",
+      "NestJS",
+      "FastAPI",
+      "Spring Boot"
+    ]
+  }
+  </script>
+
+  <!-- ===== Datos Estructurados JSON-LD: Negocio Local ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Kernesys",
+    "image": "https://www.kernesys.com/img/logokernesys.png",
+    "url": "https://www.kernesys.com",
+    "telephone": "+52-812-368-6540",
+    "email": "administracion@kernesys.com",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Monterrey",
+      "addressRegion": "Nuevo León",
+      "addressCountry": "MX"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "25.6866",
+      "longitude": "-100.3161"
+    },
+    "areaServed": {
+      "@type": "GeoCircle",
+      "geoMidpoint": {
+        "@type": "GeoCoordinates",
+        "latitude": "25.6866",
+        "longitude": "-100.3161"
+      },
+      "geoRadius": "50000"
+    },
+    "serviceArea": {
+      "@type": "Place",
+      "name": "Worldwide"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Servicios de Desarrollo de Software",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Desarrollo de Software a la Medida",
+            "description": "Desarrollamos soluciones personalizadas que se adaptan a tus necesidades específicas, optimizando procesos y mejorando eficiencia."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Automatización de Procesos",
+            "description": "Mejoramos la eficiencia operativa, reducción de costos y garantizamos consistencia en toda tu empresa."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Desarrollo Web y E-commerce",
+            "description": "Creamos sitios web y tiendas en línea atractivas, funcionales y optimizadas para el éxito de tu negocio."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Aplicaciones Móviles",
+            "description": "Desarrollo de aplicaciones móviles nativas con Flutter para iOS y Android con experiencias fluidas y de alta calidad."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Sistemas ERP y CRM",
+            "description": "Implementación y desarrollo de sistemas de gestión empresarial ERP y CRM personalizados."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Integración de Aplicaciones",
+            "description": "Unificamos procesos, mejoramos la comunicación y automatización de tareas entre los distintos sistemas de la empresa."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Servicios en la Nube (AWS)",
+            "description": "Soluciones flexibles, seguras y rentables en AWS para almacenar, gestionar y acceder a información crítica."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Seguridad de Datos",
+            "description": "Protección ante amenazas, control de acceso, cumplimiento de regulaciones y recuperación ante desastres."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Migración de Sistemas",
+            "description": "Actualización y migración tecnológica eficiente y sin interrupciones hacia nuevas tecnologías."
+          }
+        }
+      ]
+    }
+  }
+  </script>
+
+  <!-- ===== Datos Estructurados JSON-LD: WebSite con SearchAction ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Kernesys",
+    "url": "https://www.kernesys.com",
+    "description": "Consultora de desarrollo de software a la medida en Monterrey, México",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Kernesys"
+    },
+    "inLanguage": ["es", "en"]
+  }
+  </script>
+
+  <!-- ===== Datos Estructurados JSON-LD: WebPage ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Kernesys - Desarrollo de Software a la Medida",
+    "description": "Consultora de software en Monterrey, México. Desarrollo web, apps móviles, ERP, CRM, CMS, e-commerce, integraciones y servicios en la nube desde 2019.",
+    "url": "https://www.kernesys.com",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "Kernesys",
+      "url": "https://www.kernesys.com"
+    },
+    "about": {
+      "@type": "Organization",
+      "name": "Kernesys"
+    },
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "Kernesys"
+    },
+    "speakable": {
+      "@type": "SpeakableSpecification",
+      "cssSelector": [".slide-title", ".about-title", ".service-title"]
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": "https://www.kernesys.com"
+        }
+      ]
+    }
+  }
+  </script>
+
+  <!-- ===== Datos Estructurados JSON-LD: FAQ ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿Qué servicios de desarrollo de software ofrece Kernesys?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Kernesys ofrece desarrollo de software a la medida, desarrollo web, diseño web, e-commerce, aplicaciones móviles (Flutter), sistemas ERP, CRM, CMS, integración de aplicaciones, automatización de procesos, servicios en la nube (AWS), seguridad de datos y migración de sistemas."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Dónde se ubica Kernesys?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Kernesys tiene su sede en Monterrey, Nuevo León, México, pero atiende solicitudes de clientes de todo el mundo."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Qué tecnologías utiliza Kernesys?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Kernesys utiliza tecnologías modernas como Vue.js, Laravel, FastAPI, NestJS, Spring Boot para backend; Flutter para aplicaciones móviles; MySQL, PostgreSQL, MongoDB y Elasticsearch para bases de datos; y AWS para infraestructura en la nube."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Kernesys desarrolla aplicaciones móviles?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí, Kernesys desarrolla aplicaciones móviles nativas con Flutter, lo que permite crear experiencias rápidas y fluidas tanto en iOS como en Android con un código base único y eficiente."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Desde cuándo opera Kernesys?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Kernesys es una empresa 100% mexicana operando desde 2019, dedicada a impulsar la transformación digital de empresas mediante soluciones tecnológicas innovadoras y personalizadas."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- ===== Favicons ===== -->
   <link rel="icon" href="faviconn.ico" />
-  <!-- bootstarp -->
+  <link rel="apple-touch-icon" href="img/logokernesys.png" />
+
+  <!-- ===== Preconnect y DNS Prefetch para rendimiento ===== -->
+  <link rel="preconnect" href="https://www.google-analytics.com" />
+  <link rel="preconnect" href="https://www.googletagmanager.com" />
+  <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+
+  <!-- ===== CSS ===== -->
+  <!-- bootstrap -->
   <link rel="stylesheet" href="css/bootstrap.min.css" />
   <!-- Fancybox -->
   <link rel="stylesheet" href="css/jquery.fancybox.min.css" />
@@ -20,16 +401,40 @@
   <!-- Splitting -->
   <link rel="stylesheet" href="css/splitting.css" />
   <!-- Font Family -->
-  <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900" /> -->
-  <link rel="stylesheet" href="css/fonts-nunito.css">
+  <link rel="stylesheet" href="css/fonts-nunito.css" />
   <!-- styles-LTR -->
   <link rel="stylesheet" href="css/styles-LTR.css" />
-  <title>Kernesys</title>
 </head>
 
 <body class="landing-page-demo overlay-is-linear-gradient rounded-btns">
   <div id="app">
-
+    <!-- Contenido de respaldo para SEO (visible para crawlers cuando JS no carga) -->
+    <noscript>
+      <div style="padding: 40px; max-width: 900px; margin: 0 auto; font-family: 'Nunito', sans-serif;">
+        <h1>Kernesys - Desarrollo de Software a la Medida en Monterrey, México</h1>
+        <p>Somos una consultora de software 100% mexicana con sede en Monterrey, Nuevo León. Desde 2019 impulsamos la transformación digital de empresas con soluciones tecnológicas innovadoras y personalizadas.</p>
+        <h2>Nuestros Servicios</h2>
+        <ul>
+          <li><strong>Desarrollo de Software a la Medida:</strong> Soluciones personalizadas que se adaptan a tus necesidades específicas.</li>
+          <li><strong>Automatización de Procesos:</strong> Optimización operativa y reducción de costos.</li>
+          <li><strong>Desarrollo Web y Diseño Web:</strong> Sitios web modernos, responsivos y optimizados.</li>
+          <li><strong>E-commerce:</strong> Tiendas en línea funcionales y atractivas.</li>
+          <li><strong>Aplicaciones Móviles:</strong> Apps nativas con Flutter para iOS y Android.</li>
+          <li><strong>Sistemas ERP y CRM:</strong> Gestión empresarial personalizada.</li>
+          <li><strong>Integración de Sistemas:</strong> Unificación de procesos empresariales.</li>
+          <li><strong>Servicios en la Nube (AWS):</strong> Infraestructura escalable y segura.</li>
+          <li><strong>Seguridad de Datos:</strong> Protección y cumplimiento regulatorio.</li>
+          <li><strong>Migración de Sistemas:</strong> Actualización tecnológica sin interrupciones.</li>
+        </ul>
+        <h2>Tecnologías</h2>
+        <p>Vue.js, Laravel, FastAPI, NestJS, Spring Boot, Flutter, MySQL, PostgreSQL, MongoDB, Elasticsearch, AWS.</p>
+        <h2>Contacto</h2>
+        <p>Email: <a href="mailto:administracion@kernesys.com">administracion@kernesys.com</a></p>
+        <p>Teléfono: <a href="tel:+528123686540">+52 812 368 6540</a></p>
+        <p>Ubicación: Monterrey, Nuevo León, México</p>
+        <p>Web: <a href="https://www.kernesys.com">www.kernesys.com</a></p>
+      </div>
+    </noscript>
   </div>
 
   <!--End Page Header-->

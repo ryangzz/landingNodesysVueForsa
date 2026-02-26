@@ -14,7 +14,7 @@
 
                 </p>
               </div>
-              <img class="about-img img-fluid" src="img/about-1_photo.png" alt="Our vision" />
+              <img class="about-img img-fluid" src="img/about-1_photo.png" alt="Kernesys - Empresa mexicana de desarrollo de software y transformación digital desde 2019" />
             </div>
           </div>
           <div class="col-12 col-lg-6 d-flex align-items-center about-col wow fadeInUp" data-wow-delay="0.4s">
@@ -85,7 +85,7 @@
                   <div class="col-12">
                     <ul class="menu-items">
                       <li class="info-item">
-                        <img class="info-img-icon" src="img/icon-2.png" alt="showcase image"
+                        <img class="info-img-icon" src="img/icon-2.png" alt="Experiencias únicas en desarrollo de software - Kernesys"
                         draggable="false" />
                         <div class="info-content">
                           <h5 class="info-title">Experiencias unicas</h5>
@@ -95,7 +95,7 @@
                         </div>
                       </li>
                       <li class="info-item">
-                        <img class="info-img-icon" src="img/icon-3.png" alt="showcase image"
+                        <img class="info-img-icon" src="img/icon-3.png" alt="Valor empresarial con tecnología avanzada - Kernesys"
                         draggable="false" />
                         <div class="info-content">
                           <h5 class="info-title">Valor empresarial</h5>
@@ -120,7 +120,7 @@
                   Innovamos para optimizar y potenciar tu éxito empresarial
                 </p>
               </div>
-              <img class="img-fluid about-img" src="img/about-2_photo.png" alt="Our vision" />
+              <img class="img-fluid about-img" src="img/about-2_photo.png" alt="Kernesys - Misión de acompañar a clientes hacia el éxito con soluciones tecnológicas" />
             </div>
           </div>
         </div>

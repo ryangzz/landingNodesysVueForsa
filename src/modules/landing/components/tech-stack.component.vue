@@ -11,7 +11,7 @@
     <div class="container">
       <div class="row justify-content-between" data-wow-delay="0.4s">
         <div class="col-lg-6 col-md-6">
-          <img class="w-100 tech-stack-img" src="img/tech_stack_1.jpg" alt="Image">          
+          <img class="w-100 tech-stack-img" src="img/tech_stack_1.jpg" alt="Stack tecnológico de Kernesys: Vue.js, Laravel, Flutter, NestJS, FastAPI, Spring Boot, AWS, MySQL, PostgreSQL, MongoDB">          
         </div>
         <div class="col-md-6 col-lg-5">
 

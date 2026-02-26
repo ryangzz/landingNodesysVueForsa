@@ -16,10 +16,10 @@
         <div class="col-12 col-md-6 col-lg-4 mx-auto">
           <div class="service-box wow fadeInUp" data-wow-delay="0.2s">
             <div class="service-icon">
-              <img class="img-icon" src="img/1-services.png" alt="service image 1" draggable="false" />
+              <img class="img-icon" src="img/1-services.png" alt="Automatización de procesos empresariales - Kernesys Monterrey" draggable="false" />
             </div>
             <div class="service-content">
-              <h3 class="service-title">Automatizacion de procesos</h3>
+              <h3 class="service-title">Automatización de procesos</h3>
               <p class="service-text">
                 Mejoramos la eficiencia operativa, reduccion de costos y garantizar la consistencia en toda tu empresa, permitiéndote centrarte en el crecimiento y la innovación.
               </p>
@@ -31,7 +31,7 @@
         <div class="col-12 col-md-6 col-lg-4 mx-auto">
           <div class="service-box wow fadeInUp" data-wow-delay="0.4s">
             <div class="service-icon">
-              <img class="img-icon" src="img/2-services.png" alt="service image 2" draggable="false" />
+              <img class="img-icon" src="img/2-services.png" alt="Desarrollo de software a la medida - Kernesys México" draggable="false" />
             </div>
             <div class="service-content">
               <h3 class="service-title">Desarrollo de software a la medida</h3>
@@ -50,7 +50,7 @@
         <div class="col-12 col-md-6 col-lg-4 mx-auto">
           <div class="service-box wow fadeInUp" data-wow-delay="0.2s">
             <div class="service-icon">
-              <img class="img-icon" src="img/4-services.png" alt="service image 1" draggable="false" />
+              <img class="img-icon" src="img/4-services.png" alt="Servicios en la nube AWS - Kernesys Monterrey" draggable="false" />
             </div>
             <div class="service-content">
               <h3 class="service-title">Servicios en la nube</h3>
@@ -64,10 +64,10 @@
         <div class="col-12 col-md-6 col-lg-4 mx-auto">
           <div class="service-box wow fadeInUp" data-wow-delay="0.2s">
             <div class="service-icon">
-              <img class="img-icon" src="img/4-services.png" alt="service image 1" draggable="false" />
+              <img class="img-icon" src="img/4-services.png" alt="Integración de aplicaciones y sistemas - Kernesys" draggable="false" />
             </div>
             <div class="service-content">
-              <h3 class="service-title">Integracion de aplicaciones</h3>
+              <h3 class="service-title">Integración de aplicaciones</h3>
               <p class="service-text">
                 Unificamos procesos, mejoramos la comunicacion, automatizacion de tareas y la reduccion de errores de los distintos sistemas de la empresa.
               </p>
@@ -78,7 +78,7 @@
         <div class="col-12 col-md-6 col-lg-4 mx-auto">
           <div class="service-box wow fadeInUp" data-wow-delay="0.2s">
             <div class="service-icon">
-              <img class="img-icon" src="img/4-services.png" alt="service image 1" draggable="false" />
+              <img class="img-icon" src="img/4-services.png" alt="Seguridad de datos empresariales - Kernesys" draggable="false" />
             </div>
             <div class="service-content">
               <h3 class="service-title">Seguridad en los datos</h3>
@@ -92,10 +92,10 @@
         <div class="col-12 col-md-6 col-lg-4 mx-auto">
           <div class="service-box wow fadeInUp" data-wow-delay="0.2s">
             <div class="service-icon">
-              <img class="img-icon" src="img/4-services.png" alt="service image 1" draggable="false" />
+              <img class="img-icon" src="img/4-services.png" alt="Integración y calidad de datos - Kernesys" draggable="false" />
             </div>
             <div class="service-content">
-              <h3 class="service-title">Integracion con calidad de los datos</h3>
+              <h3 class="service-title">Integración con calidad de los datos</h3>
               <p class="service-text">
                 Nuestro servicio ayuda a garantizar la precision, calidad y gestion de los datos para sea eficiente la administracion de tu empresa.
               </p>

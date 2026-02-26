@@ -23,7 +23,7 @@
             <div class="slide-content">
               <div class="slider-bg">
                 <div class="overlay-color"></div>
-                <img class="slider-bg-img" src="img/slide1.jpg" alt="slider-bg 1" />
+                <img class="slider-bg-img" src="img/slide1.jpg" alt="Kernesys - Software a la medida para impulsar tu negocio en Monterrey" />
               </div>
               <div class="container">
                 <div class="hero-text-area">
@@ -49,7 +49,7 @@
             <div class="slide-content">
               <div class="slider-bg">
                 <div class="overlay-color"></div>
-                <img class="slider-bg-img" src="img/slide2.jpg" alt="slider-bg 2" />
+                <img class="slider-bg-img" src="img/slide2.jpg" alt="Kernesys - Migraciones de sistemas eficientes y sin interrupciones" />
               </div>
               <div class="container">
                 <div class="hero-text-area">
@@ -86,7 +86,7 @@
             <div class="slide-content">
               <div class="slider-bg">
                 <div class="overlay-color"></div>
-                <img class="slider-bg-img" src="img/slide3.jpg" alt="slider-bg 3" />
+                <img class="slider-bg-img" src="img/slide3.jpg" alt="Kernesys - Manejo profesional y de calidad en proyectos de software" />
               </div>
               <div class="container">
                 <div class="hero-text-area">
