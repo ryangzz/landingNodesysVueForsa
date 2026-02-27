@@ -168,6 +168,8 @@ Estas metas controlan cómo se ve tu enlace cuando alguien lo comparte.
 
 > **Importante:** La imagen OG ideal es de **1200x630 px**. Si no tienes una imagen específica, usa el logo sobre un fondo del color de tu marca.
 
+> **Actualización aplicada:** Si tu logo principal es blanco y se pierde en previews, usa una versión oscura (por ejemplo `logoblack.png`) para `og:image`, `twitter:image`, `logo/image` en JSON-LD y también en `sitemap.xml`.
+
 ---
 
 ## Paso 5: Twitter Card
@@ -208,10 +210,14 @@ Los datos estructurados permiten a Google mostrar **rich snippets** (resultados 
     "addressRegion": "[ESTADO]",
     "addressCountry": "[CÓDIGO PAÍS ISO]"
   },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": "[LATITUD]",
-    "longitude": "[LONGITUD]"
+  "location": {
+    "@type": "Place",
+    "name": "[CIUDAD], [ESTADO], [PAÍS]",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "[LATITUD]",
+      "longitude": "[LONGITUD]"
+    }
   },
   "contactPoint": [
     {
@@ -234,6 +240,8 @@ Los datos estructurados permiten a Google mostrar **rich snippets** (resultados 
 }
 </script>
 ```
+
+> **Importante:** En `Organization`, evita usar `"geo"` directamente. Para pasar validadores (Schema.org / Rich Results), usa `"location"` con un objeto `Place` que contenga `"geo"`.
 
 ### Schema 2: ProfessionalService (Negocio Local)
 
@@ -311,10 +319,6 @@ Los datos estructurados permiten a Google mostrar **rich snippets** (resultados 
     "@type": "WebSite",
     "name": "[MARCA]",
     "url": "https://www.[DOMINIO].com"
-  },
-  "speakable": {
-    "@type": "SpeakableSpecification",
-    "cssSelector": [".slide-title", ".about-title", ".service-title"]
   },
   "breadcrumb": {
     "@type": "BreadcrumbList",
@@ -527,6 +531,8 @@ Allow: /*.svg$
   to = "/index.html"
   status = 200
 ```
+
+> **Actualización aplicada:** Para evitar URLs con `/#/`, usar `createWebHistory(process.env.BASE_URL)` en el router (no `createWebHashHistory()`).
 
 ### ⚠️ CUIDADO: No agregar redirección www en netlify.toml
 
@@ -800,6 +806,14 @@ Esto hace que Netlify sirva HTML renderizado a los bots de Google en lugar del s
 - **Causa:** Error de sintaxis JSON (coma extra, comilla faltante)
 - **Solución:** Validar el JSON en https://jsonlint.com/ antes de pegarlo
 
+### Advertencia: `geo` no reconocido en Organization
+- **Causa:** Se definió `"geo"` directamente dentro de `Organization`
+- **Solución:** Cambiar a `"location"` (`@type: "Place"`) y anidar ahí `"geo"`
+
+### Error `cssSelector` no encontrado en WebPage
+- **Causa:** Uso de `speakable.cssSelector` en una SPA donde esos selectores no están en el HTML inicial
+- **Solución:** Eliminar `speakable` del schema `WebPage` o usar rutas SSR/prerender con marcado estático real
+
 ### Open Graph no muestra preview correcta
 - **Causa:** Facebook cachea las previews. Necesitas purgarlo
 - **Solución:** Usar el [Facebook Sharing Debugger](https://developers.facebook.com/tools/debug/) y hacer "Scrape Again"
@@ -847,5 +861,5 @@ Esto hace que Netlify sirva HTML renderizado a los bots de Google en lugar del s
 
 ---
 
-> **Última actualización:** 26 de febrero de 2026  
+> **Última actualización:** 27 de febrero de 2026  
 > **Próxima revisión recomendada:** Cada 3 meses o ante cambios significativos en la página
