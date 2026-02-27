@@ -90,7 +90,7 @@
         <div class="row ">
           <div class="col-12 col-md-6">
             <p class="creadits">
-              &copy; 2024 Creado Por: Kernesys
+              &copy; 2019 Creado Por: Kernesys
             </p>
           </div>
           <div class="col-12 col-md-6" >

@@ -30,18 +30,12 @@ onMounted(() => {
             <li class="nav-item">
               <a class="nav-link" href="#about"><i class="fas fa-cogs icon"></i>Nosotros</a>
             </li>
-            <!-- <li class="nav-item">
-              <a class="nav-link" href="#portfolio"><i class="fas fa-camera-retro icon"></i>Portfolio</a>
+            <li class="nav-item">
+              <a class="nav-link" href="#our-clients"><i class="fas fa-handshake icon"></i>Clientes</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#pricing"><i class="fas fa-file-invoice-dollar icon"></i>Precios</a>
+              <a class="nav-link" href="#tech-stack"><i class="fas fa-layer-group icon"></i>Stack</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#testimonials"><i class="fas fa-comments icon"></i>Testimmonios</a>
-            </li> -->
-            <!-- <li class="nav-item">
-              <a class="nav-link" href="#faq"><i class="fas fa-question-circle icon"></i>Preguntas</a>
-            </li> -->
             <li class="nav-item">
               <a class="nav-link" href="#contact-us"><i class="fas fa-mobile-alt icon"></i>Contacto</a>
             </li>
