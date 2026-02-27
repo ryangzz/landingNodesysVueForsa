@@ -70,7 +70,7 @@
           <div class="footer-col-content-wrapper">
             <div class="contact-info-card">
               <i class="fas fa-envelope icon" style="color:white"></i><a class="text-lowercase info"
-                href="mailto:contacto@kernesys.com">administracion@kernesys.com</a>
+                href="mailto:contacto@kernesys.com">contacto@kernesys.com</a>
             </div>
             <div class="contact-info-card">
               <i class="fas fa-globe-africa icon" style="color:white"></i><a class="text-lowercase info" href="#0">www.kernesys.com</a>
@@ -79,7 +79,7 @@
               <i class="fas fa-map-marker-alt icon" style="color:white"></i><span class="info">Monterrey, Nuevo Le&oacute;n, M&eacute;xico </span>
             </div>
             <div class="contact-info-card">
-              <i class="fas fa-mobile-alt icon" style="color:white"></i><a class="info" href="tel:8123686540">+52 8123686540 </a>
+              <i class="fas fa-mobile-alt icon" style="color:white"></i><a class="info" href="tel:8132471163">+52 8132471163 </a>
             </div>
           </div>
         </div>

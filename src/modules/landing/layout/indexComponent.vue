@@ -8,6 +8,7 @@
   <contact-us-component/>
   <footer-component></footer-component>
   <loading-component></loading-component>
+  <whatsapp-float-component></whatsapp-float-component>
   <back-top-component></back-top-component>
   
 </template>
@@ -27,6 +28,7 @@ export default{
     'ourclients-component': defineAsyncComponent(()=> import('../components/ourClientsComponent.vue')),
     'footer-component':defineAsyncComponent(()=> import('../components/footerComponent.vue')),
     'loading-component':defineAsyncComponent(()=> import('../components/loadingComponent.vue')),
+    'whatsapp-float-component':defineAsyncComponent(()=> import('../components/whatsappFloatComponent.vue')),
     'back-top-component':defineAsyncComponent(()=> import('../components/backTopComponent.vue')),
     'TechStack': defineAsyncComponent(()=> import('../components/tech-stack.component.vue'))
   },
