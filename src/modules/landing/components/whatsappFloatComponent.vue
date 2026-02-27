@@ -1,7 +1,7 @@
 <template>
   <a
     class="whatsapp-float"
-    href="https://wa.me/528123686540?text=Hola%20Kernesys,%20me%20gustar%C3%ADa%20informaci%C3%B3n%20sobre%20sus%20servicios."
+    href="https://wa.me/528132471163?text=Hola%20Kernesys,%20me%20gustar%C3%ADa%20informaci%C3%B3n%20sobre%20sus%20servicios."
     target="_blank"
     rel="noopener noreferrer"
     aria-label="Enviar mensaje por WhatsApp a Kernesys"
