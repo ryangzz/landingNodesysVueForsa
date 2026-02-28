@@ -23,7 +23,11 @@
             <div class="slide-content">
               <div class="slider-bg">
                 <div class="overlay-color"></div>
-                <img class="slider-bg-img" src="img/slide1.jpg" alt="Kernesys - Software a la medida para impulsar tu negocio en Monterrey" width="7952" height="5304" loading="eager" fetchpriority="high" decoding="async" />
+                <picture>
+                  <source type="image/webp" media="(max-width: 768px)" srcset="img/slide1-mobile.webp" />
+                  <source type="image/webp" srcset="img/slide1.webp" />
+                  <img class="slider-bg-img" src="img/slide1.jpg" alt="Kernesys - Software a la medida para impulsar tu negocio en Monterrey" width="1920" height="1281" loading="eager" fetchpriority="high" decoding="async" />
+                </picture>
               </div>
               <div class="container">
                 <div class="hero-text-area">
@@ -49,7 +53,11 @@
             <div class="slide-content">
               <div class="slider-bg">
                 <div class="overlay-color"></div>
-                <img class="slider-bg-img" src="img/slide2.jpg" alt="Kernesys - Migraciones de sistemas eficientes y sin interrupciones" width="7952" height="5304" loading="lazy" decoding="async" />
+                <picture>
+                  <source type="image/webp" media="(max-width: 768px)" srcset="img/slide2-mobile.webp" />
+                  <source type="image/webp" srcset="img/slide2.webp" />
+                  <img class="slider-bg-img" src="img/slide2.jpg" alt="Kernesys - Migraciones de sistemas eficientes y sin interrupciones" width="1920" height="1281" loading="lazy" decoding="async" />
+                </picture>
               </div>
               <div class="container">
                 <div class="hero-text-area">
@@ -86,7 +94,11 @@
             <div class="slide-content">
               <div class="slider-bg">
                 <div class="overlay-color"></div>
-                <img class="slider-bg-img" src="img/slide3.jpg" alt="Kernesys - Manejo profesional y de calidad en proyectos de software" width="5760" height="3840" loading="lazy" decoding="async" />
+                <picture>
+                  <source type="image/webp" media="(max-width: 768px)" srcset="img/slide3-mobile.webp" />
+                  <source type="image/webp" srcset="img/slide3.webp" />
+                  <img class="slider-bg-img" src="img/slide3.jpg" alt="Kernesys - Manejo profesional y de calidad en proyectos de software" width="1920" height="1280" loading="lazy" decoding="async" />
+                </picture>
               </div>
               <div class="container">
                 <div class="hero-text-area">

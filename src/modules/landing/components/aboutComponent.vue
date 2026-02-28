@@ -14,7 +14,10 @@
 
                 </p>
               </div>
-              <img class="about-img img-fluid" src="img/about-1_photo.png" alt="Kernesys - Empresa mexicana de desarrollo de software y transformación digital desde 2019" width="616" height="800" loading="lazy" decoding="async" />
+              <picture>
+                <source type="image/webp" srcset="img/about-1_photo.webp" />
+                <img class="about-img img-fluid" src="img/about-1_photo.png" alt="Kernesys - Empresa mexicana de desarrollo de software y transformación digital desde 2019" width="616" height="800" loading="lazy" decoding="async" />
+              </picture>
             </div>
           </div>
           <div class="col-12 col-lg-6 d-flex align-items-center about-col wow fadeInUp" data-wow-delay="0.4s">
@@ -120,7 +123,10 @@
                   Innovamos para optimizar y potenciar tu éxito empresarial
                 </p>
               </div>
-              <img class="img-fluid about-img" src="img/about-2_photo.png" alt="Kernesys - Misión de acompañar a clientes hacia el éxito con soluciones tecnológicas" width="600" height="800" loading="lazy" decoding="async" />
+              <picture>
+                <source type="image/webp" srcset="img/about-2_photo.webp" />
+                <img class="img-fluid about-img" src="img/about-2_photo.png" alt="Kernesys - Misión de acompañar a clientes hacia el éxito con soluciones tecnológicas" width="600" height="800" loading="lazy" decoding="async" />
+              </picture>
             </div>
           </div>
         </div>

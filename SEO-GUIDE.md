@@ -23,8 +23,12 @@
 12. [Paso 12: Configurar vue.config.js](#paso-12-configurar-vueconfigjs)
 13. [Paso 13: Verificación y Testing](#paso-13-verificación-y-testing)
 14. [Paso 14: Google Search Console](#paso-14-google-search-console)
-15. [Errores Comunes y Soluciones](#errores-comunes-y-soluciones)
-16. [Checklist Final](#checklist-final)
+15. [Paso 15: Facebook App ID (fb:app_id)](#paso-15-facebook-app-id-fbapp_id)
+16. [Paso 16: Campos de Dirección Postal en JSON-LD](#paso-16-campos-de-dirección-postal-en-json-ld)
+17. [Paso 17: Optimización de Imágenes (WebP + Responsive)](#paso-17-optimización-de-imágenes-webp--responsive)
+18. [Paso 18: Accesibilidad (a11y)](#paso-18-accesibilidad-a11y)
+19. [Errores Comunes y Soluciones](#errores-comunes-y-soluciones)
+20. [Checklist Final](#checklist-final)
 
 ---
 
@@ -164,11 +168,14 @@ Estas metas controlan cómo se ve tu enlace cuando alguien lo comparte.
 <meta property="og:locale" content="es_MX" />
 <meta property="og:locale:alternate" content="es_ES" />
 <meta property="og:locale:alternate" content="en_US" />
+<meta property="fb:app_id" content="[TU_APP_ID_DE_FACEBOOK]" />
 ```
 
 > **Importante:** La imagen OG ideal es de **1200x630 px**. Si no tienes una imagen específica, usa el logo sobre un fondo del color de tu marca.
 
 > **Actualización aplicada:** Si tu logo principal es blanco y se pierde en previews, usa una versión oscura (por ejemplo `logoblack.png`) para `og:image`, `twitter:image`, `logo/image` en JSON-LD y también en `sitemap.xml`.
+
+> **Actualización 28/02/2026:** Se debe incluir `fb:app_id` para que Facebook valide correctamente la página. Ver [Paso 15](#paso-15-facebook-app-id-fbapp_id) para detalles.
 
 ---
 
@@ -796,6 +803,222 @@ Esto hace que Netlify sirva HTML renderizado a los bots de Google en lugar del s
 
 ---
 
+## Paso 15: Facebook App ID (fb:app_id)
+
+**Archivo:** `public/index.html` → dentro de `<head>`, junto a las etiquetas Open Graph
+
+Facebook requiere la meta `fb:app_id` para validar correctamente la propiedad del sitio y habilitar funcionalidades avanzadas de Open Graph (insights, moderación de comentarios, etc.).
+
+### Cómo obtener el App ID
+
+1. Ir a [Facebook Developers](https://developers.facebook.com/)
+2. **Mis aplicaciones** → Crear nueva aplicación (o usar una existente)
+3. En el panel de la app, copiar el **App ID** (número de ~16 dígitos)
+
+### Implementación
+
+```html
+<!-- Agregar después de las metas og:locale -->
+<meta property="fb:app_id" content="[TU_APP_ID]" />
+```
+
+### Ejemplo real aplicado
+
+```html
+<meta property="og:locale:alternate" content="en_US" />
+<meta property="fb:app_id" content="1303620424923567" />
+```
+
+### Verificación
+
+- Usar el [Facebook Sharing Debugger](https://developers.facebook.com/tools/debug/) para verificar que `fb:app_id` aparece correctamente
+- Si ya existía un caché anterior, hacer clic en **"Scrape Again"**
+
+---
+
+## Paso 16: Campos de Dirección Postal en JSON-LD
+
+**Archivo:** `public/index.html` → bloques JSON-LD de `Organization` y `ProfessionalService`
+
+Google Rich Results Test muestra advertencias no críticas cuando faltan `streetAddress` y `postalCode` en los objetos `PostalAddress` de los datos estructurados.
+
+### Problema detectado
+
+```
+Falta el campo "postalCode" (opcional)
+Falta el campo "streetAddress" (opcional)
+```
+
+### Solución
+
+Agregar `streetAddress` y `postalCode` en **ambos** bloques `PostalAddress` (Organization y ProfessionalService):
+
+```json
+"address": {
+  "@type": "PostalAddress",
+  "streetAddress": "[CALLE Y NÚMERO]",
+  "addressLocality": "[CIUDAD]",
+  "addressRegion": "[ESTADO]",
+  "postalCode": "[CÓDIGO POSTAL]",
+  "addressCountry": "[CÓDIGO PAÍS ISO]"
+}
+```
+
+### Ejemplo real aplicado
+
+```json
+"address": {
+  "@type": "PostalAddress",
+  "streetAddress": "Monterrey",
+  "addressLocality": "Monterrey",
+  "addressRegion": "Nuevo León",
+  "postalCode": "64000",
+  "addressCountry": "MX"
+}
+```
+
+> **Nota:** Aunque estos campos son opcionales, completarlos elimina advertencias y fortalece el SEO local.
+
+---
+
+## Paso 17: Optimización de Imágenes (WebP + Responsive)
+
+**Archivos modificados:**
+- `src/modules/landing/components/sliderComponent.vue`
+- `src/modules/landing/components/aboutComponent.vue`
+- `src/modules/landing/components/ourClientsComponent.vue`
+- `public/index.html` (preload)
+- `public/img/` (archivos WebP generados)
+
+PageSpeed Insights reporta problemas de rendimiento cuando las imágenes son demasiado pesadas o no tienen dimensiones explícitas. Esta optimización ataca los diagnósticos:
+- "Mejorar la entrega de imágenes"
+- "Los elementos de imagen no tienen width y height explícitos"
+- "Evita cargas útiles de red de gran tamaño"
+
+### 17.1 Convertir imágenes a WebP con redimensionado
+
+Instalar `cwebp` (herramienta oficial de Google):
+
+```bash
+sudo apt-get install -y webp
+```
+
+Convertir y redimensionar imágenes pesadas:
+
+```bash
+cd public/img
+
+# Desktop (1920px de ancho)
+cwebp -q 82 -resize 1920 0 slide1.jpg -o slide1.webp
+cwebp -q 82 -resize 1920 0 slide2.jpg -o slide2.webp
+cwebp -q 82 -resize 1920 0 slide3.jpg -o slide3.webp
+
+# Mobile (960px de ancho)
+cwebp -q 82 -resize 960 0 slide1.jpg -o slide1-mobile.webp
+cwebp -q 82 -resize 960 0 slide2.jpg -o slide2-mobile.webp
+cwebp -q 82 -resize 960 0 slide3.jpg -o slide3-mobile.webp
+
+# Imágenes PNG (sin redimensionar, solo convertir)
+cwebp -q 80 about-1_photo.png -o about-1_photo.webp
+cwebp -q 80 about-2_photo.png -o about-2_photo.webp
+```
+
+### Tabla de ahorro obtenido
+
+| Archivo | Original | WebP Desktop | WebP Mobile | Ahorro |
+|---|---|---|---|---|
+| slide1 | 954 KB | 203 KB | 65 KB | -79% / -93% |
+| slide2 | 634 KB | 134 KB | 45 KB | -79% / -93% |
+| slide3 | 344 KB | 129 KB | 45 KB | -63% / -87% |
+| about-1 | 151 KB | 53 KB | — | -65% |
+| about-2 | 190 KB | 57 KB | — | -70% |
+
+### 17.2 Usar `<picture>` con fallback
+
+Reemplazar cada `<img>` por un `<picture>` que sirva WebP con fallback al formato original:
+
+```html
+<!-- ❌ ANTES -->
+<img class="slider-bg-img" src="img/slide1.jpg" alt="..." />
+
+<!-- ✅ DESPUÉS -->
+<picture>
+  <source type="image/webp" media="(max-width: 768px)" srcset="img/slide1-mobile.webp" />
+  <source type="image/webp" srcset="img/slide1.webp" />
+  <img class="slider-bg-img" src="img/slide1.jpg" alt="..." width="1920" height="1281" loading="eager" fetchpriority="high" decoding="async" />
+</picture>
+```
+
+> **Reglas para atributos de carga:**
+> - Primera imagen visible (hero/LCP): `loading="eager"` + `fetchpriority="high"`
+> - Demás imágenes: `loading="lazy"` + `decoding="async"`
+> - **Siempre** incluir `width` y `height` para evitar CLS
+
+### 17.3 Preload de imagen hero (LCP)
+
+**Archivo:** `public/index.html` → dentro de `<head>`, al inicio
+
+```html
+<link rel="preload" as="image" type="image/webp" href="img/slide1.webp" media="(min-width: 769px)" />
+<link rel="preload" as="image" type="image/webp" href="img/slide1-mobile.webp" media="(max-width: 768px)" />
+```
+
+Esto le indica al navegador que descargue la imagen hero antes de procesar el CSS/JS, mejorando el LCP significativamente.
+
+### 17.4 Dimensiones explícitas en logos de clientes
+
+Todas las imágenes deben tener `width` y `height` reales (obtener con `file imagen.png`):
+
+```html
+<!-- ❌ ANTES -->
+<img class="img-fluid logo" src="img/Coexsa.png" alt=" " />
+
+<!-- ✅ DESPUÉS -->
+<img class="img-fluid logo" src="img/Coexsa.png" alt="Logo de Coexsa" width="200" height="200" loading="lazy" decoding="async" />
+```
+
+> **Importante:** No dejar `alt=" "` vacío en logos de clientes; usar `alt="Logo de [Nombre]"` para accesibilidad y SEO.
+
+---
+
+## Paso 18: Accesibilidad (a11y)
+
+**Archivos modificados:**
+- `src/modules/landing/components/sliderComponent.vue`
+- `src/modules/landing/components/ourClientsComponent.vue`
+
+Lighthouse reporta "Los enlaces no tienen nombres reconocibles" cuando un `<a>` solo contiene un icono `<i>` sin texto visible ni `aria-label`.
+
+### Enlaces con íconos (redes sociales)
+
+```html
+<!-- ❌ ANTES -->
+<a class="sc-link" href="https://www.facebook.com/Kernesys/">
+  <i class="fab fa-facebook-f sc-icon"></i>
+</a>
+
+<!-- ✅ DESPUÉS -->
+<a class="sc-link" href="https://www.facebook.com/Kernesys/" aria-label="Facebook de Kernesys">
+  <i class="fab fa-facebook-f sc-icon"></i>
+</a>
+```
+
+Agregar `aria-label` descriptivo a **todos** los enlaces que contengan solo íconos (redes sociales, WhatsApp flotante, botones de navegación del slider, etc.).
+
+### Alt descriptivos en imágenes de clientes
+
+Cambiar `alt=" "` por descripciones reales:
+
+```html
+<!-- ❌ MAL -->
+<img src="img/Coexsa.png" alt=" " />
+
+<!-- ✅ BIEN -->
+<img src="img/Coexsa.png" alt="Logo de Coexsa" />
+```
+
+---
+
 ## Errores Comunes y Soluciones
 
 ### ERR_TOO_MANY_REDIRECTS
@@ -855,11 +1078,19 @@ Esto hace que Netlify sirva HTML renderizado a los bots de Google en lugar del s
 □ Sitemap enviado a Google
 □ Indexación solicitada
 □ Prerendering activado en Netlify (opcional)
+□ fb:app_id configurado en Open Graph
+□ streetAddress y postalCode en JSON-LD (Organization + ProfessionalService)
+□ Imágenes convertidas a WebP con versiones responsive (mobile/desktop)
+□ Preload de imagen hero (LCP) en <head>
+□ Todas las imágenes con width y height explícitos
+□ loading="lazy" en imágenes no críticas
+□ fetchpriority="high" en imagen hero (LCP)
+□ aria-label en enlaces con solo íconos (accesibilidad)
 □ Build exitoso sin errores
 □ Verificación con script de consola: 100%
 ```
 
 ---
 
-> **Última actualización:** 27 de febrero de 2026  
+> **Última actualización:** 28 de febrero de 2026  
 > **Próxima revisión recomendada:** Cada 3 meses o ante cambios significativos en la página
