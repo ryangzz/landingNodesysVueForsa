@@ -32,7 +32,7 @@
             </div>
             <div class="swiper-slide">
               <div class="client-logo wow fadeInUp" data-wow-delay=".2s">
-                <a href="#0"><picture><source type="image/webp" srcset="img/Coexsa.webp" /><img class="img-fluid logo" src="img/Coexsa.png" alt="Logo de Coexsa" width="200" height="200" loading="lazy" decoding="async" /></picture></a>
+                <a href="#0"><picture><source type="image/webp" srcset="img/Coexsa.webp" /><img class="img-fluid logo" src="img/Coexsa.png" alt="Logo de Grupo Coexsa" width="200" height="200" loading="lazy" decoding="async" style="min-width: 140px; max-height: 120px;" /></picture></a>
               </div>
             </div>
             <div class="swiper-slide">
