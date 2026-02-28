@@ -88,8 +88,7 @@
                   <div class="col-12">
                     <ul class="menu-items">
                       <li class="info-item">
-                        <img class="info-img-icon" src="img/icon-2.png" alt="Experiencias únicas en desarrollo de software - Kernesys"
-                        draggable="false" />
+                        <picture><source type="image/webp" srcset="img/icon-2.webp" /><img class="info-img-icon" src="img/icon-2.png" alt="Experiencias únicas en desarrollo de software - Kernesys" width="128" height="128" draggable="false" loading="lazy" decoding="async" /></picture>
                         <div class="info-content">
                           <h5 class="info-title">Experiencias unicas</h5>
                           <p class="info-text">
@@ -98,8 +97,7 @@
                         </div>
                       </li>
                       <li class="info-item">
-                        <img class="info-img-icon" src="img/icon-3.png" alt="Valor empresarial con tecnología avanzada - Kernesys"
-                        draggable="false" />
+                        <picture><source type="image/webp" srcset="img/icon-3.webp" /><img class="info-img-icon" src="img/icon-3.png" alt="Valor empresarial con tecnología avanzada - Kernesys" width="128" height="128" draggable="false" loading="lazy" decoding="async" /></picture>
                         <div class="info-content">
                           <h5 class="info-title">Valor empresarial</h5>
                           <p class="info-text">

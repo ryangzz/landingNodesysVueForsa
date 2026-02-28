@@ -27,8 +27,10 @@
 16. [Paso 16: Campos de Dirección Postal en JSON-LD](#paso-16-campos-de-dirección-postal-en-json-ld)
 17. [Paso 17: Optimización de Imágenes (WebP + Responsive)](#paso-17-optimización-de-imágenes-webp--responsive)
 18. [Paso 18: Accesibilidad (a11y)](#paso-18-accesibilidad-a11y)
-19. [Errores Comunes y Soluciones](#errores-comunes-y-soluciones)
-20. [Checklist Final](#checklist-final)
+19. [Paso 19: Security Headers (CSP + Cross-Origin)](#paso-19-security-headers-csp--cross-origin)
+20. [Paso 20: Optimización PageSpeed Round 2 (CLS, Imágenes, Fuentes)](#paso-20-optimización-pagespeed-round-2-cls-imágenes-fuentes)
+21. [Errores Comunes y Soluciones](#errores-comunes-y-soluciones)
+22. [Checklist Final](#checklist-final)
 
 ---
 
@@ -1019,6 +1021,217 @@ Cambiar `alt=" "` por descripciones reales:
 
 ---
 
+## Paso 19: Security Headers (CSP + Cross-Origin)
+
+**Archivo:** `netlify.toml`
+
+El reporte de [securityheaders.com](https://securityheaders.com/?q=kernesys.com) reveló la falta de `Content-Security-Policy` y headers de aislamiento Cross-Origin. Estos headers protegen contra XSS, clickjacking e inyección de código.
+
+### Content-Security-Policy
+
+Define qué orígenes pueden cargar recursos en la página:
+
+```toml
+[headers]
+  for = "/*"
+  [headers.values]
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://connect.facebook.net https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https: blob:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://www.google-analytics.com https://api.emailjs.com https://api.web3forms.com https://wa.me; frame-src https://www.youtube.com https://www.youtube-nocookie.com https://www.facebook.com; object-src 'none'; upgrade-insecure-requests"
+```
+
+**Directivas clave:**
+
+| Directiva | Descripción |
+|-----------|-------------|
+| `default-src 'self'` | Solo permite recursos del mismo origen por defecto |
+| `script-src` | Whitelist: GTM, GA, Facebook SDK, CDN |
+| `style-src 'unsafe-inline'` | Requerido por Vue.js para estilos dinámicos |
+| `img-src data: https: blob:` | Permite imágenes base64, HTTPS y blobs |
+| `object-src 'none'` | Bloquea plugins (Flash, Java) |
+| `upgrade-insecure-requests` | Fuerza HTTPS en todas las peticiones |
+
+> **Nota:** `'unsafe-inline'` y `'unsafe-eval'` son necesarios para Vue.js SPA. Si se migra a SSR/prerender, considerar reemplazar por nonces o hashes.
+
+### Cross-Origin Headers
+
+```toml
+    Cross-Origin-Opener-Policy = "same-origin-allow-popups"
+    Cross-Origin-Embedder-Policy = "unsafe-none"
+    Cross-Origin-Resource-Policy = "same-site"
+```
+
+| Header | Valor | Razón |
+|--------|-------|-------|
+| `COOP` | `same-origin-allow-popups` | Permite popups (OAuth Facebook, login social) |
+| `COEP` | `unsafe-none` | Permite recursos cross-origin sin CORS (YouTube embeds, fonts) |
+| `CORP` | `same-site` | Restringe carga de recursos al mismo sitio |
+
+### Validación
+
+- Escanear en [securityheaders.com](https://securityheaders.com/?q=kernesys.com) → Esperado: **A+**
+- Si la CSP bloquea algún recurso, se verá en la consola del navegador como `Refused to load...`
+- Ajustar la whitelist en el CSP según los errores reportados
+
+---
+
+## Paso 20: Optimización PageSpeed Round 2 (CLS, Imágenes, Fuentes)
+
+**Estado inicial:** Rendimiento 63% (móvil) / 75% (escritorio)  
+**Objetivo:** >85% en ambas plataformas
+
+### 20.1 - Corrección de CLS (Cumulative Layout Shift)
+
+**Archivo:** `src/modules/landing/components/ContactUsComponent.vue`
+
+El mayor causante de CLS era la sección `#contact-us` que aparecía tardíamente desplazando el layout:
+
+```html
+<!-- ✅ Reservar espacio y contener layout -->
+<section class="contact-us mega-section section-bg-shade" id="contact-us"
+  style="min-height: 600px; contain: layout;">
+```
+
+- `min-height: 600px` reserva espacio mínimo antes de que Vue renderice
+- `contain: layout` indica al navegador que el contenido no afectará elementos externos
+
+**Archivo:** `public/css/styles-LTR.css`
+
+Fix de relación de aspecto incorrecta en logos de clientes (Coexsa mostraba 1.36 vs 1.00):
+
+```css
+.our-clients .logo {
+  max-height: 85px;
+  object-fit: contain; /* ← Nuevo: mantiene proporción */
+  transition: all 0.5s ease-in-out 0s;
+}
+```
+
+### 20.2 - Optimización de imágenes adicionales
+
+**Herramientas:** `ImageMagick` (resize) + `cwebp` (conversión WebP)
+
+#### Logo principal (3972×1037 → 400×104)
+
+```bash
+convert logokernesys.png -resize 400x -strip logokernesys-opt.png
+cwebp -q 80 logokernesys-opt.png -o logokernesys.webp
+```
+
+**Archivo:** `src/modules/landing/components/headerComponent.vue`
+
+```html
+<picture>
+  <source type="image/webp" srcset="img/logokernesys.webp" />
+  <img class="brand-logo light-logo img-fluid" src="img/logokernesys.png"
+    alt="Kernesys - Consultora de Desarrollo de Software" width="400" height="104" />
+</picture>
+```
+
+#### Logos de clientes (resize + WebP)
+
+| Imagen | Original | Optimizado | Ahorro |
+|--------|----------|------------|--------|
+| logokernesys.png | 66.9 KiB (3972px) | 5.0 KiB WebP (400px) | **92%** |
+| FloreriaHortensia2.png | 68.1 KiB (810px) | 13 KiB WebP (500px) | **81%** |
+| Spa.png | 75.2 KiB (480px) | 22 KiB WebP | **71%** |
+| biofase.png | 51.4 KiB (3058px) | 9.2 KiB WebP (500px) | **82%** |
+| Coexsa.png | 18.1 KiB (200px) | 4.8 KiB WebP | **73%** |
+
+**Archivo:** `src/modules/landing/components/ourClientsComponent.vue`
+
+Todos los logos ahora usan `<picture>` con `<source>` WebP + fallback PNG.
+
+#### Iconos de servicios (512×512 → 128×128)
+
+```bash
+convert 1-services.png -resize 128x128 -strip 1-services-128.png
+cwebp -q 80 1-services-128.png -o 1-services.webp
+# Repetir para: 2-services, 4-services, icon-2, icon-3
+```
+
+**Archivos:** `servicesComponent.vue`, `aboutComponent.vue`
+
+Cada icono ahora usa `<picture>` con `width="128" height="128"` + `loading="lazy"` + `decoding="async"`.
+
+#### Recompresión de slides (q70 desktop, q60 mobile)
+
+```bash
+# Desktop: resize a 1920px + WebP q70
+convert slide1.jpg -resize 1920x -quality 85 -strip slide1-temp.jpg
+cwebp -q 70 slide1-temp.jpg -o slide1.webp
+
+# Mobile: recomprimir a q60
+cwebp -q 60 slide1-mobile.webp -o slide1-mobile.webp
+```
+
+| Imagen | Antes | Después |
+|--------|-------|---------|
+| slide1.webp | 203 KiB | 141 KiB |
+| slide2.webp | 134 KiB | 93 KiB |
+| slide3.webp | 129 KiB | 85 KiB |
+| slides mobile (×3) | 155 KiB | 99 KiB |
+
+### 20.3 - Font Display: Swap
+
+**Archivo:** `public/css/all.min.css`
+
+Cambiar `font-display: auto` → `font-display: swap` en las 3 declaraciones `@font-face` de Font Awesome:
+
+```css
+/* Buscar y reemplazar en all.min.css */
+font-display:auto  →  font-display:swap
+```
+
+**Archivo:** `public/css/fonts-nunito.css`
+
+Agregar `font-display: swap` a las 30 declaraciones `@font-face` de Nunito:
+
+```bash
+sed -i "s/font-weight: \([0-9]*\);/font-weight: \1;\n  font-display: swap;/" fonts-nunito.css
+```
+
+### 20.4 - Eliminar preconnects no utilizados
+
+**Archivo:** `public/index.html`
+
+Lighthouse detectó que `preconnect` a Google Analytics/GTM no se estaban usando (los scripts no se cargan en la primera carga). Se mantienen solo como `dns-prefetch`:
+
+```html
+<!-- ❌ ANTES: preconnect sin usar -->
+<link rel="preconnect" href="https://www.google-analytics.com" />
+<link rel="preconnect" href="https://www.googletagmanager.com" />
+<link rel="dns-prefetch" href="https://www.google-analytics.com" />
+<link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+
+<!-- ✅ DESPUÉS: solo dns-prefetch -->
+<link rel="dns-prefetch" href="https://www.google-analytics.com" />
+<link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+```
+
+### 20.5 - Fix de accesibilidad adicional
+
+**Archivo:** `src/modules/landing/components/sliderComponent.vue`
+
+```html
+<!-- Video link sin nombre reconocible → agregar aria-label -->
+<a class="video-link" href="https://www.youtube.com/watch?v=8cN7LWGO-gE"
+  role="button" data-fancybox="data-fancybox"
+  aria-label="Ver video de Kernesys sobre migraciones de sistemas">
+```
+
+**Archivo:** `src/modules/landing/components/ourClientsComponent.vue`
+
+Fix orden de encabezados (h4 saltaba niveles → h2):
+
+```html
+<!-- ❌ ANTES: salta de h2 (servicios) a h4 -->
+<h4 class="section-title2">¡Ellos confian en nosotros!</h4>
+
+<!-- ✅ DESPUÉS: orden descendente correcto -->
+<h2 class="section-title2">¡Ellos confian en nosotros!</h2>
+```
+
+---
+
 ## Errores Comunes y Soluciones
 
 ### ERR_TOO_MANY_REDIRECTS
@@ -1086,6 +1299,18 @@ Cambiar `alt=" "` por descripciones reales:
 □ loading="lazy" en imágenes no críticas
 □ fetchpriority="high" en imagen hero (LCP)
 □ aria-label en enlaces con solo íconos (accesibilidad)
+□ Content-Security-Policy configurado en netlify.toml
+□ Cross-Origin headers (COOP, COEP, CORP) configurados
+□ securityheaders.com reporta A o A+
+□ font-display: swap en Font Awesome y Nunito
+□ Logo principal redimensionado (≤400px) y convertido a WebP
+□ Logos de clientes redimensionados y convertidos a WebP con <picture>
+□ Iconos de servicios redimensionados (128px) y convertidos a WebP
+□ Slides recomprimidos (q70 desktop, q60 mobile)
+□ min-height + contain: layout en secciones que causan CLS
+□ object-fit: contain en imágenes con relación de aspecto forzada
+□ Preconnects sin usar eliminados (solo dns-prefetch)
+□ Orden de encabezados h1→h2→h3 secuencial sin saltos
 □ Build exitoso sin errores
 □ Verificación con script de consola: 100%
 ```

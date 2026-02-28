@@ -14,7 +14,10 @@ onMounted(() => {
       <nav class="main-navbar" id="main-nav">
         <a class="navbar-brand" href="#">
           
-          <img class="brand-logo light-logo img-fluid" src="img/logokernesys.png" alt="Kernesys - Consultora de Desarrollo de Software en Monterrey, México" width="180" height="50" />
+          <picture>
+            <source type="image/webp" srcset="img/logokernesys.webp" />
+            <img class="brand-logo light-logo img-fluid" src="img/logokernesys.png" alt="Kernesys - Consultora de Desarrollo de Software en Monterrey, México" width="400" height="104" />
+          </picture>
         </a>
         <div class="menu-toggler-btn">
           <span></span><span></span><span></span>

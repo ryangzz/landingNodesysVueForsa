@@ -78,7 +78,7 @@
                       <div class="cta-links-area wow fadeInUp" data-wow-delay="0.8s">
                         <div class="play-btn-row-dir">
                           <a class="video-link" href="https://www.youtube.com/watch?v=8cN7LWGO-gE" role="button"
-                            data-fancybox="data-fancybox">
+                            data-fancybox="data-fancybox" aria-label="Ver video de Kernesys sobre migraciones de sistemas">
                             
                           </a>
                         </div>

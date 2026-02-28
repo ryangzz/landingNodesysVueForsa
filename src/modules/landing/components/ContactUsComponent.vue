@@ -1,5 +1,5 @@
 <template>
-    <section class="contact-us  mega-section section-bg-shade" id="contact-us">
+    <section class="contact-us  mega-section section-bg-shade" id="contact-us" style="min-height: 600px; contain: layout;">
         <div class="container">
             <div class="section-heading center-heading">
                 <h2 class="section-title2 wow words chars splitting animated" data-splitting="chars"
