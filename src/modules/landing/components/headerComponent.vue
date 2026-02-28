@@ -1,10 +1,11 @@
 <script setup>
-import { inject,onMounted, nextTick } from 'vue';
+import { onMounted, nextTick } from 'vue';
 
-const appjs = inject('appjs')
 onMounted(() => {
-  nextTick(() => { // 👈 Espera a que Vue termine de renderizar el DOM
-    appjs(); // Ahora jQuery puede acceder a los elementos de forma segura
+  nextTick(() => {
+    if (typeof window.appjs === 'function') {
+      window.appjs();
+    }
   });
 });
 </script>

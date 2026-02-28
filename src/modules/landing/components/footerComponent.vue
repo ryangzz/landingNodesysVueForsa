@@ -95,7 +95,7 @@
           </div>
           <div class="col-12 col-md-6" >
             <div class="terms-links">
-              <a href="#0">Terminos de uso</a> | <a href="#0">Politica de Privacidad</a>
+              <a href="#0" @click.prevent="showTerminos">Terminos de uso</a> | <a href="#0" @click.prevent="showPrivacidad">Politica de Privacidad</a>
             </div>
           </div>
         </div>
@@ -104,3 +104,120 @@
   </footer>
 <!-- End  page-footer Section-->
 </template>
+
+<script setup>
+import Swal from 'sweetalert2';
+
+const logoUrl = 'img/logokernesys.png';
+
+const showTerminos = () => {
+  Swal.fire({
+    title: '<strong>Términos de Uso</strong>',
+    imageUrl: logoUrl,
+    imageWidth: 200,
+    imageAlt: 'Kernesys Logo',
+    html: `
+      <div style="text-align: left; max-height: 400px; overflow-y: auto; font-size: 14px; line-height: 1.6; padding: 0 10px;">
+        <p><strong>Última actualización:</strong> 28 de febrero de 2026</p>
+
+        <p>Bienvenido a <strong>kernesys.com</strong>. Al acceder y utilizar este sitio web, aceptas cumplir con los siguientes términos y condiciones de uso.</p>
+
+        <h4 style="margin-top: 16px; color: #074d7e;">1. Uso del Sitio</h4>
+        <p>Este sitio web es propiedad y está operado por <strong>Kernesys</strong>. El contenido proporcionado es únicamente con fines informativos sobre nuestros servicios de desarrollo de software, consultoría tecnológica y soluciones empresariales.</p>
+
+        <h4 style="margin-top: 16px; color: #074d7e;">2. Propiedad Intelectual</h4>
+        <p>Todo el contenido de este sitio, incluyendo pero no limitado a textos, gráficos, logotipos, imágenes, código fuente y diseño, es propiedad de Kernesys y está protegido por las leyes de propiedad intelectual de México y tratados internacionales.</p>
+
+        <h4 style="margin-top: 16px; color: #074d7e;">3. Servicios</h4>
+        <p>Kernesys ofrece servicios de desarrollo de software a la medida, automatización de procesos, integración de sistemas, servicios en la nube, desarrollo de aplicaciones móviles, ERP, CRM, CMS y e-commerce. Las especificaciones y alcances de cada proyecto se definen mediante acuerdos individuales con cada cliente.</p>
+
+        <h4 style="margin-top: 16px; color: #074d7e;">4. Limitación de Responsabilidad</h4>
+        <p>Kernesys no será responsable por daños directos, indirectos, incidentales o consecuentes que resulten del uso o la imposibilidad de uso de este sitio web. La información se proporciona "tal cual" sin garantías de ningún tipo.</p>
+
+        <h4 style="margin-top: 16px; color: #074d7e;">5. Enlaces a Terceros</h4>
+        <p>Este sitio puede contener enlaces a sitios web de terceros. Kernesys no se hace responsable del contenido, políticas de privacidad o prácticas de dichos sitios.</p>
+
+        <h4 style="margin-top: 16px; color: #074d7e;">6. Modificaciones</h4>
+        <p>Kernesys se reserva el derecho de modificar estos términos en cualquier momento. Los cambios entrarán en vigor inmediatamente después de su publicación en este sitio.</p>
+
+        <h4 style="margin-top: 16px; color: #074d7e;">7. Legislación Aplicable</h4>
+        <p>Estos términos se rigen por las leyes de los Estados Unidos Mexicanos. Cualquier disputa será resuelta ante los tribunales competentes de Monterrey, Nuevo León, México.</p>
+
+        <h4 style="margin-top: 16px; color: #074d7e;">8. Contacto</h4>
+        <p>Para cualquier consulta sobre estos términos, puedes contactarnos en: <a href="mailto:contacto@kernesys.com" style="color: #074d7e;">contacto@kernesys.com</a></p>
+      </div>
+    `,
+    width: 700,
+    confirmButtonText: 'Entendido',
+    confirmButtonColor: '#074d7e',
+    showCloseButton: true,
+  });
+};
+
+const showPrivacidad = () => {
+  Swal.fire({
+    title: '<strong>Política de Privacidad</strong>',
+    imageUrl: logoUrl,
+    imageWidth: 200,
+    imageAlt: 'Kernesys Logo',
+    html: `
+      <div style="text-align: left; max-height: 400px; overflow-y: auto; font-size: 14px; line-height: 1.6; padding: 0 10px;">
+        <p><strong>Última actualización:</strong> 28 de febrero de 2026</p>
+
+        <p>En <strong>Kernesys</strong>, respetamos tu privacidad y nos comprometemos a proteger la información personal que compartas con nosotros a través de este sitio web.</p>
+
+        <h4 style="margin-top: 16px; color: #074d7e;">1. Información que Recopilamos</h4>
+        <p>Recopilamos información personal únicamente cuando nos la proporcionas voluntariamente a través de nuestro formulario de contacto:</p>
+        <ul style="padding-left: 20px;">
+          <li>Nombre completo</li>
+          <li>Correo electrónico</li>
+          <li>Asunto y mensaje</li>
+        </ul>
+
+        <h4 style="margin-top: 16px; color: #074d7e;">2. Uso de la Información</h4>
+        <p>La información recopilada se utiliza exclusivamente para:</p>
+        <ul style="padding-left: 20px;">
+          <li>Responder a consultas y solicitudes de cotización</li>
+          <li>Proporcionar información sobre nuestros servicios</li>
+          <li>Dar seguimiento a proyectos potenciales</li>
+        </ul>
+
+        <h4 style="margin-top: 16px; color: #074d7e;">3. Protección de Datos</h4>
+        <p>Implementamos medidas de seguridad técnicas y organizativas para proteger tu información personal contra acceso no autorizado, alteración, divulgación o destrucción. Los datos del formulario se envían de forma segura mediante HTTPS.</p>
+
+        <h4 style="margin-top: 16px; color: #074d7e;">4. Cookies y Tecnologías de Rastreo</h4>
+        <p>Este sitio utiliza Google Analytics para analizar el tráfico web. Google Analytics recopila información anónima sobre las visitas, incluyendo páginas visitadas, tiempo de permanencia y tipo de dispositivo. No se recopilan datos personales identificables a través de cookies.</p>
+
+        <h4 style="margin-top: 16px; color: #074d7e;">5. Compartición de Datos</h4>
+        <p>Kernesys <strong>no vende, alquila ni comparte</strong> tu información personal con terceros, salvo cuando sea requerido por ley o autoridad competente.</p>
+
+        <h4 style="margin-top: 16px; color: #074d7e;">6. Derechos ARCO</h4>
+        <p>De acuerdo con la Ley Federal de Protección de Datos Personales en Posesión de los Particulares (LFPDPPP), tienes derecho a:</p>
+        <ul style="padding-left: 20px;">
+          <li><strong>Acceder</strong> a tus datos personales</li>
+          <li><strong>Rectificar</strong> datos inexactos o incompletos</li>
+          <li><strong>Cancelar</strong> el tratamiento de tus datos</li>
+          <li><strong>Oponerte</strong> al uso de tus datos para ciertos fines</li>
+        </ul>
+        <p>Para ejercer tus derechos ARCO, envía un correo a <a href="mailto:contacto@kernesys.com" style="color: #074d7e;">contacto@kernesys.com</a>.</p>
+
+        <h4 style="margin-top: 16px; color: #074d7e;">7. Retención de Datos</h4>
+        <p>Conservamos tu información personal solo durante el tiempo necesario para cumplir con los fines para los cuales fue recopilada, o según lo requieran las leyes aplicables.</p>
+
+        <h4 style="margin-top: 16px; color: #074d7e;">8. Cambios a esta Política</h4>
+        <p>Nos reservamos el derecho de actualizar esta política de privacidad en cualquier momento. Te notificaremos de cambios significativos publicando la nueva política en este sitio web.</p>
+
+        <h4 style="margin-top: 16px; color: #074d7e;">9. Contacto</h4>
+        <p>Si tienes preguntas sobre esta política de privacidad, contáctanos en:<br>
+        <strong>Email:</strong> <a href="mailto:contacto@kernesys.com" style="color: #074d7e;">contacto@kernesys.com</a><br>
+        <strong>Teléfono:</strong> +52 813 247 1163<br>
+        <strong>Ubicación:</strong> Monterrey, Nuevo León, México</p>
+      </div>
+    `,
+    width: 700,
+    confirmButtonText: 'Entendido',
+    confirmButtonColor: '#074d7e',
+    showCloseButton: true,
+  });
+};
+</script>
