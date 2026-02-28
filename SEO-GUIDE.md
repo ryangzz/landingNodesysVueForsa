@@ -363,7 +363,7 @@ Los datos estructurados permiten a Google mostrar **rich snippets** (resultados 
 
 **Archivo:** `public/index.html` → dentro del `<div id="app">`
 
-Las SPAs (Single Page Applications) como Vue.js renderizan con JavaScript. Algunos crawlers no ejecutan JS. El `<noscript>` proporciona contenido HTML estático para estos casos.
+Las SPAs (Single Page Applications) como Vue.js, React o Angular renderizan con JavaScript. Algunos crawlers no ejecutan JS. El `<noscript>` proporciona contenido HTML estático para estos casos.
 
 ```html
 <div id="app">
@@ -378,7 +378,7 @@ Las SPAs (Single Page Applications) como Vue.js renderizan con JavaScript. Algun
         <!-- Todos los servicios -->
       </ul>
       <h2>Tecnologías</h2>
-      <p>[LISTA DE TECNOLOGÍAS]</p>
+      <p>[LISTA DE TECNOLOGÍAS] (ejemplo: Vue.js, React.js, Angular, Laravel, FastAPI, AWS)</p>
       <h2>Contacto</h2>
       <p>Email: <a href="mailto:[EMAIL]">[EMAIL]</a></p>
       <p>Teléfono: <a href="tel:[TELÉFONO]">[TELÉFONO]</a></p>

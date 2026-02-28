@@ -125,6 +125,8 @@ export default {
     const techs = [
       // Frontend
       { name: 'Vue.js', icon: 'fab fa-vuejs', color: '#42b883', category: 'frontend', categoryLabel: 'Frontend' },
+      { name: 'React.js', icon: 'fab fa-react', color: '#61DAFB', category: 'frontend', categoryLabel: 'Frontend' },
+      { name: 'Angular', icon: 'fab fa-angular', color: '#DD0031', category: 'frontend', categoryLabel: 'Frontend' },
       { name: 'JavaScript', icon: 'fab fa-js-square', color: '#F7DF1E', category: 'frontend', categoryLabel: 'Frontend' },
       { name: 'HTML5', icon: 'fab fa-html5', color: '#E34F26', category: 'frontend', categoryLabel: 'Frontend' },
       { name: 'CSS3', icon: 'fab fa-css3-alt', color: '#1572B6', category: 'frontend', categoryLabel: 'Frontend' },
