@@ -4,13 +4,13 @@
       <div class="sc-wraper dir-row sc-flat">
         <ul class="sc-list">
           <li class="sc-item" title="Facebook">
-            <a class="sc-link" href="https://www.facebook.com/Kernesys/"><i class="fab fa-facebook-f sc-icon"></i></a>
+            <a class="sc-link" href="https://www.facebook.com/Kernesys/" aria-label="Facebook de Kernesys"><i class="fab fa-facebook-f sc-icon"></i></a>
           </li>
           <li class="sc-item" title="Linkedin">
-            <a class="sc-link" href="https://www.linkedin.com/company/kernesys/"><i class="fab fa-linkedin sc-icon"></i></a>
+            <a class="sc-link" href="https://www.linkedin.com/company/kernesys/" aria-label="LinkedIn de Kernesys"><i class="fab fa-linkedin sc-icon"></i></a>
           </li>
           <li class="sc-item" title="instagram">
-            <a class="sc-link" href="https://www.instagram.com/kernesys/"><i class="fab fa-instagram sc-icon"></i></a>
+            <a class="sc-link" href="https://www.instagram.com/kernesys/" aria-label="Instagram de Kernesys"><i class="fab fa-instagram sc-icon"></i></a>
           </li>
         </ul>
       </div>
@@ -23,7 +23,7 @@
             <div class="slide-content">
               <div class="slider-bg">
                 <div class="overlay-color"></div>
-                <img class="slider-bg-img" src="img/slide1.jpg" alt="Kernesys - Software a la medida para impulsar tu negocio en Monterrey" />
+                <img class="slider-bg-img" src="img/slide1.jpg" alt="Kernesys - Software a la medida para impulsar tu negocio en Monterrey" width="7952" height="5304" loading="eager" fetchpriority="high" decoding="async" />
               </div>
               <div class="container">
                 <div class="hero-text-area">
@@ -49,7 +49,7 @@
             <div class="slide-content">
               <div class="slider-bg">
                 <div class="overlay-color"></div>
-                <img class="slider-bg-img" src="img/slide2.jpg" alt="Kernesys - Migraciones de sistemas eficientes y sin interrupciones" />
+                <img class="slider-bg-img" src="img/slide2.jpg" alt="Kernesys - Migraciones de sistemas eficientes y sin interrupciones" width="7952" height="5304" loading="lazy" decoding="async" />
               </div>
               <div class="container">
                 <div class="hero-text-area">
@@ -86,7 +86,7 @@
             <div class="slide-content">
               <div class="slider-bg">
                 <div class="overlay-color"></div>
-                <img class="slider-bg-img" src="img/slide3.jpg" alt="Kernesys - Manejo profesional y de calidad en proyectos de software" />
+                <img class="slider-bg-img" src="img/slide3.jpg" alt="Kernesys - Manejo profesional y de calidad en proyectos de software" width="5760" height="3840" loading="lazy" decoding="async" />
               </div>
               <div class="container">
                 <div class="hero-text-area">

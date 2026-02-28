@@ -22,22 +22,22 @@
                 -->
             <div class="swiper-slide">
               <div class="client-logo wow fadeInUp" data-wow-delay=".2s">
-                <a href="#0"><img class="img-fluid logo" src="img/FloreriaHortensia2.png" alt=" " /></a>
+                <a href="#0"><img class="img-fluid logo" src="img/FloreriaHortensia2.png" alt="Logo de Florería Hortensia" width="810" height="308" loading="lazy" decoding="async" /></a>
               </div>
             </div>
             <div class="swiper-slide">
               <div class="client-logo wow fadeInUp" data-wow-delay=".2s">
-                <a href="#0"><img class="img-fluid logo" src="img/Spa.png" alt=" " /></a>
+                <a href="#0"><img class="img-fluid logo" src="img/Spa.png" alt="Logo de Spa" width="480" height="249" loading="lazy" decoding="async" /></a>
               </div>
             </div>
             <div class="swiper-slide">
               <div class="client-logo wow fadeInUp" data-wow-delay=".2s">
-                <a href="#0"><img class="img-fluid logo" src="img/Coexsa.png" alt=" " /></a>
+                <a href="#0"><img class="img-fluid logo" src="img/Coexsa.png" alt="Logo de Coexsa" width="200" height="200" loading="lazy" decoding="async" /></a>
               </div>
             </div>
             <div class="swiper-slide">
               <div class="client-logo wow fadeInUp" data-wow-delay=".2s">
-                <a href="#0"><img class="img-fluid logo" src="img/biofase.png" alt=" " /></a>
+                <a href="#0"><img class="img-fluid logo" src="img/biofase.png" alt="Logo de Biofase" width="3058" height="768" loading="lazy" decoding="async" /></a>
               </div>
             </div>
           </div>
