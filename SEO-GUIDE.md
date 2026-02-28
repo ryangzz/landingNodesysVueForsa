@@ -29,8 +29,10 @@
 18. [Paso 18: Accesibilidad (a11y)](#paso-18-accesibilidad-a11y)
 19. [Paso 19: Security Headers (CSP + Cross-Origin)](#paso-19-security-headers-csp--cross-origin)
 20. [Paso 20: Optimización PageSpeed Round 2 (CLS, Imágenes, Fuentes)](#paso-20-optimización-pagespeed-round-2-cls-imágenes-fuentes)
-21. [Errores Comunes y Soluciones](#errores-comunes-y-soluciones)
-22. [Checklist Final](#checklist-final)
+21. [Paso 21: Minificación de JavaScript con Terser](#paso-21-minificación-de-javascript-con-terser)
+22. [Paso 22: Modales de Términos de Uso y Política de Privacidad](#paso-22-modales-de-términos-de-uso-y-política-de-privacidad)
+23. [Errores Comunes y Soluciones](#errores-comunes-y-soluciones)
+24. [Checklist Final](#checklist-final)
 
 ---
 
@@ -559,7 +561,7 @@ Cada imagen debe tener un atributo `alt` descriptivo que incluya keywords releva
 ### Formato recomendado:
 
 ```html
-<!-- ❌ MAL -->
+<!-- ❌  MAL -->
 <img src="img/logo.png" alt="" />
 <img src="img/photo.png" alt="image" />
 <img src="img/slide.jpg" alt="slider-bg 1" />
@@ -1232,6 +1234,115 @@ Fix orden de encabezados (h4 saltaba niveles → h2):
 
 ---
 
+## Paso 21: Minificación de JavaScript con Terser
+
+**Archivos:** `public/js/*.js`  
+**Herramienta:** [Terser](https://github.com/terser/terser) (incluido en node_modules via npx)
+
+Los scripts de terceros en `public/js/` no pasaban por el pipeline de build de Webpack/Vue CLI, por lo que permanecían sin minificar. PageSpeed reportaba "Minifica los recursos JavaScript" con ~3 KiB de ahorro estimado.
+
+### Comando
+
+```bash
+# Minificar un archivo (compress + mangle)
+npx terser archivo.js --compress --mangle -o archivo.js
+```
+
+### Archivos minificados
+
+| Archivo | Antes | Después | Ahorro |
+|---------|-------|---------|--------|
+| `isotope-min.js` | 45 KiB | 34 KiB | **24%** |
+| `jquery.countTo.js` | 3.7 KiB | 2.0 KiB | **47%** |
+| `mainn.js` | 14 KiB | 5.2 KiB | **62%** |
+| `scrollspy.js` | 4.3 KiB | 2.1 KiB | **50%** |
+| **Total** | **66.8 KiB** | **43.6 KiB** | **35%** |
+
+### Archivos que ya estaban minificados (no tocar)
+
+- `bootstrap.bundle.min.js`
+- `jquery-3.6.1.min.js`
+- `jquery.fancybox.min.js`
+- `splitting.min.js`
+- `swiper.min.js`
+- `wow.min.js`
+- `email.min.js`
+
+> **Importante:** Hacer backup antes de minificar. Terser sobrescribe el archivo original si se usa la misma ruta de entrada y salida. Se recomienda `cp archivo.js archivo.js.bak` antes de ejecutar.
+
+---
+
+## Paso 22: Modales de Términos de Uso y Política de Privacidad
+
+**Archivo:** `src/modules/landing/components/footerComponent.vue`  
+**Dependencia:** [SweetAlert2](https://sweetalert2.github.io/) (`npm install sweetalert2`)
+
+Se agregaron modales interactivos para "Términos de Uso" y "Política de Privacidad" en el footer, usando `Swal.fire()` con el logo de Kernesys.
+
+### Instalación
+
+```bash
+npm install sweetalert2
+```
+
+### Implementación
+
+```vue
+<script setup>
+import Swal from 'sweetalert2';
+
+const showTerminos = () => {
+  Swal.fire({
+    title: '<strong>Términos de Uso</strong>',
+    imageUrl: 'img/logokernesys.png',
+    imageWidth: 200,
+    imageAlt: 'Kernesys Logo',
+    html: `<div style="text-align:left; max-height:400px; overflow-y:auto;">...</div>`,
+    width: 700,
+    confirmButtonText: 'Entendido',
+    confirmButtonColor: '#074d7e',
+    showCloseButton: true,
+  });
+};
+</script>
+```
+
+### Enlaces en el footer
+
+```html
+<div class="terms-links">
+  <a href="#0" @click.prevent="showTerminos">Terminos de uso</a> |
+  <a href="#0" @click.prevent="showPrivacidad">Politica de Privacidad</a>
+</div>
+```
+
+### Contenido de los modales
+
+**Términos de Uso** incluye:
+1. Uso del Sitio
+2. Propiedad Intelectual
+3. Servicios
+4. Limitación de Responsabilidad
+5. Enlaces a Terceros
+6. Modificaciones
+7. Legislación Aplicable (tribunales de Monterrey, NL, México)
+8. Contacto
+
+**Política de Privacidad** incluye:
+1. Información que Recopilamos (nombre, email, asunto, mensaje)
+2. Uso de la Información
+3. Protección de Datos (HTTPS)
+4. Cookies y Tecnologías de Rastreo (Google Analytics)
+5. No compartición de datos con terceros
+6. Derechos ARCO (LFPDPPP)
+7. Retención de Datos
+8. Cambios a la Política
+9. Contacto
+
+> **Nota legal:** El contenido de los modales cumple con la Ley Federal de Protección de Datos Personales en Posesión de los Particulares (LFPDPPP) de México, incluyendo el aviso de derechos ARCO.
+
+---
+
 ## Errores Comunes y Soluciones
 
 ### ERR_TOO_MANY_REDIRECTS
@@ -1311,6 +1422,9 @@ Fix orden de encabezados (h4 saltaba niveles → h2):
 □ object-fit: contain en imágenes con relación de aspecto forzada
 □ Preconnects sin usar eliminados (solo dns-prefetch)
 □ Orden de encabezados h1→h2→h3 secuencial sin saltos
+□ Scripts no-minificados en public/js/ minificados con Terser
+□ Modales de Términos de Uso y Política de Privacidad funcionando
+□ SweetAlert2 instalado como dependencia
 □ Build exitoso sin errores
 □ Verificación con script de consola: 100%
 ```
