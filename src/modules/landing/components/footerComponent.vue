@@ -41,7 +41,7 @@
                 <a class="footer-menu-link" href="https://www.instagram.com/kernesys/">Instagram</a>
               </li>
               <li class="footer-menu-item">
-                <a class="footer-menu-link" href="https://www.linkedin.com/company/kernesys/">linkedIn</a>
+                <a class="footer-menu-link" href="https://www.linkedin.com/company/kernesys/">LinkedIn</a>
               </li>
             </ul>
           </div>
@@ -90,12 +90,12 @@
         <div class="row ">
           <div class="col-12 col-md-6">
             <p class="creadits">
-              &copy; 2019 Creado Por: Kernesys
+              &copy; 2025 Creado Por: Kernesys
             </p>
           </div>
           <div class="col-12 col-md-6" >
             <div class="terms-links">
-              <a href="#0" @click.prevent="showTerminos">Terminos de uso</a> | <a href="#0" @click.prevent="showPrivacidad">Politica de Privacidad</a>
+              <a href="#0" @click.prevent="showTerminos">Términos de uso</a> | <a href="#0" @click.prevent="showPrivacidad">Política de Privacidad</a>
             </div>
           </div>
         </div>

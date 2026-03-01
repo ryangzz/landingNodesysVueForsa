@@ -3,7 +3,7 @@
   <section class="our-clients elf-section section-bg-shade" id="our-clients">
     <div class="container">
       <div class="section-heading">
-        <h2 class="section-title2">¡Ellos confian en nosotros!</h2>
+        <h2 class="section-title2">¡Ellos confían en nosotros!</h2>
         <p class="section-subtitle">
         </p>        
       </div>

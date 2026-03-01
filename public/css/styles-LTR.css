@@ -2851,7 +2851,6 @@ body.hard-squared-btns .portfolio-btn {
 }
 .our-clients .logo {
   max-height: 85px;
-  object-fit: contain;
   transition: all 0.5s ease-in-out 0s;
 }
 

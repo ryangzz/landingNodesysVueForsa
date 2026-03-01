@@ -18,7 +18,7 @@ import { defineAsyncComponent } from 'vue';
 import contactUsComponent from '../components/ContactUsComponent.vue';
 
 export default{
-  name:"navBarDayBook",
+  name:"KernesysLanding",
   components:{
     'contact-us-component': contactUsComponent,
     'header-menu':defineAsyncComponent(()=> import('../components/headerComponent.vue')),

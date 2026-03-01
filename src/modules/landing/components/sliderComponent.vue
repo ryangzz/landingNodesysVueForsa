@@ -40,7 +40,7 @@
                     </div>
                     <div class="col-9 col-md-10 col-lg-8 mx-auto">
                       <p class="slide-subtitle narrow-centerd-text" data-splitting="words">
-                        Desarrollamos soluciones personalizadas que se adaptan perfectamente a tus necesidades específicas, optimizando sus procesos y mejorando tu eficiencia.
+                        Desarrollamos soluciones personalizadas que se adaptan perfectamente a tus necesidades, optimizando tus procesos y potenciando tu eficiencia operativa.
                       </p>
                     </div>                    
                   </div>
@@ -110,8 +110,7 @@
                     </div>
                     <div class="col-9 col-md-10 col-lg-8 mx-auto">
                       <p class="slide-subtitle narrow-centerd-text" data-splitting="words">
-                        Transforma tu negocio con nuestras soluciones tecnológicas
-Descubre cómo podemos mejorar la eficiencia de tus proyectos tecnológicos con nuestras innovadoras soluciones. Aumenta tu productividad y reduce costos hoy mismo.
+                        Gestión integral de proyectos tecnológicos con metodologías ágiles, asegurando entregas puntuales y resultados de alto impacto.
                       </p>
                     </div>
                     <div class="col-12">                      

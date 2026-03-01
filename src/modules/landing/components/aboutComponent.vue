@@ -30,7 +30,7 @@
                 Estamos orgullosos de ser una empresa 100% mexicana dedicada a impulsar la transformación digital de las empresas. Nuestro compromiso es ayudar a nuestros clientes a optimizar y automatizar sus procesos y reglas de negocio, llevándolos a alcanzar nuevos niveles de eficiencia y éxito.
               </p>
 
-            <!--  <div class="about-stats stats-counter">
+              <div class="about-stats stats-counter">
                 <div class="row g-0">
                   <div class="col-4">
                     <div class="stat-box">
@@ -41,7 +41,6 @@
                       <h5 class="stat-desc">Proyectos</h5>
                     </div>
                   </div>
-                  
                   <div class="col-4">
                     <div class="stat-box">
                       <p class="stat-num">
@@ -57,11 +56,11 @@
                         <span class="sign">+</span><span class="counter" data-from="0" data-to="15" data-speed="3000"
                           data-refresh-interval="50"></span>
                       </p>
-                      <h5 class="stat-desc">Migraciones de software</h5>
+                      <h5 class="stat-desc">Migraciones</h5>
                     </div>
                   </div>
                 </div>
-              </div> -->
+              </div>
               <a class="ma-btn-primary d-none" href="#0">Leer Mas</a>
             </div>
           </div>
@@ -74,15 +73,15 @@
           <div class="col-12 col-lg-6 d-flex align-items-center order-2 order-lg-0 about-col wow fadeInUp"
             data-wow-delay="0.2s">
             <div class="text-area">
-              <span class="tag-line">Nuestra Mision</span>
+              <span class="tag-line">Nuestra Misión</span>
               <h2 class="about-title">
-                Apoyar en el camino de los clientes para alcanzar el exito
+                Acompañarte en el camino hacia el éxito empresarial
               </h2>
               <div class="info-items">
                 <div class="row g-0">
                   <div class="col-12">
                     <p class="about-text">
-                      En Kernesys, nuestra misión es acompañarte en tu camino hacia el éxito empresarial, proporcionándote soluciones tecnológicas innovadoras que transformen y optimicen sus procesos. Nos comprometemos a ayudarte a alcanzar tus objetivos mediante la automatización y sistematización de sus operaciones, permitiéndote concentrarse en lo que realmente importa: hacer crecer tu negocio.
+                      En Kernesys, nuestra misión es acompañarte en tu camino hacia el éxito empresarial, proporcionándote soluciones tecnológicas innovadoras que transformen y optimicen tus procesos. Nos comprometemos a ayudarte a alcanzar tus objetivos mediante la automatización y sistematización de tus operaciones, permitiéndote concentrarte en lo que realmente importa: hacer crecer tu negocio.
                     </p>
                   </div>
                   <div class="col-12">
@@ -90,7 +89,7 @@
                       <li class="info-item">
                         <picture><source type="image/webp" srcset="img/icon-2.webp" /><img class="info-img-icon" src="img/icon-2.png" alt="Experiencias únicas en desarrollo de software - Kernesys" width="128" height="128" draggable="false" loading="lazy" decoding="async" /></picture>
                         <div class="info-content">
-                          <h5 class="info-title">Experiencias unicas</h5>
+                          <h5 class="info-title">Experiencias únicas</h5>
                           <p class="info-text">
                             Nos dedicamos a crear experiencias únicas a través de nuestras soluciones de software a medida. Cada proyecto es una oportunidad para desarrollar aplicaciones que no solo cumplen con tus necesidades empresariales, sino que también mejoran la experiencia de usuario y fortalecen tu marca en el mercado.
                           </p>
@@ -101,7 +100,7 @@
                         <div class="info-content">
                           <h5 class="info-title">Valor empresarial</h5>
                           <p class="info-text">
-                            Agregamos valor a tu negocio mediante la implementación de tecnologías avanzadas y estrategias innovadoras. Nuestro enfoque en la excelencia en el desarrollo de software asegura que cada solución no solo resuelva problematicas, sino que también impulse el crecimiento y la eficiencia de tu empresa.
+                            Agregamos valor a tu negocio mediante la implementación de tecnologías avanzadas y estrategias innovadoras. Nuestro enfoque en la excelencia en el desarrollo de software asegura que cada solución no solo resuelva problemáticas, sino que también impulse el crecimiento y la eficiencia de tu empresa.
                           </p>
                         </div>
                       </li>

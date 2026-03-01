@@ -7,110 +7,102 @@
           Innovación y excelencia en cada solución
         </h2>
         <p class="section-subtitle wow fadeInUp" data-wow-delay=".5s">
-        Nuestro compromiso es proporcionar soluciones tecnológicas avanzadas que no solo cumplen, sino que superan tus expectativas, garantizando eficiencia y crecimiento continuo para tu negocio.
+          Diseñamos, desarrollamos e implementamos soluciones tecnológicas a la medida que transforman la operación de tu empresa, desde sistemas compactos hasta plataformas empresariales de gran escala.
         </p>
         <div class="line line-solid-main-color wow fadeIn" data-wow-delay="1s"></div>
       </div>
       <div class="row services-row">
-        <!--Start First service box-->
+        <!--Start First service box: Software a la Medida-->
         <div class="col-12 col-md-6 col-lg-4 mx-auto">
           <div class="service-box wow fadeInUp" data-wow-delay="0.2s">
+            <div class="service-icon">
+              <picture><source type="image/webp" srcset="img/2-services.webp" /><img class="img-icon" src="img/2-services.png" alt="Desarrollo de software a la medida - Kernesys Monterrey" width="128" height="128" draggable="false" loading="lazy" decoding="async" /></picture>
+            </div>
+            <div class="service-content">
+              <h3 class="service-title">Software a la medida</h3>
+              <p class="service-text">
+                Creamos sistemas personalizados desde cero, adaptados al 100% a los procesos únicos de tu empresa. Desde aplicaciones internas hasta plataformas complejas con múltiples módulos, construimos la solución exacta que necesitas.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- End First service box-->
+        <!--Start Second service box: Sistemas ERP, CRM y E-commerce-->
+        <div class="col-12 col-md-6 col-lg-4 mx-auto">
+          <div class="service-box wow fadeInUp" data-wow-delay="0.4s">
+            <div class="service-icon">
+              <picture><source type="image/webp" srcset="img/3-services.webp" /><img class="img-icon" src="img/3-services.png" alt="Sistemas ERP, CRM y E-commerce a la medida - Kernesys México" width="128" height="128" draggable="false" loading="lazy" decoding="async" /></picture>
+            </div>
+            <div class="service-content">
+              <h3 class="service-title">Sistemas ERP, CRM y E-commerce</h3>
+              <p class="service-text">
+                Desarrollamos e implementamos sistemas de gestión empresarial, relación con clientes y comercio electrónico diseñados a tu medida, centralizando toda la información de tu negocio en una sola plataforma.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- End Second service box-->
+        <!--Start Third service box: Automatización de Procesos-->
+        <div class="col-12 col-md-6 col-lg-4 mx-auto">
+          <div class="service-box wow fadeInUp" data-wow-delay="0.6s">
             <div class="service-icon">
               <picture><source type="image/webp" srcset="img/1-services.webp" /><img class="img-icon" src="img/1-services.png" alt="Automatización de procesos empresariales - Kernesys Monterrey" width="128" height="128" draggable="false" loading="lazy" decoding="async" /></picture>
             </div>
             <div class="service-content">
               <h3 class="service-title">Automatización de procesos</h3>
               <p class="service-text">
-                Mejoramos la eficiencia operativa, reduccion de costos y garantizar la consistencia en toda tu empresa, permitiéndote centrarte en el crecimiento y la innovación.
+                Eliminamos tareas repetitivas y manuales digitalizando los flujos de trabajo de tu empresa. Reducimos costos operativos, minimizamos errores humanos y liberamos a tu equipo para enfocarse en lo estratégico.
               </p>
             </div>
           </div>
         </div>
-        <!-- End First service box                    -->
-        <!--Start Second service box-->
+        <!-- End Third service box-->
+        <!--Start Fourth service box: Aplicaciones Móviles-->
+        <div class="col-12 col-md-6 col-lg-4 mx-auto">
+          <div class="service-box wow fadeInUp" data-wow-delay="0.2s">
+            <div class="service-icon">
+              <picture><source type="image/webp" srcset="img/5-services.webp" /><img class="img-icon" src="img/5-services.png" alt="Desarrollo de aplicaciones móviles - Kernesys" width="128" height="128" draggable="false" loading="lazy" decoding="async" /></picture>
+            </div>
+            <div class="service-content">
+              <h3 class="service-title">Aplicaciones móviles</h3>
+              <p class="service-text">
+                Desarrollamos apps nativas y multiplataforma con Flutter para iOS y Android. Desde apps internas para tu operación hasta productos digitales para tus clientes, con experiencias rápidas e intuitivas.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- End Fourth service box-->
+        <!--Start Fifth service box: Integración de Sistemas y Nube-->
         <div class="col-12 col-md-6 col-lg-4 mx-auto">
           <div class="service-box wow fadeInUp" data-wow-delay="0.4s">
             <div class="service-icon">
-              <picture><source type="image/webp" srcset="img/2-services.webp" /><img class="img-icon" src="img/2-services.png" alt="Desarrollo de software a la medida - Kernesys México" width="128" height="128" draggable="false" loading="lazy" decoding="async" /></picture>
+              <picture><source type="image/webp" srcset="img/4-services.webp" /><img class="img-icon" src="img/4-services.png" alt="Integración de sistemas y servicios en la nube - Kernesys" width="128" height="128" draggable="false" loading="lazy" decoding="async" /></picture>
             </div>
             <div class="service-content">
-              <h3 class="service-title">Desarrollo de software a la medida</h3>
+              <h3 class="service-title">Integración de sistemas y nube</h3>
               <p class="service-text">
-                Nuestros desarrollos aseguran estabilidad y eficiencia a largo plazo. Mejoramos la productividad creando soluciones personalizadas dando el soporte y la escabilidad del proyecto.
-
+                Conectamos tus sistemas existentes entre sí y con servicios en la nube (AWS), unificando datos y procesos en una infraestructura segura, escalable y de alta disponibilidad para tu empresa.
               </p>
             </div>
           </div>
         </div>
-        <!-- End Second service box-->
-        <!--Start Third service box-->
-
-        <!-- End Third service box-->
-        <!--Start fourth service box-->
+        <!-- End Fifth service box-->
+        <!--Start Sixth service box: Migración y Modernización-->
         <div class="col-12 col-md-6 col-lg-4 mx-auto">
-          <div class="service-box wow fadeInUp" data-wow-delay="0.2s">
+          <div class="service-box wow fadeInUp" data-wow-delay="0.6s">
             <div class="service-icon">
-              <picture><source type="image/webp" srcset="img/4-services.webp" /><img class="img-icon" src="img/4-services.png" alt="Servicios en la nube AWS - Kernesys Monterrey" width="128" height="128" draggable="false" loading="lazy" decoding="async" /></picture>
+              <picture><source type="image/webp" srcset="img/6-services.webp" /><img class="img-icon" src="img/6-services.png" alt="Migración y modernización de sistemas - Kernesys" width="128" height="128" draggable="false" loading="lazy" decoding="async" /></picture>
             </div>
             <div class="service-content">
-              <h3 class="service-title">Servicios en la nube</h3>
+              <h3 class="service-title">Migración y modernización</h3>
               <p class="service-text">
-                Proporcionamos una solucion flexible, segura y rentable para almacenar, gestionar y acceder a la informacion critica de la empresa, ayudando a operar con mayor eficiencia y tranquilidad
+                Actualizamos sistemas legacy a tecnologías modernas sin interrumpir tu operación. Migramos bases de datos, renovamos interfaces y optimizamos arquitecturas para que tu empresa no se quede atrás.
               </p>
             </div>
           </div>
         </div>
-
-        <div class="col-12 col-md-6 col-lg-4 mx-auto">
-          <div class="service-box wow fadeInUp" data-wow-delay="0.2s">
-            <div class="service-icon">
-              <picture><source type="image/webp" srcset="img/4-services.webp" /><img class="img-icon" src="img/4-services.png" alt="Integración de aplicaciones y sistemas - Kernesys" width="128" height="128" draggable="false" loading="lazy" decoding="async" /></picture>
-            </div>
-            <div class="service-content">
-              <h3 class="service-title">Integración de aplicaciones</h3>
-              <p class="service-text">
-                Unificamos procesos, mejoramos la comunicacion, automatizacion de tareas y la reduccion de errores de los distintos sistemas de la empresa.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-12 col-md-6 col-lg-4 mx-auto">
-          <div class="service-box wow fadeInUp" data-wow-delay="0.2s">
-            <div class="service-icon">
-              <picture><source type="image/webp" srcset="img/4-services.webp" /><img class="img-icon" src="img/4-services.png" alt="Seguridad de datos empresariales - Kernesys" width="128" height="128" draggable="false" loading="lazy" decoding="async" /></picture>
-            </div>
-            <div class="service-content">
-              <h3 class="service-title">Seguridad en los datos</h3>
-              <p class="service-text">
-                Ofrecemos proteccion ante amenazas, control de acceso, regulaciones, recuperaciones ante desastrez y la tranquilidad de saber que la información de tu empresa está protegida.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-12 col-md-6 col-lg-4 mx-auto">
-          <div class="service-box wow fadeInUp" data-wow-delay="0.2s">
-            <div class="service-icon">
-              <picture><source type="image/webp" srcset="img/4-services.webp" /><img class="img-icon" src="img/4-services.png" alt="Integración y calidad de datos - Kernesys" width="128" height="128" draggable="false" loading="lazy" decoding="async" /></picture>
-            </div>
-            <div class="service-content">
-              <h3 class="service-title">Integración con calidad de los datos</h3>
-              <p class="service-text">
-                Nuestro servicio ayuda a garantizar la precision, calidad y gestion de los datos para sea eficiente la administracion de tu empresa.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- End sixth service box-->
+        <!-- End Sixth service box-->
       </div>
-      <!--Start .see-more-area-->
-      <!--
-      <div class="see-more-area wow fadeInUp" data-wow-delay="0.8s">
-        <a class="ma-btn-primary" href="#0">Ver Todos Los Servicios</a>
-      </div>-->
-      <!--End Of .see-more-area    -->
     </div>
   </section>
   <!-- End  services Section-->
