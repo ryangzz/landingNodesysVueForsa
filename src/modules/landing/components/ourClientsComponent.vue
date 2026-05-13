@@ -45,6 +45,11 @@
                 <a href="#0"><picture><source type="image/webp" srcset="img/huasion-logo-no-bg.webp" /><img class="img-fluid logo" src="img/huasion-logo-no-bg.webp" alt="Logo de Huasion" width="500" height="126" loading="lazy" decoding="async" /></picture></a>
               </div>
             </div>
+            <div class="swiper-slide">
+              <div class="client-logo wow fadeInUp" data-wow-delay=".2s">
+                <a href="#0"><picture><source type="image/webp" srcset="img/carmexloo.webp" /><img class="img-fluid logo" src="img/carmexloo.webp" alt="Logo de Carmex" width="500" height="126" loading="lazy" decoding="async" /></picture></a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
