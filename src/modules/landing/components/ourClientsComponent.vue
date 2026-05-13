@@ -11,7 +11,7 @@
                     style="visibility: visible; animation-delay: 1s; animation-name: fadeIn;"></div>
     </div>
     <div class="container"> 
-      <div class="clients-logos d-flex align-items-center justify-content-around flex-wrap">
+      <div class="flex-wrap clients-logos d-flex align-items-center justify-content-around">
         <!--Swiper-->
         <div class="swiper-container">
           <div class="swiper-wrapper clients-logo-wraper">
@@ -38,6 +38,11 @@
             <div class="swiper-slide">
               <div class="client-logo wow fadeInUp" data-wow-delay=".2s">
                 <a href="#0"><picture><source type="image/webp" srcset="img/biofase.webp" /><img class="img-fluid logo" src="img/biofase.png" alt="Logo de Biofase" width="500" height="126" loading="lazy" decoding="async" /></picture></a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="client-logo wow fadeInUp" data-wow-delay=".2s">
+                <a href="#0"><picture><source type="image/webp" srcset="img/huasion-logo-no-bg.webp" /><img class="img-fluid logo" src="img/huasion-logo-no-bg.webp" alt="Logo de Huasion" width="500" height="126" loading="lazy" decoding="async" /></picture></a>
               </div>
             </div>
           </div>
