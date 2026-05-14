@@ -1,4 +1,8 @@
 <!DOCTYPE html>
+<!-- ============================================================
+     Kernesys Landing — HTML puro (migrado desde Vue.js)
+     Rama de respaldo Vue.js: vue-backup
+============================================================ -->
 <html lang="es" prefix="og: https://ogp.me/ns#">
 
 <head>
@@ -390,60 +394,1262 @@
     <link rel="stylesheet" href="css/swiper.min.css" />
     <link rel="stylesheet" href="css/splitting.css" />
   </noscript>
+
+  <!-- SweetAlert2 (modales Términos y Privacidad) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" media="print" onload="this.media='all'" />
+
+  <style>
+    /* ===== Tech Stack ===== */
+    .tech-stack-section {
+      background: linear-gradient(180deg, #f8fafc 0%, #eef2f7 100%);
+      padding: 100px 0;
+      overflow: hidden;
+    }
+    .tech-tabs {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 50px;
+    }
+    .tech-tab-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 22px;
+      border: 2px solid #d5dce6;
+      border-radius: 50px;
+      background: white;
+      color: #4a5568;
+      font-size: .95rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all .3s cubic-bezier(.4,0,.2,1);
+      font-family: 'Nunito', sans-serif;
+    }
+    .tech-tab-btn i { font-size: 1rem; transition: transform .3s ease; }
+    .tech-tab-btn:hover {
+      border-color: #074d7e;
+      color: #074d7e;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 15px rgba(7,77,126,.15);
+    }
+    .tech-tab-btn.active {
+      background: linear-gradient(135deg,#074d7e 0%,#0a6bab 100%);
+      border-color: #074d7e;
+      color: white;
+      box-shadow: 0 6px 20px rgba(7,77,126,.3);
+    }
+    .tech-tab-btn.active i { transform: scale(1.15); }
+    .tech-grid { margin-bottom: 60px; }
+    .tech-grid-inner {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px,1fr));
+      gap: 20px;
+    }
+    .tech-card {
+      position: relative;
+      border-radius: 16px;
+      background: white;
+      padding: 28px 16px;
+      text-align: center;
+      cursor: default;
+      transition: all .4s cubic-bezier(.4,0,.2,1);
+      overflow: hidden;
+      border: 1px solid #e8edf2;
+    }
+    .tech-card-glow {
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: var(--accent,#074d7e);
+      opacity: 0;
+      transition: all .4s ease;
+    }
+    .tech-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(0,0,0,.08);
+      border-color: transparent;
+    }
+    .tech-card:hover .tech-card-glow { opacity: 1; height: 4px; }
+    .tech-card-content { position: relative; z-index: 1; }
+    .tech-icon-wrapper {
+      width: 64px; height: 64px;
+      margin: 0 auto 16px;
+      display: flex; align-items: center; justify-content: center;
+      border-radius: 16px;
+      background: linear-gradient(135deg,#f0f4f8 0%,#e2e8f0 100%);
+      transition: all .4s ease;
+    }
+    .tech-card:hover .tech-icon-wrapper {
+      transform: scale(1.1);
+      background: linear-gradient(135deg,#e8f4fd 0%,#dbeafe 100%);
+    }
+    .tech-icon-wrapper i { font-size: 1.8rem; transition: all .3s ease; }
+    .tech-card:hover .tech-icon-wrapper i { transform: scale(1.1); }
+    .tech-name { font-size: .95rem; font-weight: 700; color: #1a202c; margin-bottom: 6px; letter-spacing: -.01em; }
+    .tech-category-badge {
+      display: inline-block;
+      font-size: .7rem; font-weight: 600; color: #718096;
+      background: #f1f5f9; padding: 3px 10px; border-radius: 20px;
+      text-transform: uppercase; letter-spacing: .5px;
+    }
+    .tech-desc-card {
+      background: white; border-radius: 20px; padding: 32px 28px;
+      height: 100%; position: relative; overflow: hidden;
+      border: 1px solid #e8edf2;
+      transition: all .4s cubic-bezier(.4,0,.2,1);
+    }
+    .tech-desc-card::before {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0; height: 4px;
+      background: var(--cat-color,#074d7e); opacity: .8;
+    }
+    .tech-desc-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 40px rgba(0,0,0,.08);
+      border-color: transparent;
+    }
+    .tech-desc-icon {
+      width: 52px; height: 52px; border-radius: 14px;
+      background: linear-gradient(135deg,#074d7e 0%,#0a6bab 100%);
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 20px;
+    }
+    .tech-desc-icon i { font-size: 1.3rem; color: white; }
+    .tech-desc-title { font-size: 1.15rem; font-weight: 800; color: #1a202c; margin-bottom: 12px; }
+    .tech-desc-text { font-size: .9rem; line-height: 1.7; color: #64748b; margin-bottom: 0; }
+    /* ===== WhatsApp Float ===== */
+    .whatsapp-float {
+      position: fixed; right: 22px; bottom: 95px;
+      width: 56px; height: 56px; border-radius: 50%;
+      background: #25d366; color: #fff;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 2rem; z-index: 9999;
+      box-shadow: 0 10px 24px rgba(37,211,102,.35);
+      transition: transform .2s ease, box-shadow .2s ease;
+      text-decoration: none !important; border: 0; outline: 0; line-height: 1;
+    }
+    .whatsapp-float:hover {
+      color: #fff;
+      transform: translateY(-2px) scale(1.03);
+      box-shadow: 0 12px 28px rgba(37,211,102,.45);
+      text-decoration: none !important;
+    }
+    .whatsapp-float:focus,.whatsapp-float:active,.whatsapp-float:visited { color:#fff; text-decoration:none!important; }
+    .whatsapp-float i { display:block; line-height:1; }
+    @media(max-width:768px){
+      .whatsapp-float { right:16px; bottom:88px; width:52px; height:52px; font-size:1.8rem; }
+    }
+  </style>
 </head>
 
 <body class="landing-page-demo overlay-is-linear-gradient rounded-btns">
-  <div id="app">
-    <!-- Contenido de respaldo para SEO (visible para crawlers cuando JS no carga) -->
-    <noscript>
-      <div style="padding: 40px; max-width: 900px; margin: 0 auto; font-family: 'Nunito', sans-serif;">
-        <h1>Kernesys - Desarrollo de Software a la Medida en Monterrey, México</h1>
-        <p>Somos una consultora de software 100% mexicana con sede en Monterrey, Nuevo León. Desde 2019 impulsamos la transformación digital de empresas con soluciones tecnológicas innovadoras y personalizadas.</p>
-        <h2>Nuestros Servicios</h2>
-        <ul>
-          <li><strong>Desarrollo de Software a la Medida:</strong> Soluciones personalizadas que se adaptan a tus necesidades específicas.</li>
-          <li><strong>Automatización de Procesos:</strong> Optimización operativa y reducción de costos.</li>
-          <li><strong>Desarrollo Web y Diseño Web:</strong> Sitios web modernos, responsivos y optimizados.</li>
-          <li><strong>E-commerce:</strong> Tiendas en línea funcionales y atractivas.</li>
-          <li><strong>Aplicaciones Móviles:</strong> Apps nativas con Flutter para iOS y Android.</li>
-          <li><strong>Sistemas ERP y CRM:</strong> Gestión empresarial personalizada.</li>
-          <li><strong>Integración de Sistemas:</strong> Unificación de procesos empresariales.</li>
-          <li><strong>Servicios en la Nube (AWS):</strong> Infraestructura escalable y segura.</li>
-          <li><strong>Seguridad de Datos:</strong> Protección y cumplimiento regulatorio.</li>
-          <li><strong>Migración de Sistemas:</strong> Actualización tecnológica sin interrupciones.</li>
-        </ul>
-        <h2>Tecnologías</h2>
-        <p>Vue.js, React.js, Angular, Laravel, FastAPI, NestJS, Spring Boot, Flutter, MySQL, PostgreSQL, MongoDB, Elasticsearch, AWS.</p>
-        <h2>Contacto</h2>
-        <p>Email: <a href="mailto:contacto@kernesys.com">contacto@kernesys.com</a></p>
-        <p>Teléfono: <a href="tel:+528132471163">+52 813 247 1163</a></p>
-        <p>Ubicación: Monterrey, Nuevo León, México</p>
-        <p>Web: <a href="https://www.kernesys.com">www.kernesys.com</a></p>
-      </div>
-    </noscript>
+
+  <!-- ============================================================ -->
+  <!-- Loading Screen                                               -->
+  <!-- ============================================================ -->
+  <div class="loading-screen d-none" id="loading-screen">
+    <div class="spinner">
+      <div class="bounce1"></div>
+      <div class="bounce2"></div>
+      <div class="bounce3"></div>
+    </div>
   </div>
 
-  <!--End Page Header-->
- 
+  <!-- ============================================================ -->
+  <!-- Header                                                       -->
+  <!-- ============================================================ -->
+  <header class="page-header menu-on-end" id="page-header">
+    <div class="container">
+      <nav class="main-navbar" id="main-nav">
+        <a class="navbar-brand" href="#">
+          <picture>
+            <source type="image/webp" srcset="img/logokernesys.webp" />
+            <img class="brand-logo light-logo img-fluid" src="img/logokernesys.png"
+              alt="Kernesys - Consultora de Desarrollo de Software en Monterrey, México"
+              width="400" height="104" />
+          </picture>
+        </a>
+        <div class="menu-toggler-btn">
+          <span></span><span></span><span></span>
+        </div>
+        <div class="navbar-menu-wraper" id="navbar-menu-wraper">
+          <ul class="navbar-nav mobile-menu">
+            <li class="nav-item has-sub-menu">
+              <a class="nav-link" href="#page-hero"><i class="fas fa-home icon"></i>Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#services"><i class="fas fa-address-card icon"></i>Servicios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about"><i class="fas fa-cogs icon"></i>Nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#our-clients"><i class="fas fa-handshake icon"></i>Clientes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#tech-stack"><i class="fas fa-layer-group icon"></i>Stack</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact-us"><i class="fas fa-mobile-alt icon"></i>Contacto</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
 
-  <!--     JQuery     -->
+  <!-- ============================================================ -->
+  <!-- Hero Slider                                                  -->
+  <!-- ============================================================ -->
+  <section class="page-hero hero-swiper-slider d-flex align-items-center" id="page-hero">
+    <div class="social-icons">
+      <div class="sc-wraper dir-row sc-flat">
+        <ul class="sc-list">
+          <li class="sc-item" title="Facebook">
+            <a class="sc-link" href="https://www.facebook.com/Kernesys/" aria-label="Facebook de Kernesys">
+              <i class="fab fa-facebook-f sc-icon"></i></a>
+          </li>
+          <li class="sc-item" title="Linkedin">
+            <a class="sc-link" href="https://www.linkedin.com/company/kernesys/" aria-label="LinkedIn de Kernesys">
+              <i class="fab fa-linkedin sc-icon"></i></a>
+          </li>
+          <li class="sc-item" title="instagram">
+            <a class="sc-link" href="https://www.instagram.com/kernesys/" aria-label="Instagram de Kernesys">
+              <i class="fab fa-instagram sc-icon"></i></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="slider swiper-container">
+      <div class="swiper-wrapper text-center">
+        <!-- Slide 1 -->
+        <div class="swiper-slide">
+          <div class="slide-content">
+            <div class="slider-bg">
+              <div class="overlay-color"></div>
+              <picture>
+                <source type="image/webp" media="(max-width: 768px)" srcset="img/slide1-mobile.webp" />
+                <source type="image/webp" srcset="img/slide1.webp" />
+                <img class="slider-bg-img" src="img/slide1.jpg"
+                  alt="Kernesys - Software a la medida para impulsar tu negocio en Monterrey"
+                  width="1920" height="1281" loading="eager" fetchpriority="high" decoding="async" />
+              </picture>
+            </div>
+            <div class="container">
+              <div class="hero-text-area">
+                <div class="row justify-content-center">
+                  <div class="col-12 col-lg-8 mx-auto">
+                    <h1 class="slide-title" data-splitting="words">
+                      Software a la medida para <span class="hollow-text">impulsar</span> tu negocio.
+                    </h1>
+                  </div>
+                  <div class="col-9 col-md-10 col-lg-8 mx-auto">
+                    <p class="slide-subtitle narrow-centerd-text" data-splitting="words">
+                      Desarrollamos soluciones personalizadas que se adaptan perfectamente a tus necesidades,
+                      optimizando tus procesos y potenciando tu eficiencia operativa.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Slide 2 -->
+        <div class="swiper-slide">
+          <div class="slide-content">
+            <div class="slider-bg">
+              <div class="overlay-color"></div>
+              <picture>
+                <source type="image/webp" media="(max-width: 768px)" srcset="img/slide2-mobile.webp" />
+                <source type="image/webp" srcset="img/slide2.webp" />
+                <img class="slider-bg-img" src="img/slide2.jpg"
+                  alt="Kernesys - Migraciones de sistemas eficientes y sin interrupciones"
+                  width="1920" height="1281" loading="lazy" decoding="async" />
+              </picture>
+            </div>
+            <div class="container">
+              <div class="hero-text-area">
+                <div class="row justify-content-center">
+                  <div class="col-12 col-lg-8 mx-auto">
+                    <h1 class="slide-title" data-splitting="words">
+                      Migraciones <span class="hollow-text">eficientes</span> y sin interrupciones
+                    </h1>
+                  </div>
+                  <div class="col-9 col-md-10 col-lg-8 mx-auto">
+                    <p class="slide-subtitle narrow-centerd-text" data-splitting="words">
+                      Actualiza tus sistemas a nuevas tecnologías. Nos encargamos de una migración
+                      tecnológica exitosa para tu negocio.
+                    </p>
+                  </div>
+                  <div class="col-12">
+                    <div class="cta-links-area wow fadeInUp" data-wow-delay="0.8s">
+                      <div class="play-btn-row-dir">
+                        <a class="video-link" href="https://www.youtube.com/watch?v=8cN7LWGO-gE"
+                          role="button" data-fancybox="data-fancybox"
+                          aria-label="Ver video de Kernesys sobre migraciones de sistemas"></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Slide 3 -->
+        <div class="swiper-slide">
+          <div class="slide-content">
+            <div class="slider-bg">
+              <div class="overlay-color"></div>
+              <picture>
+                <source type="image/webp" media="(max-width: 768px)" srcset="img/slide3-mobile.webp" />
+                <source type="image/webp" srcset="img/slide3.webp" />
+                <img class="slider-bg-img" src="img/slide3.jpg"
+                  alt="Kernesys - Manejo profesional y de calidad en proyectos de software"
+                  width="1920" height="1280" loading="lazy" decoding="async" />
+              </picture>
+            </div>
+            <div class="container">
+              <div class="hero-text-area">
+                <div class="row justify-content-center">
+                  <div class="col-12 col-lg-8 mx-auto">
+                    <h1 class="slide-title wow fadeInUp" data-splitting="words">
+                      Manejo <span class="hollow-text">profesional</span> y de calidad en los proyectos
+                    </h1>
+                  </div>
+                  <div class="col-9 col-md-10 col-lg-8 mx-auto">
+                    <p class="slide-subtitle narrow-centerd-text" data-splitting="words">
+                      Gestión integral de proyectos tecnológicos con metodologías ágiles,
+                      asegurando entregas puntuales y resultados de alto impacto.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-button-prev wow fadeInUp" data-wow-offset="0" data-wow-delay=".4s">
+        <div class="left-arrow"><i class="fas fa-arrow-left icon"></i></div>
+      </div>
+      <div class="swiper-button-next wow fadeInUp" data-wow-offset="0" data-wow-delay=".4s">
+        <div class="right-arrow"><i class="fas fa-arrow-right icon"></i></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- Services                                                     -->
+  <!-- ============================================================ -->
+  <section class="services text-center mega-section section-bg-shade" id="services">
+    <div class="container">
+      <div class="section-heading center-heading">
+        <h2 class="section-title2 wow" data-splitting="chars">
+          Innovación y excelencia en cada solución
+        </h2>
+        <p class="section-subtitle wow fadeInUp" data-wow-delay=".5s">
+          Diseñamos, desarrollamos e implementamos soluciones tecnológicas a la medida que transforman
+          la operación de tu empresa, desde sistemas compactos hasta plataformas empresariales de gran escala.
+        </p>
+        <div class="line line-solid-main-color wow fadeIn" data-wow-delay="1s"></div>
+      </div>
+      <div class="row services-row">
+        <div class="col-12 col-md-6 col-lg-4 mx-auto">
+          <div class="service-box wow fadeInUp" data-wow-delay="0.2s">
+            <div class="service-icon">
+              <picture><source type="image/webp" srcset="img/2-services.webp" />
+                <img class="img-icon" src="img/2-services.png"
+                  alt="Desarrollo de software a la medida - Kernesys Monterrey"
+                  width="128" height="128" draggable="false" loading="lazy" decoding="async" /></picture>
+            </div>
+            <div class="service-content">
+              <h3 class="service-title">Software a la medida</h3>
+              <p class="service-text">Creamos sistemas personalizados desde cero, adaptados al 100% a los procesos únicos
+                de tu empresa. Desde aplicaciones internas hasta plataformas complejas con múltiples módulos,
+                construimos la solución exacta que necesitas.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 mx-auto">
+          <div class="service-box wow fadeInUp" data-wow-delay="0.4s">
+            <div class="service-icon">
+              <picture><source type="image/webp" srcset="img/3-services.webp" />
+                <img class="img-icon" src="img/3-services.png"
+                  alt="Sistemas ERP, CRM y E-commerce a la medida - Kernesys México"
+                  width="128" height="128" draggable="false" loading="lazy" decoding="async" /></picture>
+            </div>
+            <div class="service-content">
+              <h3 class="service-title">Sistemas ERP, CRM y E-commerce</h3>
+              <p class="service-text">Desarrollamos e implementamos sistemas de gestión empresarial, relación con
+                clientes y comercio electrónico diseñados a tu medida, centralizando toda la información de tu
+                negocio en una sola plataforma.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 mx-auto">
+          <div class="service-box wow fadeInUp" data-wow-delay="0.6s">
+            <div class="service-icon">
+              <picture><source type="image/webp" srcset="img/1-services.webp" />
+                <img class="img-icon" src="img/1-services.png"
+                  alt="Automatización de procesos empresariales - Kernesys Monterrey"
+                  width="128" height="128" draggable="false" loading="lazy" decoding="async" /></picture>
+            </div>
+            <div class="service-content">
+              <h3 class="service-title">Automatización de procesos</h3>
+              <p class="service-text">Eliminamos tareas repetitivas y manuales digitalizando los flujos de trabajo de
+                tu empresa. Reducimos costos operativos, minimizamos errores humanos y liberamos a tu equipo para
+                enfocarse en lo estratégico.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 mx-auto">
+          <div class="service-box wow fadeInUp" data-wow-delay="0.2s">
+            <div class="service-icon">
+              <picture><source type="image/webp" srcset="img/5-services.webp" />
+                <img class="img-icon" src="img/5-services.png"
+                  alt="Desarrollo de aplicaciones móviles - Kernesys"
+                  width="128" height="128" draggable="false" loading="lazy" decoding="async" /></picture>
+            </div>
+            <div class="service-content">
+              <h3 class="service-title">Aplicaciones móviles</h3>
+              <p class="service-text">Desarrollamos apps nativas y multiplataforma con Flutter para iOS y Android.
+                Desde apps internas para tu operación hasta productos digitales para tus clientes,
+                con experiencias rápidas e intuitivas.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 mx-auto">
+          <div class="service-box wow fadeInUp" data-wow-delay="0.4s">
+            <div class="service-icon">
+              <picture><source type="image/webp" srcset="img/4-services.webp" />
+                <img class="img-icon" src="img/4-services.png"
+                  alt="Integración de sistemas y servicios en la nube - Kernesys"
+                  width="128" height="128" draggable="false" loading="lazy" decoding="async" /></picture>
+            </div>
+            <div class="service-content">
+              <h3 class="service-title">Integración de sistemas y nube</h3>
+              <p class="service-text">Conectamos tus sistemas existentes entre sí y con servicios en la nube (AWS),
+                unificando datos y procesos en una infraestructura segura, escalable y de alta disponibilidad
+                para tu empresa.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 mx-auto">
+          <div class="service-box wow fadeInUp" data-wow-delay="0.6s">
+            <div class="service-icon">
+              <picture><source type="image/webp" srcset="img/6-services.webp" />
+                <img class="img-icon" src="img/6-services.png"
+                  alt="Migración y modernización de sistemas - Kernesys"
+                  width="128" height="128" draggable="false" loading="lazy" decoding="async" /></picture>
+            </div>
+            <div class="service-content">
+              <h3 class="service-title">Migración y modernización</h3>
+              <p class="service-text">Actualizamos sistemas legacy a tecnologías modernas sin interrumpir tu operación.
+                Migramos bases de datos, renovamos interfaces y optimizamos arquitecturas para que tu empresa
+                no se quede atrás.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- About                                                        -->
+  <!-- ============================================================ -->
+  <section class="about mega-section" id="about">
+    <div class="container">
+      <!-- Primera sección about -->
+      <div class="content-block">
+        <div class="row">
+          <div class="col-12 col-lg-6 d-flex align-items-center about-col wow fadeInUp" data-wow-delay="0.2s">
+            <div class="img-area">
+              <div class="photo-banner-end">
+                <i class="fas fa-pen-nib icon"></i>
+                <p class="banner-text">Potenciamos negocios con soluciones tecnológicas innovadoras y personalizadas.</p>
+              </div>
+              <picture>
+                <source type="image/webp" srcset="img/about-1_photo.webp" />
+                <img class="about-img img-fluid" src="img/about-1_photo.png"
+                  alt="Kernesys - Empresa mexicana de desarrollo de software y transformación digital desde 2019"
+                  width="616" height="800" loading="lazy" decoding="async" />
+              </picture>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6 d-flex align-items-center about-col wow fadeInUp" data-wow-delay="0.4s">
+            <div class="text-area">
+              <span class="tag-line">Sobre nosotros</span>
+              <h2 class="about-title">Transformación tecnológica con sello mexicano</h2>
+              <p class="about-text">Estamos orgullosos de ser una empresa 100% mexicana dedicada a impulsar la
+                transformación digital de las empresas. Nuestro compromiso es ayudar a nuestros clientes a optimizar
+                y automatizar sus procesos y reglas de negocio, llevándolos a alcanzar nuevos niveles de eficiencia
+                y éxito.</p>
+              <div class="about-stats stats-counter">
+                <div class="row g-0">
+                  <div class="col-4">
+                    <div class="stat-box">
+                      <p class="stat-num">
+                        <span class="sign">+</span>
+                        <span class="counter" data-from="10" data-to="60" data-speed="3000" data-refresh-interval="50"></span>
+                      </p>
+                      <h5 class="stat-desc">Proyectos</h5>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div class="stat-box">
+                      <p class="stat-num">
+                        <span class="sign">+</span>
+                        <span class="counter" data-from="25" data-to="50" data-speed="3000" data-refresh-interval="50"></span>
+                      </p>
+                      <h5 class="stat-desc">Clientes</h5>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div class="stat-box">
+                      <p class="stat-num">
+                        <span class="sign">+</span>
+                        <span class="counter" data-from="0" data-to="15" data-speed="3000" data-refresh-interval="50"></span>
+                      </p>
+                      <h5 class="stat-desc">Migraciones</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Segunda sección about: Misión -->
+      <div class="content-block">
+        <div class="row">
+          <div class="col-12 col-lg-6 d-flex align-items-center order-2 order-lg-0 about-col wow fadeInUp" data-wow-delay="0.2s">
+            <div class="text-area">
+              <span class="tag-line">Nuestra Misión</span>
+              <h2 class="about-title">Acompañarte en el camino hacia el éxito empresarial</h2>
+              <div class="info-items">
+                <div class="row g-0">
+                  <div class="col-12">
+                    <p class="about-text">En Kernesys, nuestra misión es acompañarte en tu camino hacia el éxito
+                      empresarial, proporcionándote soluciones tecnológicas innovadoras que transformen y optimicen
+                      tus procesos. Nos comprometemos a ayudarte a alcanzar tus objetivos mediante la automatización
+                      y sistematización de tus operaciones, permitiéndote concentrarte en lo que realmente importa:
+                      hacer crecer tu negocio.</p>
+                  </div>
+                  <div class="col-12">
+                    <ul class="menu-items">
+                      <li class="info-item">
+                        <picture><source type="image/webp" srcset="img/icon-2.webp" />
+                          <img class="info-img-icon" src="img/icon-2.png"
+                            alt="Experiencias únicas en desarrollo de software - Kernesys"
+                            width="128" height="128" draggable="false" loading="lazy" decoding="async" /></picture>
+                        <div class="info-content">
+                          <h5 class="info-title">Experiencias únicas</h5>
+                          <p class="info-text">Nos dedicamos a crear experiencias únicas a través de nuestras
+                            soluciones de software a medida. Cada proyecto es una oportunidad para desarrollar
+                            aplicaciones que no solo cumplen con tus necesidades empresariales, sino que también
+                            mejoran la experiencia de usuario y fortalecen tu marca en el mercado.</p>
+                        </div>
+                      </li>
+                      <li class="info-item">
+                        <picture><source type="image/webp" srcset="img/icon-3.webp" />
+                          <img class="info-img-icon" src="img/icon-3.png"
+                            alt="Valor empresarial con tecnología avanzada - Kernesys"
+                            width="128" height="128" draggable="false" loading="lazy" decoding="async" /></picture>
+                        <div class="info-content">
+                          <h5 class="info-title">Valor empresarial</h5>
+                          <p class="info-text">Agregamos valor a tu negocio mediante la implementación de
+                            tecnologías avanzadas y estrategias innovadoras. Nuestro enfoque en la excelencia
+                            en el desarrollo de software asegura que cada solución no solo resuelva
+                            problemáticas, sino que también impulse el crecimiento y la eficiencia de
+                            tu empresa.</p>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6 d-flex align-items-center about-col order-0 order-lg-2 wow fadeInUp" data-wow-delay="0.4s">
+            <div class="img-area">
+              <div class="photo-banner-start">
+                <i class="fas fa-code icon"></i>
+                <p class="banner-text">Innovamos para optimizar y potenciar tu éxito empresarial</p>
+              </div>
+              <picture>
+                <source type="image/webp" srcset="img/about-2_photo.webp" />
+                <img class="img-fluid about-img" src="img/about-2_photo.png"
+                  alt="Kernesys - Misión de acompañar a clientes hacia el éxito con soluciones tecnológicas"
+                  width="600" height="800" loading="lazy" decoding="async" />
+              </picture>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- Clientes                                                     -->
+  <!-- ============================================================ -->
+  <section class="our-clients elf-section section-bg-shade" id="our-clients">
+    <div class="container">
+      <div class="section-heading">
+        <h2 class="section-title2">¡Ellos confían en nosotros!</h2>
+        <p class="section-subtitle"></p>
+      </div>
+      <div class="line line-solid-main-color wow fadeIn" data-wow-delay="1s"
+        style="visibility:visible;animation-delay:1s;animation-name:fadeIn;"></div>
+    </div>
+    <div class="container">
+      <div class="flex-wrap clients-logos d-flex align-items-center justify-content-around">
+        <div class="swiper-container">
+          <div class="swiper-wrapper clients-logo-wraper">
+            <div class="swiper-slide">
+              <div class="client-logo wow fadeInUp" data-wow-delay=".2s">
+                <a href="#0"><picture><source type="image/webp" srcset="img/FloreriaHortensia2.webp" />
+                  <img class="img-fluid logo" src="img/FloreriaHortensia2.png" alt="Logo de Florería Hortensia"
+                    width="500" height="190" loading="lazy" decoding="async" /></picture></a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="client-logo wow fadeInUp" data-wow-delay=".2s">
+                <a href="#0"><picture><source type="image/webp" srcset="img/Spa.webp" />
+                  <img class="img-fluid logo" src="img/Spa.png" alt="Logo de Spa"
+                    width="480" height="249" loading="lazy" decoding="async" /></picture></a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="client-logo wow fadeInUp" data-wow-delay=".2s">
+                <a href="#0"><picture><source type="image/webp" srcset="img/Coexsa.webp" />
+                  <img class="img-fluid logo" src="img/Coexsa.png" alt="Logo de Grupo Coexsa"
+                    width="200" height="200" loading="lazy" decoding="async"
+                    style="min-width:140px;max-height:120px;" /></picture></a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="client-logo wow fadeInUp" data-wow-delay=".2s">
+                <a href="#0"><picture><source type="image/webp" srcset="img/biofase.webp" />
+                  <img class="img-fluid logo" src="img/biofase.png" alt="Logo de Biofase"
+                    width="500" height="126" loading="lazy" decoding="async" /></picture></a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="client-logo wow fadeInUp" data-wow-delay=".2s">
+                <a href="#0"><picture><source type="image/webp" srcset="img/huasion-logo-no-bg.webp" />
+                  <img class="img-fluid logo" src="img/huasion-logo-no-bg.webp" alt="Logo de Huasion"
+                    width="500" height="126" loading="lazy" decoding="async" /></picture></a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="client-logo wow fadeInUp" data-wow-delay=".2s">
+                <a href="#0"><picture><source type="image/webp" srcset="img/carmexloo.webp" />
+                  <img class="img-fluid logo" src="img/carmexloo.webp" alt="Logo de Carmex"
+                    width="500" height="126" loading="lazy" decoding="async" /></picture></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- Tech Stack                                                   -->
+  <!-- ============================================================ -->
+  <section class="tech-stack-section mega-section" id="tech-stack">
+    <div class="container">
+      <div class="section-heading center-heading">
+        <h2 class="section-title2 wow" data-splitting="chars">Nuestro Stack Tecnológico</h2>
+        <p class="section-subtitle wow fadeInUp" data-wow-delay=".5s">
+          Combinamos las tecnologías más potentes y modernas del mercado para construir soluciones
+          robustas, escalables y de alto rendimiento.
+        </p>
+        <div class="line line-solid-main-color wow fadeIn" data-wow-delay="1s"></div>
+      </div>
+
+      <!-- Tabs de categoría -->
+      <div class="tech-tabs wow fadeInUp" data-wow-delay="0.3s">
+        <button class="tech-tab-btn active" data-cat="all" onclick="techStackFilter('all')">
+          <i class="fas fa-th"></i><span>Todos</span>
+        </button>
+        <button class="tech-tab-btn" data-cat="frontend" onclick="techStackFilter('frontend')">
+          <i class="fas fa-palette"></i><span>Frontend</span>
+        </button>
+        <button class="tech-tab-btn" data-cat="backend" onclick="techStackFilter('backend')">
+          <i class="fas fa-server"></i><span>Backend</span>
+        </button>
+        <button class="tech-tab-btn" data-cat="mobile" onclick="techStackFilter('mobile')">
+          <i class="fas fa-mobile-alt"></i><span>Móvil</span>
+        </button>
+        <button class="tech-tab-btn" data-cat="database" onclick="techStackFilter('database')">
+          <i class="fas fa-database"></i><span>Bases de Datos</span>
+        </button>
+        <button class="tech-tab-btn" data-cat="devops" onclick="techStackFilter('devops')">
+          <i class="fas fa-cloud"></i><span>Cloud &amp; DevOps</span>
+        </button>
+      </div>
+
+      <!-- Grid de tecnologías -->
+      <div class="tech-grid wow fadeInUp" data-wow-delay="0.4s">
+        <div class="tech-grid-inner" id="tech-grid-inner">
+          <!-- Frontend -->
+          <div class="tech-card" data-category="frontend" style="--accent:#42b883">
+            <div class="tech-card-glow"></div>
+            <div class="tech-card-content">
+              <div class="tech-icon-wrapper"><i class="fab fa-vuejs" style="color:#42b883"></i></div>
+              <h4 class="tech-name">Vue.js</h4>
+              <span class="tech-category-badge">Frontend</span>
+            </div>
+          </div>
+          <div class="tech-card" data-category="frontend" style="--accent:#61DAFB">
+            <div class="tech-card-glow"></div>
+            <div class="tech-card-content">
+              <div class="tech-icon-wrapper"><i class="fab fa-react" style="color:#61DAFB"></i></div>
+              <h4 class="tech-name">React.js</h4>
+              <span class="tech-category-badge">Frontend</span>
+            </div>
+          </div>
+          <div class="tech-card" data-category="frontend" style="--accent:#DD0031">
+            <div class="tech-card-glow"></div>
+            <div class="tech-card-content">
+              <div class="tech-icon-wrapper"><i class="fab fa-angular" style="color:#DD0031"></i></div>
+              <h4 class="tech-name">Angular</h4>
+              <span class="tech-category-badge">Frontend</span>
+            </div>
+          </div>
+          <div class="tech-card" data-category="frontend" style="--accent:#F7DF1E">
+            <div class="tech-card-glow"></div>
+            <div class="tech-card-content">
+              <div class="tech-icon-wrapper"><i class="fab fa-js-square" style="color:#F7DF1E"></i></div>
+              <h4 class="tech-name">JavaScript</h4>
+              <span class="tech-category-badge">Frontend</span>
+            </div>
+          </div>
+          <div class="tech-card" data-category="frontend" style="--accent:#E34F26">
+            <div class="tech-card-glow"></div>
+            <div class="tech-card-content">
+              <div class="tech-icon-wrapper"><i class="fab fa-html5" style="color:#E34F26"></i></div>
+              <h4 class="tech-name">HTML5</h4>
+              <span class="tech-category-badge">Frontend</span>
+            </div>
+          </div>
+          <div class="tech-card" data-category="frontend" style="--accent:#1572B6">
+            <div class="tech-card-glow"></div>
+            <div class="tech-card-content">
+              <div class="tech-icon-wrapper"><i class="fab fa-css3-alt" style="color:#1572B6"></i></div>
+              <h4 class="tech-name">CSS3</h4>
+              <span class="tech-category-badge">Frontend</span>
+            </div>
+          </div>
+          <div class="tech-card" data-category="frontend" style="--accent:#9553E9">
+            <div class="tech-card-glow"></div>
+            <div class="tech-card-content">
+              <div class="tech-icon-wrapper"><i class="fas fa-bolt" style="color:#9553E9"></i></div>
+              <h4 class="tech-name">Inertia.js</h4>
+              <span class="tech-category-badge">Frontend</span>
+            </div>
+          </div>
+          <!-- Backend -->
+          <div class="tech-card" data-category="backend" style="--accent:#FF2D20">
+            <div class="tech-card-glow"></div>
+            <div class="tech-card-content">
+              <div class="tech-icon-wrapper"><i class="fab fa-laravel" style="color:#FF2D20"></i></div>
+              <h4 class="tech-name">Laravel</h4>
+              <span class="tech-category-badge">Backend</span>
+            </div>
+          </div>
+          <div class="tech-card" data-category="backend" style="--accent:#777BB4">
+            <div class="tech-card-glow"></div>
+            <div class="tech-card-content">
+              <div class="tech-icon-wrapper"><i class="fab fa-php" style="color:#777BB4"></i></div>
+              <h4 class="tech-name">PHP</h4>
+              <span class="tech-category-badge">Backend</span>
+            </div>
+          </div>
+          <div class="tech-card" data-category="backend" style="--accent:#E0234E">
+            <div class="tech-card-glow"></div>
+            <div class="tech-card-content">
+              <div class="tech-icon-wrapper"><i class="fab fa-node-js" style="color:#E0234E"></i></div>
+              <h4 class="tech-name">NestJS</h4>
+              <span class="tech-category-badge">Backend</span>
+            </div>
+          </div>
+          <div class="tech-card" data-category="backend" style="--accent:#3776AB">
+            <div class="tech-card-glow"></div>
+            <div class="tech-card-content">
+              <div class="tech-icon-wrapper"><i class="fab fa-python" style="color:#3776AB"></i></div>
+              <h4 class="tech-name">Python</h4>
+              <span class="tech-category-badge">Backend</span>
+            </div>
+          </div>
+          <div class="tech-card" data-category="backend" style="--accent:#092E20">
+            <div class="tech-card-glow"></div>
+            <div class="tech-card-content">
+              <div class="tech-icon-wrapper"><i class="fab fa-python" style="color:#092E20"></i></div>
+              <h4 class="tech-name">Django</h4>
+              <span class="tech-category-badge">Backend</span>
+            </div>
+          </div>
+          <div class="tech-card" data-category="backend" style="--accent:#009688">
+            <div class="tech-card-glow"></div>
+            <div class="tech-card-content">
+              <div class="tech-icon-wrapper"><i class="fab fa-python" style="color:#009688"></i></div>
+              <h4 class="tech-name">FastAPI</h4>
+              <span class="tech-category-badge">Backend</span>
+            </div>
+          </div>
+          <div class="tech-card" data-category="backend" style="--accent:#ED8B00">
+            <div class="tech-card-glow"></div>
+            <div class="tech-card-content">
+              <div class="tech-icon-wrapper"><i class="fab fa-java" style="color:#ED8B00"></i></div>
+              <h4 class="tech-name">Java</h4>
+              <span class="tech-category-badge">Backend</span>
+            </div>
+          </div>
+          <div class="tech-card" data-category="backend" style="--accent:#6DB33F">
+            <div class="tech-card-glow"></div>
+            <div class="tech-card-content">
+              <div class="tech-icon-wrapper"><i class="fab fa-java" style="color:#6DB33F"></i></div>
+              <h4 class="tech-name">Spring Boot</h4>
+              <span class="tech-category-badge">Backend</span>
+            </div>
+          </div>
+          <div class="tech-card" data-category="backend" style="--accent:#68217A">
+            <div class="tech-card-glow"></div>
+            <div class="tech-card-content">
+              <div class="tech-icon-wrapper"><i class="fas fa-code" style="color:#68217A"></i></div>
+              <h4 class="tech-name">C#</h4>
+              <span class="tech-category-badge">Backend</span>
+            </div>
+          </div>
+          <div class="tech-card" data-category="backend" style="--accent:#00599C">
+            <div class="tech-card-glow"></div>
+            <div class="tech-card-content">
+              <div class="tech-icon-wrapper"><i class="fas fa-code" style="color:#00599C"></i></div>
+              <h4 class="tech-name">C++</h4>
+              <span class="tech-category-badge">Backend</span>
+            </div>
+          </div>
+          <!-- Móvil -->
+          <div class="tech-card" data-category="mobile" style="--accent:#027DFD">
+            <div class="tech-card-glow"></div>
+            <div class="tech-card-content">
+              <div class="tech-icon-wrapper"><i class="fas fa-mobile-alt" style="color:#027DFD"></i></div>
+              <h4 class="tech-name">Flutter</h4>
+              <span class="tech-category-badge">Móvil</span>
+            </div>
+          </div>
+          <div class="tech-card" data-category="mobile" style="--accent:#3DDC84">
+            <div class="tech-card-glow"></div>
+            <div class="tech-card-content">
+              <div class="tech-icon-wrapper"><i class="fab fa-android" style="color:#3DDC84"></i></div>
+              <h4 class="tech-name">Android</h4>
+              <span class="tech-category-badge">Móvil</span>
+            </div>
+          </div>
+          <div class="tech-card" data-category="mobile" style="--accent:#999999">
+            <div class="tech-card-glow"></div>
+            <div class="tech-card-content">
+              <div class="tech-icon-wrapper"><i class="fab fa-apple" style="color:#999999"></i></div>
+              <h4 class="tech-name">iOS</h4>
+              <span class="tech-category-badge">Móvil</span>
+            </div>
+          </div>
+          <!-- Bases de datos -->
+          <div class="tech-card" data-category="database" style="--accent:#4479A1">
+            <div class="tech-card-glow"></div>
+            <div class="tech-card-content">
+              <div class="tech-icon-wrapper"><i class="fas fa-database" style="color:#4479A1"></i></div>
+              <h4 class="tech-name">MySQL</h4>
+              <span class="tech-category-badge">Base de Datos</span>
+            </div>
+          </div>
+          <div class="tech-card" data-category="database" style="--accent:#336791">
+            <div class="tech-card-glow"></div>
+            <div class="tech-card-content">
+              <div class="tech-icon-wrapper"><i class="fas fa-database" style="color:#336791"></i></div>
+              <h4 class="tech-name">PostgreSQL</h4>
+              <span class="tech-category-badge">Base de Datos</span>
+            </div>
+          </div>
+          <div class="tech-card" data-category="database" style="--accent:#47A248">
+            <div class="tech-card-glow"></div>
+            <div class="tech-card-content">
+              <div class="tech-icon-wrapper"><i class="fas fa-leaf" style="color:#47A248"></i></div>
+              <h4 class="tech-name">MongoDB</h4>
+              <span class="tech-category-badge">Base de Datos</span>
+            </div>
+          </div>
+          <div class="tech-card" data-category="database" style="--accent:#FEC514">
+            <div class="tech-card-glow"></div>
+            <div class="tech-card-content">
+              <div class="tech-icon-wrapper"><i class="fas fa-search" style="color:#FEC514"></i></div>
+              <h4 class="tech-name">Elasticsearch</h4>
+              <span class="tech-category-badge">Base de Datos</span>
+            </div>
+          </div>
+          <!-- Cloud & DevOps -->
+          <div class="tech-card" data-category="devops" style="--accent:#FF9900">
+            <div class="tech-card-glow"></div>
+            <div class="tech-card-content">
+              <div class="tech-icon-wrapper"><i class="fab fa-aws" style="color:#FF9900"></i></div>
+              <h4 class="tech-name">AWS</h4>
+              <span class="tech-category-badge">Cloud &amp; DevOps</span>
+            </div>
+          </div>
+          <div class="tech-card" data-category="devops" style="--accent:#2496ED">
+            <div class="tech-card-glow"></div>
+            <div class="tech-card-content">
+              <div class="tech-icon-wrapper"><i class="fab fa-docker" style="color:#2496ED"></i></div>
+              <h4 class="tech-name">Docker</h4>
+              <span class="tech-category-badge">Cloud &amp; DevOps</span>
+            </div>
+          </div>
+          <div class="tech-card" data-category="devops" style="--accent:#F05032">
+            <div class="tech-card-glow"></div>
+            <div class="tech-card-content">
+              <div class="tech-icon-wrapper"><i class="fab fa-git-alt" style="color:#F05032"></i></div>
+              <h4 class="tech-name">Git</h4>
+              <span class="tech-category-badge">Cloud &amp; DevOps</span>
+            </div>
+          </div>
+          <div class="tech-card" data-category="devops" style="--accent:#FCC624">
+            <div class="tech-card-glow"></div>
+            <div class="tech-card-content">
+              <div class="tech-icon-wrapper"><i class="fab fa-linux" style="color:#FCC624"></i></div>
+              <h4 class="tech-name">Linux</h4>
+              <span class="tech-category-badge">Cloud &amp; DevOps</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tarjetas descriptivas por categoría -->
+      <div class="tech-descriptions wow fadeInUp" data-wow-delay="0.5s">
+        <div class="row g-4">
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="tech-desc-card" style="--cat-color:#42b883">
+              <div class="tech-desc-icon"><i class="fas fa-palette"></i></div>
+              <h5 class="tech-desc-title">Frontend</h5>
+              <p class="tech-desc-text">Creamos interfaces modernas, interactivas y completamente responsivas con las mejores
+                tecnologías del ecosistema JavaScript, garantizando experiencias de usuario excepcionales en cualquier dispositivo.</p>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="tech-desc-card" style="--cat-color:#FF2D20">
+              <div class="tech-desc-icon"><i class="fas fa-server"></i></div>
+              <h5 class="tech-desc-title">Backend</h5>
+              <p class="tech-desc-text">Arquitecturas robustas y escalables con APIs seguras y de alto rendimiento. Nuestro backend
+                maneja grandes volúmenes de datos con eficiencia y brinda una base sólida para el crecimiento continuo.</p>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="tech-desc-card" style="--cat-color:#027DFD">
+              <div class="tech-desc-icon"><i class="fas fa-mobile-alt"></i></div>
+              <h5 class="tech-desc-title">Móvil</h5>
+              <p class="tech-desc-text">Desarrollamos aplicaciones móviles multiplataforma para iOS y Android con experiencias
+                rápidas, fluidas y de alta calidad, reduciendo tiempos de desarrollo con un código base único.</p>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="tech-desc-card" style="--cat-color:#336791">
+              <div class="tech-desc-icon"><i class="fas fa-database"></i></div>
+              <h5 class="tech-desc-title">Bases de Datos</h5>
+              <p class="tech-desc-text">Arquitectura flexible que combina bases de datos relacionales y no relacionales, con
+                capacidades avanzadas de búsqueda full-text para resultados rápidos y precisos en tiempo real.</p>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="tech-desc-card" style="--cat-color:#FF9900">
+              <div class="tech-desc-icon"><i class="fas fa-cloud"></i></div>
+              <h5 class="tech-desc-title">Cloud &amp; DevOps</h5>
+              <p class="tech-desc-text">Infraestructura en la nube altamente confiable, escalable y segura con contenedorización
+                y despliegue automatizado para garantizar alta disponibilidad y rendimiento optimizado.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- Contacto                                                     -->
+  <!-- ============================================================ -->
+  <section class="contact-us mega-section section-bg-shade" id="contact-us" style="min-height:600px;contain:layout;">
+    <div class="container">
+      <div class="section-heading center-heading">
+        <h2 class="section-title2 wow" data-splitting="chars">Contáctanos</h2>
+        <p class="section-subtitle wow fadeInUp" data-wow-delay=".5s">
+          ¡Queremos conocer tus ideas! Comparte con nosotros y hagamos algo increíble juntos.</p>
+        <div class="line line-solid-main-color wow fadeIn" data-wow-delay="1s"></div>
+      </div>
+      <div class="row">
+        <div class="col-12 col-lg-9 mx-auto wow fadeInUp" data-wow-delay="0.4s">
+          <div class="main-form-wraper">
+            <form class="main-form" id="contact-us-form" method="post"
+              action="https://api.web3forms.com/submit" autocomplete="off">
+              <input type="hidden" name="access_key" value="9f1456ea-5d9c-43a6-8c36-6df8545ead4b">
+              <input type="hidden" name="redirect" value="https://kernesys.com">
+              <div class="row">
+                <div class="col-12 col-lg-6">
+                  <div class="input-wraper">
+                    <input class="text-input" id="user-name" name="name" type="text">
+                    <label for="user-name">Nombre<span class="req">*</span></label>
+                    <span class="b-border"></span><i></i><span class="error-msg"></span>
+                  </div>
+                </div>
+                <div class="col-12 col-lg-6">
+                  <div class="input-wraper">
+                    <input class="text-input" id="user-email" name="email" type="email">
+                    <label for="user-email">Correo<span class="req">*</span></label>
+                    <span class="b-border"></span><i></i><span class="error-msg"></span>
+                  </div>
+                </div>
+                <div class="col-12 col-lg-12">
+                  <div class="input-wraper">
+                    <input class="text-input" id="msg-subject" name="msg-subject" type="text">
+                    <label for="msg-subject">Asunto<span class="req">*</span></label>
+                    <span class="b-border"></span><i></i><span class="error-msg"></span>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="input-wraper">
+                    <textarea class="text-input" id="msg-text" name="message"></textarea>
+                    <label for="msg-text">Tu mensaje<span class="req">*</span></label>
+                    <span class="b-border"></span><i></i><span class="error-msg"></span>
+                  </div>
+                </div>
+                <input type="checkbox" name="botcheck" class="hidden" style="display:none;">
+                <div class="col-6 submit-wraper">
+                  <button class="ma-btn-primary" id="submit-btn" type="submit">Enviar</button>
+                </div>
+                <div class="col-6">
+                  <p class="done-msg"></p>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- Footer                                                       -->
+  <!-- ============================================================ -->
+  <footer class="page-footer dark-color-footer" id="page-footer">
+    <div class="container">
+      <div class="row justify-content-center footer-cols">
+        <div class="col-12 col-md-8 col-lg-5 footer-col wow fadeInUp" data-wow-delay="0.3s">
+          <h6 class="footer-col-title">Sobre Kernesys</h6>
+          <div class="footer-col-content-wrapper">
+            <p class="footer-text-about-us">Nuestro enfoque se centra en desarrollar software a medida que automatiza
+              procesos, optimiza operaciones y permite a nuestros clientes alcanzar nuevos niveles de eficiencia y
+              éxito empresarial.</p>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3 footer-col wow fadeInUp" data-wow-delay="0.5s">
+          <h6 class="footer-col-title">Redes sociales</h6>
+          <div class="footer-col-content-wrapper">
+            <ul class="footer-menu">
+              <li class="footer-menu-item">
+                <a class="footer-menu-link" href="https://www.facebook.com/Kernesys/">Facebook</a>
+              </li>
+              <li class="footer-menu-item">
+                <a class="footer-menu-link" href="https://www.instagram.com/kernesys/">Instagram</a>
+              </li>
+              <li class="footer-menu-item">
+                <a class="footer-menu-link" href="https://www.linkedin.com/company/kernesys/">LinkedIn</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-12 col-md-8 col-lg-4 footer-col wow fadeInUp" data-wow-delay=".9s">
+          <h6 class="footer-col-title">Informaci&oacute;n De Contacto</h6>
+          <div class="footer-col-content-wrapper">
+            <div class="contact-info-card">
+              <i class="fas fa-envelope icon" style="color:white"></i>
+              <a class="text-lowercase info" href="mailto:contacto@kernesys.com">contacto@kernesys.com</a>
+            </div>
+            <div class="contact-info-card">
+              <i class="fas fa-globe-africa icon" style="color:white"></i>
+              <a class="text-lowercase info" href="https://www.kernesys.com">www.kernesys.com</a>
+            </div>
+            <div class="contact-info-card">
+              <i class="fas fa-map-marker-alt icon" style="color:white"></i>
+              <span class="info">Monterrey, Nuevo Le&oacute;n, M&eacute;xico</span>
+            </div>
+            <div class="contact-info-card">
+              <i class="fas fa-mobile-alt icon" style="color:white"></i>
+              <a class="info" href="tel:8132471163">+52 8132471163</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="copyrights">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-6">
+            <p class="creadits">&copy; 2025 Creado Por: Kernesys</p>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="terms-links">
+              <a href="#0" onclick="showTerminos();return false;">Términos de uso</a> |
+              <a href="#0" onclick="showPrivacidad();return false;">Política de Privacidad</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================================ -->
+  <!-- WhatsApp Float                                               -->
+  <!-- ============================================================ -->
+  <a class="whatsapp-float"
+    href="https://wa.me/528132471163?text=Hola%20Kernesys,%20me%20gustar%C3%ADa%20informaci%C3%B3n%20sobre%20sus%20servicios."
+    target="_blank" rel="noopener noreferrer"
+    aria-label="Enviar mensaje por WhatsApp a Kernesys"
+    title="Escríbenos por WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- ============================================================ -->
+  <!-- Volver arriba                                                -->
+  <!-- ============================================================ -->
+  <div class="back-to-top" id="back-to-top">
+    <i class="fas fa-arrow-up icon"></i>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- SEO noscript fallback                                        -->
+  <!-- ============================================================ -->
+  <noscript>
+    <div style="padding:40px;max-width:900px;margin:0 auto;font-family:'Nunito',sans-serif;">
+      <h1>Kernesys - Desarrollo de Software a la Medida en Monterrey, México</h1>
+      <p>Somos una consultora de software 100% mexicana con sede en Monterrey, Nuevo León. Desde 2019 impulsamos la transformación digital de empresas con soluciones tecnológicas innovadoras y personalizadas.</p>
+      <h2>Contacto</h2>
+      <p>Email: <a href="mailto:contacto@kernesys.com">contacto@kernesys.com</a></p>
+      <p>Teléfono: <a href="tel:+528132471163">+52 813 247 1163</a></p>
+      <p>Ubicación: Monterrey, Nuevo León, México</p>
+    </div>
+  </noscript>
+
+  <!-- ===== Scripts ===== -->
   <script src="js/jquery-3.6.1.min.js"></script>
-  <!--     bootstrap     -->
   <script src="js/bootstrap.bundle.min.js" defer></script>
-  <!--     fancybox     -->
   <script src="js/jquery.fancybox.min.js" defer></script>
-  <!--     countTo     -->
   <script src="js/jquery.countTo.js" defer></script>
-  <!--     wow     -->
   <script src="js/wow.min.js" defer></script>
-  <!--     swiper     -->
   <script src="js/swiper.min.js" defer></script>
-  <!--     isotope     -->
   <script src="js/isotope-min.js" defer></script>
-  <!--     Splitting     -->
   <script src="js/splitting.min.js" defer></script>
-  <!--     main     -->
   <script src="js/mainn.js" defer></script>
+  <!-- SweetAlert2 -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
+
+  <script>
+    /* ===== Tech Stack: filtrado vanilla JS ===== */
+    function techStackFilter(category) {
+      var cards = document.querySelectorAll('#tech-grid-inner .tech-card');
+      var buttons = document.querySelectorAll('.tech-tab-btn');
+
+      buttons.forEach(function(btn) {
+        btn.classList.toggle('active', btn.getAttribute('data-cat') === category);
+      });
+
+      cards.forEach(function(card) {
+        if (category === 'all' || card.getAttribute('data-category') === category) {
+          card.style.display = '';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    /* ===== Modales legales (SweetAlert2) ===== */
+    var _kernesysLogo = 'img/logokernesys.png';
+
+    function showTerminos() {
+      Swal.fire({
+        title: '<strong>Términos de Uso</strong>',
+        imageUrl: _kernesysLogo,
+        imageWidth: 200,
+        imageAlt: 'Kernesys Logo',
+        html: '<div style="text-align:left;max-height:400px;overflow-y:auto;font-size:14px;line-height:1.6;padding:0 10px;">'
+          + '<p><strong>Última actualización:</strong> 28 de febrero de 2026</p>'
+          + '<p>Bienvenido a <strong>kernesys.com</strong>. Al acceder y utilizar este sitio web, aceptas cumplir con los siguientes términos y condiciones de uso.</p>'
+          + '<h4 style="margin-top:16px;color:#074d7e;">1. Uso del Sitio</h4>'
+          + '<p>Este sitio web es propiedad y está operado por <strong>Kernesys</strong>. El contenido proporcionado es únicamente con fines informativos sobre nuestros servicios de desarrollo de software, consultoría tecnológica y soluciones empresariales.</p>'
+          + '<h4 style="margin-top:16px;color:#074d7e;">2. Propiedad Intelectual</h4>'
+          + '<p>Todo el contenido de este sitio, incluyendo pero no limitado a textos, gráficos, logotipos, imágenes, código fuente y diseño, es propiedad de Kernesys y está protegido por las leyes de propiedad intelectual de México y tratados internacionales.</p>'
+          + '<h4 style="margin-top:16px;color:#074d7e;">3. Servicios</h4>'
+          + '<p>Kernesys ofrece servicios de desarrollo de software a la medida, automatización de procesos, integración de sistemas, servicios en la nube, desarrollo de aplicaciones móviles, ERP, CRM, CMS y e-commerce. Las especificaciones y alcances de cada proyecto se definen mediante acuerdos individuales con cada cliente.</p>'
+          + '<h4 style="margin-top:16px;color:#074d7e;">4. Limitación de Responsabilidad</h4>'
+          + '<p>Kernesys no será responsable por daños directos, indirectos, incidentales o consecuentes que resulten del uso o la imposibilidad de uso de este sitio web. La información se proporciona "tal cual" sin garantías de ningún tipo.</p>'
+          + '<h4 style="margin-top:16px;color:#074d7e;">5. Enlaces a Terceros</h4>'
+          + '<p>Este sitio puede contener enlaces a sitios web de terceros. Kernesys no se hace responsable del contenido, políticas de privacidad o prácticas de dichos sitios.</p>'
+          + '<h4 style="margin-top:16px;color:#074d7e;">6. Modificaciones</h4>'
+          + '<p>Kernesys se reserva el derecho de modificar estos términos en cualquier momento. Los cambios entrarán en vigor inmediatamente después de su publicación en este sitio.</p>'
+          + '<h4 style="margin-top:16px;color:#074d7e;">7. Legislación Aplicable</h4>'
+          + '<p>Estos términos se rigen por las leyes de los Estados Unidos Mexicanos. Cualquier disputa será resuelta ante los tribunales competentes de Monterrey, Nuevo León, México.</p>'
+          + '<h4 style="margin-top:16px;color:#074d7e;">8. Contacto</h4>'
+          + '<p>Para cualquier consulta sobre estos términos, puedes contactarnos en: <a href="mailto:contacto@kernesys.com" style="color:#074d7e;">contacto@kernesys.com</a></p>'
+          + '</div>',
+        width: 700,
+        confirmButtonText: 'Entendido',
+        confirmButtonColor: '#074d7e',
+        showCloseButton: true,
+      });
+    }
+
+    function showPrivacidad() {
+      Swal.fire({
+        title: '<strong>Política de Privacidad</strong>',
+        imageUrl: _kernesysLogo,
+        imageWidth: 200,
+        imageAlt: 'Kernesys Logo',
+        html: '<div style="text-align:left;max-height:400px;overflow-y:auto;font-size:14px;line-height:1.6;padding:0 10px;">'
+          + '<p><strong>Última actualización:</strong> 28 de febrero de 2026</p>'
+          + '<p>En <strong>Kernesys</strong>, respetamos tu privacidad y nos comprometemos a proteger la información personal que compartas con nosotros a través de este sitio web.</p>'
+          + '<h4 style="margin-top:16px;color:#074d7e;">1. Información que Recopilamos</h4>'
+          + '<p>Recopilamos información personal únicamente cuando nos la proporcionas voluntariamente a través de nuestro formulario de contacto: Nombre completo, Correo electrónico, Asunto y mensaje.</p>'
+          + '<h4 style="margin-top:16px;color:#074d7e;">2. Uso de la Información</h4>'
+          + '<p>La información recopilada se utiliza exclusivamente para responder a consultas y solicitudes de cotización, proporcionar información sobre nuestros servicios y dar seguimiento a proyectos potenciales.</p>'
+          + '<h4 style="margin-top:16px;color:#074d7e;">3. Protección de Datos</h4>'
+          + '<p>Implementamos medidas de seguridad técnicas y organizativas para proteger tu información personal contra acceso no autorizado, alteración, divulgación o destrucción. Los datos del formulario se envían de forma segura mediante HTTPS.</p>'
+          + '<h4 style="margin-top:16px;color:#074d7e;">4. Cookies y Tecnologías de Rastreo</h4>'
+          + '<p>Este sitio utiliza Google Analytics para analizar el tráfico web de forma anónima. No se recopilan datos personales identificables a través de cookies.</p>'
+          + '<h4 style="margin-top:16px;color:#074d7e;">5. Compartición de Datos</h4>'
+          + '<p>Kernesys <strong>no vende, alquila ni comparte</strong> tu información personal con terceros, salvo cuando sea requerido por ley o autoridad competente.</p>'
+          + '<h4 style="margin-top:16px;color:#074d7e;">6. Derechos ARCO</h4>'
+          + '<p>De acuerdo con la LFPDPPP, tienes derecho a Acceder, Rectificar, Cancelar y Oponerte al uso de tus datos. Para ejercer tus derechos ARCO, envía un correo a <a href="mailto:contacto@kernesys.com" style="color:#074d7e;">contacto@kernesys.com</a>.</p>'
+          + '<h4 style="margin-top:16px;color:#074d7e;">7. Retención de Datos</h4>'
+          + '<p>Conservamos tu información personal solo durante el tiempo necesario para cumplir con los fines para los cuales fue recopilada.</p>'
+          + '<h4 style="margin-top:16px;color:#074d7e;">8. Cambios a esta Política</h4>'
+          + '<p>Nos reservamos el derecho de actualizar esta política de privacidad en cualquier momento.</p>'
+          + '<h4 style="margin-top:16px;color:#074d7e;">9. Contacto</h4>'
+          + '<p><strong>Email:</strong> <a href="mailto:contacto@kernesys.com" style="color:#074d7e;">contacto@kernesys.com</a><br>'
+          + '<strong>Teléfono:</strong> +52 813 247 1163<br>'
+          + '<strong>Ubicación:</strong> Monterrey, Nuevo León, México</p>'
+          + '</div>',
+        width: 700,
+        confirmButtonText: 'Entendido',
+        confirmButtonColor: '#074d7e',
+        showCloseButton: true,
+      });
+    }
+
+    /* ===== Inicializar appjs cuando DOM esté listo ===== */
+    document.addEventListener('DOMContentLoaded', function() {
+      if (typeof appjs === 'function') {
+        appjs();
+      }
+    });
+  </script>
 </body>
 
 </html>
