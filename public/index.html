@@ -16,8 +16,8 @@
 
   <!-- ===== SEO: Título y Descripción Principal ===== -->
   <title>Kernesys | Desarrollo de Software a la Medida en Monterrey, México | ERP, CRM, Apps Móviles</title>
-  <meta name="description" content="Kernesys es una consultora de software en Monterrey, Nuevo León, México. Ofrecemos desarrollo web, aplicaciones móviles, ERP, CRM, CMS, e-commerce, integraciones de sistemas, servicios en la nube y automatización de procesos. Soluciones tecnológicas personalizadas desde 2019." />
-  <meta name="keywords" content="desarrollo de software, desarrollo web, diseño web, aplicaciones móviles, ERP, CRM, CMS, e-commerce, ecommerce, comercio electrónico, integraciones de sistemas, automatización de procesos, software a la medida, consultora de software, desarrollo de aplicaciones, sistemas empresariales, transformación digital, servicios en la nube, cloud computing, migración de sistemas, seguridad de datos, Monterrey, Nuevo León, México, Kernesys, desarrollo Laravel, desarrollo Vue.js, desarrollo React.js, desarrollo Angular, Flutter, NestJS, FastAPI, Spring Boot, AWS, bases de datos, MySQL, PostgreSQL, MongoDB, software personalizado, consultoría tecnológica, desarrollo de plataformas, aplicaciones web, tienda en línea, sistema de gestión, facturación electrónica, soluciones tecnológicas" />
+  <meta name="description" content="¿Buscas desarrollo de software a la medida en Monterrey? Kernesys crea sistemas ERP, CRM, apps móviles, e-commerce, automatización de procesos y soluciones cloud para empresas. Transformamos tu negocio con tecnología. Consultora 100% mexicana desde 2019." />
+  <meta name="keywords" content="desarrollo de software a medida, desarrollo de software a medida en México, empresa de desarrollo de software Monterrey, consultoría tecnológica MTY, soluciones IT para empresas, sistemas a la medida PyMEs, software empresarial, desarrollo web, diseño web, aplicaciones móviles, ERP, CRM, CMS, e-commerce, ecommerce, comercio electrónico, integraciones de sistemas, automatización de procesos, software a la medida, consultora de software, desarrollo de aplicaciones, sistemas empresariales, transformación digital, servicios en la nube, cloud computing, migración de sistemas, seguridad de datos, punto de venta, helpdesk, sistema de membresías, agendamiento online, sistema para constructoras, gestión de obras, logística y transporte, tienda de flores online, Monterrey, Nuevo León, México, Kernesys, desarrollo Laravel, desarrollo Vue.js, desarrollo React.js, desarrollo Angular, Flutter, NestJS, FastAPI, Spring Boot, AWS, bases de datos, MySQL, PostgreSQL, MongoDB, software personalizado, consultoría tecnológica, desarrollo de plataformas, aplicaciones web, tienda en línea, sistema de gestión, facturación electrónica, soluciones tecnológicas" />
   <meta name="author" content="Kernesys - Consultora de Software" />
   <meta name="copyright" content="Kernesys © 2019-2026" />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
@@ -363,6 +363,30 @@
           "@type": "Answer",
           "text": "Kernesys es una empresa 100% mexicana operando desde 2019, dedicada a impulsar la transformación digital de empresas mediante soluciones tecnológicas innovadoras y personalizadas."
         }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cuánto tiempo tarda un proyecto de software con Kernesys?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Depende de la complejidad. Un sitio web puede estar listo en 2-4 semanas, una app móvil en 6-12 semanas y un sistema ERP o CRM completo entre 3-6 meses. Siempre entregamos un cronograma detallado antes de iniciar para que tengas total visibilidad del proceso."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Kernesys ofrece soporte y mantenimiento después del lanzamiento?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí, todos nuestros proyectos incluyen un período de soporte post-lanzamiento. Además, contamos con planes de mantenimiento extendido para garantizar que tu sistema funcione de manera óptima a largo plazo, con actualizaciones, correcciones y asistencia técnica."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Kernesys trabaja con empresas fuera de Monterrey y México?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí, trabajamos con clientes en toda la República Mexicana, Latinoamérica y Estados Unidos. Gracias a nuestras metodologías de trabajo remoto y herramientas de colaboración, la distancia no es un obstáculo para entregar proyectos de software de alta calidad."
+        }
       }
     ]
   }
@@ -541,6 +565,47 @@
     @media(max-width:768px){
       .whatsapp-float { right:16px; bottom:88px; width:52px; height:52px; font-size:1.8rem; }
     }
+
+    /* ===== Proyectos ===== */
+    .projects-section { background: #fff; padding: 100px 0; }
+    .projects-filter { display:flex; flex-wrap:wrap; justify-content:center; gap:10px; margin-bottom:48px; }
+    .pf-btn {
+      display:inline-flex; align-items:center; gap:6px;
+      padding:9px 22px; border:2px solid #d5dce6; border-radius:50px;
+      background:#fff; color:#4a5568; font-size:.9rem; font-weight:600;
+      cursor:pointer; transition:all .3s ease; font-family:'Nunito',sans-serif;
+    }
+    .pf-btn:hover { border-color:#074d7e; color:#074d7e; transform:translateY(-2px); box-shadow:0 4px 14px rgba(7,77,126,.14); }
+    .pf-btn.active { background:linear-gradient(135deg,#074d7e 0%,#0a6bab 100%); border-color:#074d7e; color:#fff; box-shadow:0 6px 18px rgba(7,77,126,.28); }
+    .project-card {
+      position:relative; border-radius:18px; background:#fff;
+      border:1px solid #e8edf2; overflow:hidden;
+      transition:all .4s cubic-bezier(.4,0,.2,1);
+      display:flex; flex-direction:column;
+    }
+    .project-card:hover { transform:translateY(-8px); box-shadow:0 24px 48px rgba(0,0,0,.1); border-color:transparent; }
+    .project-card-img {
+      height:180px; display:flex; align-items:center; justify-content:center;
+      font-size:3rem; color:#fff; position:relative; overflow:hidden;
+    }
+    .project-card-img::after {
+      content:''; position:absolute; inset:0;
+      background:rgba(0,0,0,0); transition:background .3s ease;
+    }
+    .project-card:hover .project-card-img::after { background:rgba(0,0,0,.08); }
+    .project-card-body { padding:22px 22px 26px; flex:1; display:flex; flex-direction:column; }
+    .project-badge {
+      display:inline-block; font-size:.7rem; font-weight:700; letter-spacing:.6px;
+      text-transform:uppercase; padding:4px 12px; border-radius:20px;
+      background:#eef4fb; color:#074d7e; margin-bottom:10px;
+    }
+    .project-title { font-size:1.05rem; font-weight:800; color:#1a202c; margin-bottom:8px; }
+    .project-desc { font-size:.88rem; line-height:1.65; color:#64748b; margin-bottom:0; flex:1; }
+    .project-item { margin-bottom:28px; }
+    @media(max-width:576px){
+      .projects-section { padding:70px 0; }
+      .project-card-img { height:150px; font-size:2.4rem; }
+    }
   </style>
 </head>
 
@@ -590,6 +655,9 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#tech-stack"><i class="fas fa-layer-group icon"></i>Stack</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#projects"><i class="fas fa-briefcase icon"></i>Proyectos</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#contact-us"><i class="fas fa-mobile-alt icon"></i>Contacto</a>
@@ -1375,6 +1443,202 @@
   </section>
 
   <!-- ============================================================ -->
+  <!-- Proyectos                                                     -->
+  <!-- ============================================================ -->
+  <section class="projects-section" id="projects">
+    <div class="container">
+      <div class="section-heading center-heading">
+        <h2 class="section-title2 wow" data-splitting="chars">Nuestros Proyectos</h2>
+        <p class="section-subtitle wow fadeInUp" data-wow-delay=".4s">
+          Cada proyecto es una historia de transformación digital exitosa. Conoce algunas de las soluciones que hemos construido para nuestros clientes.</p>
+        <div class="line line-solid-main-color wow fadeIn" data-wow-delay="0.8s"></div>
+      </div>
+
+      <!-- Filtros -->
+      <div class="projects-filter wow fadeInUp" data-wow-delay="0.3s" id="projects-filters">
+        <button class="pf-btn active" data-filter="*"><i class="fas fa-th"></i> Todos</button>
+        <button class="pf-btn" data-filter=".cat-erp"><i class="fas fa-chart-line"></i> ERP / CRM</button>
+        <button class="pf-btn" data-filter=".cat-mobile"><i class="fas fa-mobile-alt"></i> Móvil</button>
+        <button class="pf-btn" data-filter=".cat-ecommerce"><i class="fas fa-shopping-cart"></i> E-Commerce</button>
+        <button class="pf-btn" data-filter=".cat-web"><i class="fas fa-globe"></i> Web</button>
+      </div>
+
+      <!-- Grid de proyectos (Isotope) -->
+      <div class="row" id="projects-grid">
+
+        <!-- NexoCRM -->
+        <div class="col-12 col-md-6 col-lg-4 project-item cat-erp wow fadeInUp" data-wow-delay="0.1s">
+          <div class="project-card">
+            <div class="project-card-img" style="background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);">
+              <i class="fas fa-users-cog"></i>
+            </div>
+            <div class="project-card-body">
+              <span class="project-badge">CRM Empresarial</span>
+              <h5 class="project-title">NexoCRM</h5>
+              <p class="project-desc">CRM a la medida con pipeline de ventas visual, automatizaciones de seguimiento y reportes en tiempo real. Centraliza toda la relación con tus clientes en un solo sistema.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- CivixPro -->
+        <div class="col-12 col-md-6 col-lg-4 project-item cat-erp wow fadeInUp" data-wow-delay="0.2s">
+          <div class="project-card">
+            <div class="project-card-img" style="background:linear-gradient(135deg,#f093fb 0%,#f5576c 100%);">
+              <i class="fas fa-hard-hat"></i>
+            </div>
+            <div class="project-card-body">
+              <span class="project-badge">Gestión de Obras</span>
+              <h5 class="project-title">CivixPro</h5>
+              <p class="project-desc">Plataforma de administración de proyectos de construcción y obra urbana. Control de avances, presupuestos, órdenes de compra y equipos de trabajo en una sola herramienta.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- FleetTrack -->
+        <div class="col-12 col-md-6 col-lg-4 project-item cat-erp wow fadeInUp" data-wow-delay="0.3s">
+          <div class="project-card">
+            <div class="project-card-img" style="background:linear-gradient(135deg,#4facfe 0%,#00f2fe 100%);">
+              <i class="fas fa-truck"></i>
+            </div>
+            <div class="project-card-body">
+              <span class="project-badge">Logística</span>
+              <h5 class="project-title">FleetTrack</h5>
+              <p class="project-desc">Sistema de gestión logística y rastreo de flotas para empresas de transporte. Despacho inteligente, seguimiento GPS, bitácoras digitales y reportes de eficiencia operativa.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- FitCore -->
+        <div class="col-12 col-md-6 col-lg-4 project-item cat-mobile wow fadeInUp" data-wow-delay="0.1s">
+          <div class="project-card">
+            <div class="project-card-img" style="background:linear-gradient(135deg,#43e97b 0%,#38f9d7 100%);">
+              <i class="fas fa-dumbbell"></i>
+            </div>
+            <div class="project-card-body">
+              <span class="project-badge">App Móvil</span>
+              <h5 class="project-title">FitCore</h5>
+              <p class="project-desc">App para gimnasios con membresías y suscripciones digitales, control de acceso, historial de asistencia, pagos en línea y notificaciones push para mantener a tus socios activos.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- BloomPoint -->
+        <div class="col-12 col-md-6 col-lg-4 project-item cat-ecommerce wow fadeInUp" data-wow-delay="0.2s">
+          <div class="project-card">
+            <div class="project-card-img" style="background:linear-gradient(135deg,#fa709a 0%,#fee140 100%);">
+              <i class="fas fa-store"></i>
+            </div>
+            <div class="project-card-body">
+              <span class="project-badge">E-Commerce</span>
+              <h5 class="project-title">BloomPoint</h5>
+              <p class="project-desc">Plataforma de e-commerce para florerías con catálogo digital, gestión de pedidos por fecha, rutas de entrega, pagos integrados y administración de inventario floral en tiempo real.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Zenbook -->
+        <div class="col-12 col-md-6 col-lg-4 project-item cat-mobile wow fadeInUp" data-wow-delay="0.3s">
+          <div class="project-card">
+            <div class="project-card-img" style="background:linear-gradient(135deg,#a18cd1 0%,#fbc2eb 100%);">
+              <i class="fas fa-calendar-check"></i>
+            </div>
+            <div class="project-card-body">
+              <span class="project-badge">App de Citas</span>
+              <h5 class="project-title">Zenbook</h5>
+              <p class="project-desc">Sistema de agendamiento online para spas, salones de belleza y centros de bienestar. Reserva de servicios 24/7, recordatorios automáticos y gestión de agenda para múltiples colaboradores.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- VoltaERP -->
+        <div class="col-12 col-md-6 col-lg-4 project-item cat-erp wow fadeInUp" data-wow-delay="0.1s">
+          <div class="project-card">
+            <div class="project-card-img" style="background:linear-gradient(135deg,#0f2027 0%,#203a43 50%,#2c5364 100%);">
+              <i class="fas fa-industry"></i>
+            </div>
+            <div class="project-card-body">
+              <span class="project-badge">ERP Manufactura</span>
+              <h5 class="project-title">VoltaERP</h5>
+              <p class="project-desc">ERP especializado para planta manufacturera de componentes para vehículos eléctricos. Control de producción, trazabilidad de piezas, calidad, almacén y órdenes de trabajo integrados.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- DeskFlow -->
+        <div class="col-12 col-md-6 col-lg-4 project-item cat-web wow fadeInUp" data-wow-delay="0.2s">
+          <div class="project-card">
+            <div class="project-card-img" style="background:linear-gradient(135deg,#11998e 0%,#38ef7d 100%);">
+              <i class="fas fa-headset"></i>
+            </div>
+            <div class="project-card-body">
+              <span class="project-badge">Helpdesk</span>
+              <h5 class="project-title">DeskFlow</h5>
+              <p class="project-desc">Plataforma de soporte técnico y mantenimiento con gestión de tickets, SLA, base de conocimiento y reportes de desempeño. Ideal para equipos de TI, soporte al cliente y mantenimiento industrial.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- PyMets POS -->
+        <div class="col-12 col-md-6 col-lg-4 project-item cat-web wow fadeInUp" data-wow-delay="0.3s">
+          <div class="project-card">
+            <div class="project-card-img" style="background:linear-gradient(135deg,#f7971e 0%,#ffd200 100%);">
+              <i class="fas fa-cash-register"></i>
+            </div>
+            <div class="project-card-body">
+              <span class="project-badge">Punto de Venta</span>
+              <h5 class="project-title">PyMets</h5>
+              <p class="project-desc">Sistema de punto de venta para PyMEs con inventario en tiempo real, cortes de caja, múltiples métodos de pago, facturación electrónica SAT y reportes de ventas por sucursal.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- ProcureX -->
+        <div class="col-12 col-md-6 col-lg-4 project-item cat-erp wow fadeInUp" data-wow-delay="0.1s">
+          <div class="project-card">
+            <div class="project-card-img" style="background:linear-gradient(135deg,#1a1a2e 0%,#16213e 50%,#0f3460 100%);">
+              <i class="fas fa-file-invoice-dollar"></i>
+            </div>
+            <div class="project-card-body">
+              <span class="project-badge">Compras</span>
+              <h5 class="project-title">ProcureX</h5>
+              <p class="project-desc">Sistema de gestión de órdenes de compra y proveedores. Cotizaciones comparativas, aprobaciones por flujo, seguimiento de entregas y conciliación automatizada con cuentas por pagar.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- QuickDrop -->
+        <div class="col-12 col-md-6 col-lg-4 project-item cat-mobile wow fadeInUp" data-wow-delay="0.2s">
+          <div class="project-card">
+            <div class="project-card-img" style="background:linear-gradient(135deg,#f953c6 0%,#b91d73 100%);">
+              <i class="fas fa-motorcycle"></i>
+            </div>
+            <div class="project-card-body">
+              <span class="project-badge">App Delivery</span>
+              <h5 class="project-title">QuickDrop</h5>
+              <p class="project-desc">Aplicación de pedidos a domicilio con rastreo en tiempo real, asignación inteligente de repartidores, pagos integrados y panel de administración para restaurantes y negocios locales.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- MediLink -->
+        <div class="col-12 col-md-6 col-lg-4 project-item cat-mobile wow fadeInUp" data-wow-delay="0.3s">
+          <div class="project-card">
+            <div class="project-card-img" style="background:linear-gradient(135deg,#56ccf2 0%,#2f80ed 100%);">
+              <i class="fas fa-stethoscope"></i>
+            </div>
+            <div class="project-card-body">
+              <span class="project-badge">Salud Digital</span>
+              <h5 class="project-title">MediLink</h5>
+              <p class="project-desc">Plataforma de telemedicina con videoconsultas, expediente clínico digital, recetas electrónicas y agendamiento de citas. Conecta pacientes con médicos desde cualquier dispositivo.</p>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /projects-grid -->
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
   <!-- Contacto                                                     -->
   <!-- ============================================================ -->
   <section class="contact-us mega-section section-bg-shade" id="contact-us" style="min-height:600px;contain:layout;">
@@ -1569,6 +1833,25 @@
         }
       });
     }
+
+    /* ===== Proyectos: filtrado con Isotope ===== */
+    document.addEventListener('DOMContentLoaded', function () {
+      var grid = document.querySelector('#projects-grid');
+      if (grid && typeof Isotope !== 'undefined') {
+        var iso = new Isotope(grid, {
+          itemSelector: '.project-item',
+          layoutMode: 'fitRows',
+          transitionDuration: '0.4s'
+        });
+        document.querySelectorAll('#projects-filters .pf-btn').forEach(function (btn) {
+          btn.addEventListener('click', function () {
+            document.querySelectorAll('#projects-filters .pf-btn').forEach(function (b) { b.classList.remove('active'); });
+            btn.classList.add('active');
+            iso.arrange({ filter: btn.getAttribute('data-filter') });
+          });
+        });
+      }
+    });
 
     /* ===== Modales legales (SweetAlert2) ===== */
     var _kernesysLogo = 'img/logokernesys.png';
