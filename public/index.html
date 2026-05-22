@@ -17,7 +17,7 @@
   <!-- ===== SEO: Título y Descripción Principal ===== -->
   <title>Kernesys | Desarrollo de Software a la Medida en Monterrey, México | ERP, CRM, Apps Móviles</title>
   <meta name="description" content="¿Buscas desarrollo de software a la medida en Monterrey? Kernesys crea sistemas ERP, CRM, apps móviles, e-commerce, automatización de procesos y soluciones cloud para empresas. Transformamos tu negocio con tecnología. Consultora 100% mexicana desde 2019." />
-  <meta name="keywords" content="desarrollo de software a medida, desarrollo de software a medida en México, empresa de desarrollo de software Monterrey, consultoría tecnológica MTY, soluciones IT para empresas, sistemas a la medida PyMEs, software empresarial, desarrollo web, diseño web, aplicaciones móviles, ERP, CRM, CMS, e-commerce, ecommerce, comercio electrónico, integraciones de sistemas, automatización de procesos, software a la medida, consultora de software, desarrollo de aplicaciones, sistemas empresariales, transformación digital, servicios en la nube, cloud computing, migración de sistemas, seguridad de datos, punto de venta, helpdesk, sistema de membresías, agendamiento online, sistema para constructoras, gestión de obras, logística y transporte, tienda de flores online, Monterrey, Nuevo León, México, Kernesys, desarrollo Laravel, desarrollo Vue.js, desarrollo React.js, desarrollo Angular, Flutter, NestJS, FastAPI, Spring Boot, AWS, bases de datos, MySQL, PostgreSQL, MongoDB, software personalizado, consultoría tecnológica, desarrollo de plataformas, aplicaciones web, tienda en línea, sistema de gestión, facturación electrónica, soluciones tecnológicas" />
+  <meta name="keywords" content="desarrollo de software a medida, desarrollo de software a medida en México, empresa de desarrollo de software Monterrey, consultoría tecnológica MTY, soluciones IT para empresas, sistemas a la medida PyMEs, software empresarial, desarrollo web, diseño web, aplicaciones móviles, ERP, CRM, CMS, e-commerce, ecommerce, comercio electrónico, integraciones de sistemas, automatización de procesos, software a la medida, consultora de software, desarrollo de aplicaciones, sistemas empresariales, transformación digital, servicios en la nube, cloud computing, migración de sistemas, seguridad de datos, punto de venta, helpdesk, sistema de membresías, agendamiento online, sistema para constructoras, gestión de obras, logística y transporte, tienda de flores online, Monterrey, Nuevo León, México, Kernesys, desarrollo Laravel, desarrollo Vue.js, desarrollo React.js, desarrollo Angular, Flutter, NestJS, FastAPI, Spring Boot, AWS, bases de datos, MySQL, PostgreSQL, MongoDB, software personalizado, consultoría tecnológica, desarrollo de plataformas, aplicaciones web, tienda en línea, sistema de gestión, facturación electrónica, soluciones tecnológicas, sistema de almacén, gestión de almacenes, WMS, warehouse management system, control de inventarios, control de inventario, inventario de materia prima, control de insumos, inventario de mercancías, sistema de costeo, costeo de inventario, PEPS, UEPS, costo promedio ponderado, almacenes inteligentes, inventario inteligente, trazabilidad de lotes, stock mínimo, valuación de inventario, sistema para almacenes" />
   <meta name="author" content="Kernesys - Consultora de Software" />
   <meta name="copyright" content="Kernesys © 2019-2026" />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
@@ -168,7 +168,11 @@
       "Flutter",
       "NestJS",
       "FastAPI",
-      "Spring Boot"
+      "Spring Boot",
+      "Gestión de Almacenes",
+      "Control de Inventarios",
+      "Costeo de Inventario",
+      "WMS"
     ]
   }
   </script>
@@ -260,6 +264,14 @@
             "@type": "Service",
             "name": "Migración y Modernización",
             "description": "Actualizamos sistemas legacy a tecnologías modernas sin interrumpir tu operación. Migramos bases de datos, renovamos interfaces y optimizamos arquitecturas."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Sistemas de Almacén e Inventario Inteligente",
+            "description": "Desarrollamos sistemas WMS para gestión de almacenes, control de inventarios de materia prima, insumos y mercancías con costeos automatizados PEPS, UEPS y costo promedio ponderado, trazabilidad de lotes y alertas inteligentes de stock."
           }
         }
       ]
@@ -919,6 +931,21 @@
             </div>
           </div>
         </div>
+        <div class="mx-auto col-12 col-md-6 col-lg-4">
+          <div class="service-box wow fadeInUp" data-wow-delay="0.2s">
+            <div class="service-icon">
+              <span style="display:flex;align-items:center;justify-content:center;width:128px;height:128px;background:linear-gradient(135deg,#074d7e 0%,#1a8fe3 100%);border-radius:50%;margin:0 auto;">
+                <i class="fas fa-warehouse" style="font-size:52px;color:#fff;"></i>
+              </span>
+            </div>
+            <div class="service-content">
+              <h3 class="service-title">Almacenes e Inventario Inteligente</h3>
+              <p class="service-text">Desarrollamos sistemas WMS para gestión de almacenes, control de inventarios
+                de materia prima, insumos y mercancías, con costeos automatizados (PEPS, UEPS, costo promedio)
+                y alertas inteligentes de stock para optimizar tu operación y reducir pérdidas.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -1461,6 +1488,7 @@
         <button class="pf-btn" data-filter=".cat-mobile"><i class="fas fa-mobile-alt"></i> Móvil</button>
         <button class="pf-btn" data-filter=".cat-ecommerce"><i class="fas fa-shopping-cart"></i> E-Commerce</button>
         <button class="pf-btn" data-filter=".cat-web"><i class="fas fa-globe"></i> Web</button>
+        <button class="pf-btn" data-filter=".cat-inventory"><i class="fas fa-warehouse"></i> Almacén / Inventario</button>
       </div>
 
       <!-- Grid de proyectos (Isotope) -->
@@ -1616,6 +1644,18 @@
               <span class="project-badge">App Delivery</span>
               <h5 class="project-title">QuickDrop</h5>
               <p class="project-desc">Aplicación de pedidos a domicilio con rastreo en tiempo real, asignación inteligente de repartidores, pagos integrados y panel de administración para restaurantes y negocios locales.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- StockIQ -->
+        <div class="col-12 col-md-6 col-lg-4 project-item cat-inventory cat-erp wow fadeInUp" data-wow-delay="0.1s">
+          <div class="project-card">
+            <div class="project-card-img" style="background:linear-gradient(135deg,#134e5e 0%,#71b280 100%);"><i class="fas fa-warehouse"></i></div>
+            <div class="project-card-body">
+              <span class="project-badge">Almacén / Inventario</span>
+              <h5 class="project-title">StockIQ</h5>
+              <p class="project-desc">Sistema WMS inteligente para gestión de almacenes, control de inventarios de materia prima, insumos y mercancías. Costeo automatizado por PEPS, UEPS y promedio ponderado, alertas de stock mínimo, trazabilidad de lotes y reportes de valuación en tiempo real.</p>
             </div>
           </div>
         </div>
