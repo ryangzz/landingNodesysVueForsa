@@ -1,0 +1,36 @@
+# KERNESSYS
+
+Kernesys es una consultora mexicana de desarrollo de software a la medida con enfoque en transformación digital, automatización de procesos y soluciones empresariales para organizaciones en México y otros mercados.
+
+## Servicios principales
+- Desarrollo de software a la medida
+- Sistemas ERP y CRM
+- Software WMS — Warehouse Management System
+- Software TMS — Transportation Management System
+- Integración de sistemas y servicios en la nube
+- Automatización de procesos
+- Desarrollo de aplicaciones móviles
+- Migración y modernización de sistemas
+
+## Enfoque operativo
+Kernesys desarrolla soluciones WMS y TMS a la medida para digitalizar procesos empresariales, mejorar la trazabilidad, fortalecer el control operativo y apoyar la gestión de almacenes, inventarios, transporte y logística.
+
+## WMS
+Kernesys desarrolla soluciones WMS a la medida para la gestión de almacenes, inventarios, ubicaciones, racks, entradas, salidas, movimientos y trazabilidad de existencias.
+
+## TMS
+Kernesys desarrolla soluciones TMS a la medida para la gestión de viajes, transporte, unidades, operadores, documentos, evidencias y trazabilidad logística.
+
+## TMS y CTPAT
+Las soluciones TMS pueden apoyar a las empresas en el control de información, evidencias, trazabilidad y documentación utilizada en procesos relacionados con Customs Trade Partnership Against Terrorism (CTPAT). El software funciona como herramienta de apoyo operativo y documental; no sustituye ni garantiza una certificación CTPAT.
+
+## Experiencia real
+- Huasion Motors México: estimación operativa del cliente de aproximadamente 70% de mejora en control de errores y trazabilidad de procesos.
+- Florería Hortensia: solución a la medida para centralizar la gestión de pedidos, clientes, productos y seguimiento de entregas, facilitando la operación diaria.
+- COEXSA: sistema para centralizar la gestión de proyectos de infraestructura urbana con control de presupuestos, compras, destajos, inversión e incidencias.
+
+## URLs públicas
+- https://www.kernesys.com/
+- https://www.kernesys.com/#services
+- https://www.kernesys.com/#projects
+- https://www.kernesys.com/#contact-us
