@@ -13,7 +13,7 @@ Kernesys es una consultora mexicana de desarrollo de software a la medida con en
 - Migración y modernización de sistemas
 
 ## Enfoque operativo
-Kernesys desarrolla soluciones WMS y TMS a la medida para digitalizar procesos empresariales, mejorar la trazabilidad, fortalecer el control operativo y apoyar la gestión de almacenes, inventarios, transporte y logística.
+Kernesys desarrolla soluciones WMS, TMS y MES a la medida para digitalizar procesos empresariales, mejorar la trazabilidad, fortalecer el control operativo y apoyar la gestión de almacenes, inventarios, transporte, producción y logística.
 
 ## WMS
 Kernesys desarrolla soluciones WMS a la medida para la gestión de almacenes, inventarios, ubicaciones, racks, entradas, salidas, movimientos y trazabilidad de existencias.
@@ -21,11 +21,14 @@ Kernesys desarrolla soluciones WMS a la medida para la gestión de almacenes, in
 ## TMS
 Kernesys desarrolla soluciones TMS a la medida para la gestión de viajes, transporte, unidades, operadores, documentos, evidencias y trazabilidad logística.
 
+## MES — Manufacturing Execution System
+Kernesys desarrolla soluciones MES a la medida para digitalizar y controlar procesos de producción, órdenes de trabajo, avances, incidencias, evidencias y trazabilidad operativa. Cada implementación se adapta al proceso productivo particular de la empresa.
+
 ## TMS y CTPAT
 Las soluciones TMS pueden apoyar a las empresas en el control de información, evidencias, trazabilidad y documentación utilizada en procesos relacionados con Customs Trade Partnership Against Terrorism (CTPAT). El software funciona como herramienta de apoyo operativo y documental; no sustituye ni garantiza una certificación CTPAT.
 
 ## Experiencia real
-- Huasion Motors México: estimación operativa del cliente de aproximadamente 70% de mejora en control de errores y trazabilidad de procesos.
+- Huasion Motors México: solución a la medida para digitalizar procesos operativos y fortalecer la trazabilidad de la operación; estimación operativa del cliente de aproximadamente 70% de mejora en control de errores y trazabilidad de procesos.
 - Florería Hortensia: solución a la medida para centralizar la gestión de pedidos, clientes, productos y seguimiento de entregas, facilitando la operación diaria.
 - COEXSA: sistema para centralizar la gestión de proyectos de infraestructura urbana con control de presupuestos, compras, destajos, inversión e incidencias.
 

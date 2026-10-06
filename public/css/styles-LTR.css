@@ -2093,7 +2093,7 @@ body.hard-squared-btns .portfolio-btn {
 
 .logistics-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 2rem;
 }
 
@@ -2127,6 +2127,10 @@ body.hard-squared-btns .portfolio-btn {
 
 .panel-badge--alt {
   background: linear-gradient(135deg, #0f4d76 0%, #39b8c4 100%);
+}
+
+.panel-badge--mes {
+  background: linear-gradient(135deg, #074d7e 0%, #0f9b84 100%);
 }
 
 .panel-header h3 {
@@ -2247,6 +2251,34 @@ body.hard-squared-btns .portfolio-btn {
   grid-template-columns: 1fr 1fr;
   align-items: center;
   gap: 1rem;
+}
+
+.mockup-window--mes {
+  background: linear-gradient(180deg, rgba(255,255,255,0.96), rgba(237, 250, 246, 0.98));
+}
+
+.mockup-body--mes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.8rem;
+  align-items: end;
+}
+
+.mes-column {
+  height: 68px;
+  border-radius: 0.7rem;
+  background: linear-gradient(180deg, rgba(15,155,132,0.25), rgba(7,77,126,0.45));
+}
+
+.mes-column--strong {
+  height: 102px;
+}
+
+.mes-timeline {
+  grid-column: 1 / -1;
+  height: 0.7rem;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(7,77,126,0.2), rgba(15,155,132,0.35));
 }
 
 .route-line {
@@ -2379,6 +2411,10 @@ body.hard-squared-btns .portfolio-btn {
   font-weight: 800;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+}
+
+.success-tag {
+  margin-bottom: 0.1rem;
 }
 
 .success-text {
@@ -2646,6 +2682,10 @@ body.hard-squared-btns .portfolio-btn {
 
 .service-icon-transport {
   background: linear-gradient(135deg, rgba(7, 77, 126, 0.08), rgba(57, 184, 196, 0.1));
+}
+
+.service-icon-mes {
+  background: linear-gradient(135deg, rgba(7, 77, 126, 0.08), rgba(15, 155, 132, 0.1));
 }
 
 @media (max-width: 991px) {
