@@ -1,85 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Solo URLs canónicas reales. Los fragmentos (#servicios, #contacto…) no se indexan por separado. -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
-  
-  <!-- Página Principal -->
+
   <url>
     <loc>https://www.kernesys.com/</loc>
-    <lastmod>2026-05-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.kernesys.com/" />
-    <xhtml:link rel="alternate" hreflang="es-MX" href="https://www.kernesys.com/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.kernesys.com/" />
+    <lastmod>2026-10-25</lastmod>
     <image:image>
-      <image:loc>https://www.kernesys.com/img/logoblack.png</image:loc>
-      <image:caption>Logo de Kernesys - Consultora de Desarrollo de Software</image:caption>
-      <image:title>Kernesys Logo</image:title>
+      <image:loc>https://www.kernesys.com/img/og-kernesys.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://www.kernesys.com/img/about-1_photo.png</image:loc>
-      <image:caption>Kernesys - Soluciones tecnológicas innovadoras en Monterrey, México</image:caption>
-      <image:title>Kernesys Sobre Nosotros</image:title>
+      <image:loc>https://www.kernesys.com/img/about-1_photo.webp</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://www.kernesys.com/img/about-2_photo.png</image:loc>
-      <image:caption>Kernesys - Misión y transformación digital empresarial</image:caption>
-      <image:title>Kernesys Nuestra Misión</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.kernesys.com/img/tech_stack_1.jpg</image:loc>
-      <image:caption>Stack tecnológico de Kernesys - Vue.js, Laravel, Flutter, AWS</image:caption>
-      <image:title>Kernesys Tech Stack</image:title>
+      <image:loc>https://www.kernesys.com/img/about-2_photo.webp</image:loc>
     </image:image>
   </url>
 
-  <!-- Sección de Servicios (ancla) -->
   <url>
-    <loc>https://www.kernesys.com/#services</loc>
-    <lastmod>2026-05-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://www.kernesys.com/privacidad/</loc>
+    <lastmod>2026-10-25</lastmod>
   </url>
 
-  <!-- Sección Nosotros (ancla) -->
   <url>
-    <loc>https://www.kernesys.com/#about</loc>
-    <lastmod>2026-05-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Sección Contacto (ancla) -->
-  <url>
-    <loc>https://www.kernesys.com/#contact-us</loc>
-    <lastmod>2026-05-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Sección Tech Stack (ancla) -->
-  <url>
-    <loc>https://www.kernesys.com/#tech-stack</loc>
-    <lastmod>2026-05-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- Sección Proyectos (ancla) -->
-  <url>
-    <loc>https://www.kernesys.com/#projects</loc>
-    <lastmod>2026-05-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Sección Almacén e Inventario (ancla) -->
-  <url>
-    <loc>https://www.kernesys.com/#services</loc>
-    <lastmod>2026-05-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://www.kernesys.com/terminos/</loc>
+    <lastmod>2026-10-25</lastmod>
   </url>
 
 </urlset>
