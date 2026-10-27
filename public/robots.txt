@@ -1,32 +1,10 @@
-# Robots.txt para Kernesys - www.kernesys.com
-# Consultora de Desarrollo de Software en Monterrey, México
+# Robots.txt para Kernesys - https://www.kernesys.com
+# Consultora de desarrollo de software en Monterrey, México
 
 User-agent: *
 Allow: /
-Allow: /llms.txt
 Disallow: /admin/
 Disallow: /api/
 Disallow: /private/
-Disallow: /*.json$
 
-# Sitemap
 Sitemap: https://www.kernesys.com/sitemap.xml
-
-# Google
-User-agent: Googlebot
-Allow: /
-Crawl-delay: 1
-
-# Bing
-User-agent: Bingbot
-Allow: /
-Crawl-delay: 2
-
-# Google Images
-User-agent: Googlebot-Image
-Allow: /img/
-Allow: /*.png$
-Allow: /*.jpg$
-Allow: /*.jpeg$
-Allow: /*.webp$
-Allow: /*.svg$
